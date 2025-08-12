@@ -16,9 +16,11 @@ lang: es
 
 ## Introducción
 
-Para este paso vamos a descargar los datos usando `datasets` de NCBI, lo puedes instalar [aquí](https://github.com/ncbi/datasets).
+Vamos a trabajar con ensambles de distintas cepas de E. coli hospedero Bovino.
 
-Con el siguiente codigo vamos a descargar los genomas depoitados en NCBI de *E. coli*
+Para iniciar vamos a descargar los datos disponibles que existan usando `datasets` de NCBI, lo puedes instalar [aquí](https://github.com/ncbi/datasets).
+
+Con el siguiente código vamos a descargar los genomas depoitados en NCBI de *E. coli*
 
 ```{bash, eval=FALSE}
 
@@ -34,4 +36,36 @@ $HOME/bin/dataformat tsv genome \
 --inputfile Escherichia_coli_562.json > Escherichia_coli_562.tsv
 ```
 
-Este conjunto de metadatos nos servirá para seleccionar los ensambles de genoma que necesitamos.
+Este conjunto de metadatos `Escherichia_coli_562.tsv` nos servirá para seleccionar los ensambles de genoma que necesitamos. Para ello puedes utilizar la plataforma o método que más prefieras, y quedarnos con un conjunto más pequeño de genomas para descagar. En este tutorial este será el archivo con el que trabajaremos `Escherichia_coli_Bovine_Host.tsv`, este archivo se ve de la siguiete forma (las primeras 5 filas):
+
+```{r, echo=FALSE, message=FALSE}
+df <- readr::read_tsv("tables/Escherichia_coli_Bovine_Host.tsv")|> head(5)
+
+gt::gt(df)
+```
+
+Para descargar los archivos vamos a utilizar el siguiente código:
+
+```{bash, eval=FALSE}
+for g in \$(cut -f1 Escherichia_coli_Bovine_Host.tsv | awk 'NR > 1'); do
+        if [ -f \$g.zip ]; then
+            echo \$g'.zip exists';
+        else
+            $HOME/bin/datasets download genome accession \$g \
+            --include genome --filename \$g'.zip';
+            sleep 2;
+        fi
+    done
+```
+
+Descomprimir los archivos
+
+```{bash, eval=FALSE}
+for g in \$(cut -f1 Escherichia_coli_Bovine_Host.tsv | awk 'NR > 1'); do
+        unzip \$g.zip -d \$g;
+        mv \$g/ncbi_dataset/data/\$g/*.fna \$g.fna;
+        rm -r \$g/;
+    done
+```
+
+Con esto ya contamos con un sub conjunto de datos listo para trabajar.
