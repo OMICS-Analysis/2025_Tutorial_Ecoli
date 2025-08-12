@@ -95,8 +95,31 @@ done
 
 ## Bakta
 
+Bakta es uno de los anotadores de genomas "más" completos ya que usa distintas bases, utiliza a `DIAMOND` de alineador. Lo puedes descargar [aquí](https://github.com/oschwengers/bakta). Es necesario descargar la base de datos para poder ejecutarlo, para este ejemplo se guardó en el directorio `$HOME/db`
+
 **Precaución** ⚠️: Necesitas 8GB de RAM, disponibilidad de tiempo y memoria en tu máquina, con más de 10 genomas podría demorar según la capacidad de nucleos que tengas. Para este tutorial solo te mostraremos como es el código pero no se utilizará este paso para los siguientes análisis.
 
 ```{bash, eval=FALSE}
+source $HOME/bin/bakta-env/bin/activate
+```
 
+```{bash, eval=FALSE}
+genomes=$(ls $HOME/1_data)
+
+experiment_file="$HOME/Experiment_Design.tsv"
+
+
+for g in $genomes; do
+    id=$(basename "$g" | awk -F'/' '{print $NF}' | sed 's/.fna$//')
+
+    strain=$(awk -F'\t' -v id="$id" '$1 == id {print $3}' "$experiment_file")
+
+    bakta \
+    --db $HOME/db \
+    --output $HOME/2_annotation/bakta/${id} \
+    --genus Escherichia \
+    --strain "$strain" \
+    --threads 6 \
+    --force $HOME/1_data/${g}
+done
 ```
