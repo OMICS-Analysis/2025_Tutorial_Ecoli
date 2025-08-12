@@ -104,6 +104,8 @@ source $HOME/bin/bakta-env/bin/activate
 ```
 
 ```{bash, eval=FALSE}
+#| code-fold: true
+#| code-summary: "Muestra el código"
 genomes=$(ls $HOME/1_data)
 
 experiment_file="$HOME/Experiment_Design.tsv"
@@ -123,3 +125,34 @@ for g in $genomes; do
     --force $HOME/1_data/${g}
 done
 ```
+
+## AMRfinder
+
+```{bash, eval=FALSE}
+
+workdir=$HOME/2_annotation/prokka
+output_dir=$HOME/2_annotation/AMR
+
+for dir in $workdir/*; do
+  if [ -d "$dir" ]; then
+      sample=$(basename "$dir")
+      protein=$dir/$sample.faa
+      dna=$dir/$sample.fna
+      gff=$dir/$sample.gff3
+
+  temp_gff="${output_dir}/amrfinder_${sample}.gff"
+		perl -pe '/^##FASTA/ && exit; s/(\W)Name=/$1OldName=/i; s/ID=([^;]+)/ID=$1;Name=$1/' $gff > $temp_gff
+
+      amrfinder \
+      -p $protein \
+      -n $dna \
+      -g $temp_gff \
+      --plus --organism Escherichia \
+      -o $output_dir/${sample}_amrfinder.tsv \
+      --threads 6
+done
+```
+
+## Virulence Factor DataBase
+
+## 
