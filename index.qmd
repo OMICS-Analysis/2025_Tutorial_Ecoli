@@ -14,15 +14,19 @@ lang: es
 
 ![](images/logo_OAN_for_white.png){fig-align="center" width="300"}
 
-## Introducción
+# Introducción
 
 Vamos a trabajar con ensambles de distintas cepas de E. coli hospedero Bovino.
+
+**NOTA** ⚠️👁️‍🗨️: Para las figuras del curso se utilizaron todos los 110 genomas con hospedero Bovino. Para este tutorial generaremos un subconjunto de 15, ya incluidos genomas de referencia para patotipos EHEC y EPEC.
 
 Para iniciar vamos a descargar los datos disponibles que existan usando `datasets` de NCBI, lo puedes instalar [aquí](https://github.com/ncbi/datasets).
 
 Con el siguiente código vamos a descargar los genomas depoitados en NCBI de *E. coli*
 
 ```{bash, eval=FALSE}
+mkdir 1_data
+cd 1_data
 
 $HOME/bin/datasets \
 summary genome taxon '562' \
@@ -69,3 +73,30 @@ for g in \$(cut -f1 Escherichia_coli_Bovine_Host.tsv | awk 'NR > 1'); do
 ```
 
 Con esto ya contamos con un sub conjunto de datos listo para trabajar.
+
+# Anotación de genomas
+
+## Prokka
+
+`Prokka` es un anotador de genomas para organismos procariontes, lo puedes descargar de [aquí](https://github.com/tseemann/prokka).
+
+```{bash, eval=FALSE}
+genomes=$( ls $HOME/1_data/*.fna )
+
+for g in $genomes; do
+ prokka \
+ $g \
+ --cpus 6 \
+ --outdir prokka/${id%.fna} \
+ --genus Escherichia
+done
+ 
+```
+
+## Bakta
+
+**Precaución** ⚠️: Necesitas 8GB de RAM, disponibilidad de tiempo y memoria en tu máquina, con más de 10 genomas podría demorar según la capacidad de nucleos que tengas. Para este tutorial solo te mostraremos como es el código pero no se utilizará este paso para los siguientes análisis.
+
+```{bash, eval=FALSE}
+
+```

@@ -81,6 +81,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción">Introducción</a></li>
+  <li><a href="#anotación-de-genomas" id="toc-anotación-de-genomas" class="nav-link" data-scroll-target="#anotación-de-genomas">Anotación de genomas</a>
+  <ul class="collapse">
+  <li><a href="#prokka" id="toc-prokka" class="nav-link" data-scroll-target="#prokka">Prokka</a></li>
+  <li><a href="#bakta" id="toc-bakta" class="nav-link" data-scroll-target="#bakta">Bakta</a></li>
+  </ul></li>
   </ul>
 </nav>
 </div>
@@ -116,18 +121,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="images/logo_OAN_for_white.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="300"></p>
 </figure>
 </div>
-<section id="introducción" class="level2">
-<h2 class="anchored" data-anchor-id="introducción">Introducción</h2>
+<section id="introducción" class="level1">
+<h1>Introducción</h1>
 <p>Vamos a trabajar con ensambles de distintas cepas de E. coli hospedero Bovino.</p>
+<p><strong>NOTA</strong> ⚠️👁️‍🗨️: Para las figuras del curso se utilizaron todos los 110 genomas con hospedero Bovino. Para este tutorial generaremos un subconjunto de 15, ya incluidos genomas de referencia para patotipos EHEC y EPEC.</p>
 <p>Para iniciar vamos a descargar los datos disponibles que existan usando <code>datasets</code> de NCBI, lo puedes instalar <a href="https://github.com/ncbi/datasets">aquí</a>.</p>
 <p>Con el siguiente código vamos a descargar los genomas depoitados en NCBI de <em>E. coli</em></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="va">$HOME</span><span class="ex">/bin/datasets</span> <span class="dt">\</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>summary genome taxon <span class="st">'562'</span> <span class="dt">\</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>--assembly-level complete<span class="dt">\</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>--assembly-source refseq <span class="dt">\</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>--as-json-lines <span class="op">&gt;</span> Escherichia_coli_562.json</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> 1_data</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> 1_data</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="va">$HOME</span><span class="ex">/bin/datasets</span> <span class="dt">\</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>summary genome taxon <span class="st">'562'</span> <span class="dt">\</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>--assembly-level complete<span class="dt">\</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>--assembly-source refseq <span class="dt">\</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>--as-json-lines <span class="op">&gt;</span> Escherichia_coli_562.json</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">$HOME</span><span class="ex">/bin/dataformat</span> tsv genome <span class="dt">\</span></span>
@@ -136,23 +144,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Este conjunto de metadatos <code>Escherichia_coli_562.tsv</code> nos servirá para seleccionar los ensambles de genoma que necesitamos. Para ello puedes utilizar la plataforma o método que más prefieras, y quedarnos con un conjunto más pequeño de genomas para descagar. En este tutorial este será el archivo con el que trabajaremos <code>Escherichia_coli_Bovine_Host.tsv</code>, este archivo se ve de la siguiete forma (las primeras 5 filas):</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="gcspjoogdi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#gcspjoogdi table {
+<div id="bxvglmpkcr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#bxvglmpkcr table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#gcspjoogdi thead, #gcspjoogdi tbody, #gcspjoogdi tfoot, #gcspjoogdi tr, #gcspjoogdi td, #gcspjoogdi th {
+#bxvglmpkcr thead, #bxvglmpkcr tbody, #bxvglmpkcr tfoot, #bxvglmpkcr tr, #bxvglmpkcr td, #bxvglmpkcr th {
   border-style: none;
 }
 
-#gcspjoogdi p {
+#bxvglmpkcr p {
   margin: 0;
   padding: 0;
 }
 
-#gcspjoogdi .gt_table {
+#bxvglmpkcr .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -178,12 +186,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#gcspjoogdi .gt_caption {
+#bxvglmpkcr .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#gcspjoogdi .gt_title {
+#bxvglmpkcr .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -195,7 +203,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#gcspjoogdi .gt_subtitle {
+#bxvglmpkcr .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -207,7 +215,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#gcspjoogdi .gt_heading {
+#bxvglmpkcr .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -219,13 +227,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#gcspjoogdi .gt_bottom_border {
+#bxvglmpkcr .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#gcspjoogdi .gt_col_headings {
+#bxvglmpkcr .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -240,7 +248,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#gcspjoogdi .gt_col_heading {
+#bxvglmpkcr .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -260,7 +268,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#gcspjoogdi .gt_column_spanner_outer {
+#bxvglmpkcr .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -272,15 +280,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#gcspjoogdi .gt_column_spanner_outer:first-child {
+#bxvglmpkcr .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#gcspjoogdi .gt_column_spanner_outer:last-child {
+#bxvglmpkcr .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#gcspjoogdi .gt_column_spanner {
+#bxvglmpkcr .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -292,11 +300,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#gcspjoogdi .gt_spanner_row {
+#bxvglmpkcr .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#gcspjoogdi .gt_group_heading {
+#bxvglmpkcr .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -322,7 +330,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#gcspjoogdi .gt_empty_group_heading {
+#bxvglmpkcr .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -337,15 +345,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#gcspjoogdi .gt_from_md > :first-child {
+#bxvglmpkcr .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#gcspjoogdi .gt_from_md > :last-child {
+#bxvglmpkcr .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#gcspjoogdi .gt_row {
+#bxvglmpkcr .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -364,7 +372,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#gcspjoogdi .gt_stub {
+#bxvglmpkcr .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -377,7 +385,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#gcspjoogdi .gt_stub_row_group {
+#bxvglmpkcr .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -391,15 +399,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#gcspjoogdi .gt_row_group_first td {
+#bxvglmpkcr .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#gcspjoogdi .gt_row_group_first th {
+#bxvglmpkcr .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#gcspjoogdi .gt_summary_row {
+#bxvglmpkcr .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -409,16 +417,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#gcspjoogdi .gt_first_summary_row {
+#bxvglmpkcr .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#gcspjoogdi .gt_first_summary_row.thick {
+#bxvglmpkcr .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#gcspjoogdi .gt_last_summary_row {
+#bxvglmpkcr .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -428,7 +436,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#gcspjoogdi .gt_grand_summary_row {
+#bxvglmpkcr .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -438,7 +446,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#gcspjoogdi .gt_first_grand_summary_row {
+#bxvglmpkcr .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -448,7 +456,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#gcspjoogdi .gt_last_grand_summary_row_top {
+#bxvglmpkcr .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -458,11 +466,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#gcspjoogdi .gt_striped {
+#bxvglmpkcr .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#gcspjoogdi .gt_table_body {
+#bxvglmpkcr .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -471,7 +479,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#gcspjoogdi .gt_footnotes {
+#bxvglmpkcr .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -485,7 +493,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#gcspjoogdi .gt_footnote {
+#bxvglmpkcr .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -494,7 +502,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#gcspjoogdi .gt_sourcenotes {
+#bxvglmpkcr .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -508,7 +516,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#gcspjoogdi .gt_sourcenote {
+#bxvglmpkcr .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -516,72 +524,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#gcspjoogdi .gt_left {
+#bxvglmpkcr .gt_left {
   text-align: left;
 }
 
-#gcspjoogdi .gt_center {
+#bxvglmpkcr .gt_center {
   text-align: center;
 }
 
-#gcspjoogdi .gt_right {
+#bxvglmpkcr .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#gcspjoogdi .gt_font_normal {
+#bxvglmpkcr .gt_font_normal {
   font-weight: normal;
 }
 
-#gcspjoogdi .gt_font_bold {
+#bxvglmpkcr .gt_font_bold {
   font-weight: bold;
 }
 
-#gcspjoogdi .gt_font_italic {
+#bxvglmpkcr .gt_font_italic {
   font-style: italic;
 }
 
-#gcspjoogdi .gt_super {
+#bxvglmpkcr .gt_super {
   font-size: 65%;
 }
 
-#gcspjoogdi .gt_footnote_marks {
+#bxvglmpkcr .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#gcspjoogdi .gt_asterisk {
+#bxvglmpkcr .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#gcspjoogdi .gt_indent_1 {
+#bxvglmpkcr .gt_indent_1 {
   text-indent: 5px;
 }
 
-#gcspjoogdi .gt_indent_2 {
+#bxvglmpkcr .gt_indent_2 {
   text-indent: 10px;
 }
 
-#gcspjoogdi .gt_indent_3 {
+#bxvglmpkcr .gt_indent_3 {
   text-indent: 15px;
 }
 
-#gcspjoogdi .gt_indent_4 {
+#bxvglmpkcr .gt_indent_4 {
   text-indent: 20px;
 }
 
-#gcspjoogdi .gt_indent_5 {
+#bxvglmpkcr .gt_indent_5 {
   text-indent: 25px;
 }
 
-#gcspjoogdi .katex-display {
+#bxvglmpkcr .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#gcspjoogdi div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#bxvglmpkcr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -917,6 +925,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">done</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Con esto ya contamos con un sub conjunto de datos listo para trabajar.</p>
+</section>
+<section id="anotación-de-genomas" class="level1">
+<h1>Anotación de genomas</h1>
+<section id="prokka" class="level2">
+<h2 class="anchored" data-anchor-id="prokka">Prokka</h2>
+<p><code>Prokka</code> es un anotador de genomas para organismos procariontes, lo puedes descargar de <a href="https://github.com/tseemann/prokka">aquí</a>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="va">genomes</span><span class="op">=</span><span class="va">$(</span> <span class="fu">ls</span> <span class="va">$HOME</span>/1_data/<span class="pp">*</span>.fna <span class="va">)</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> g <span class="kw">in</span> <span class="va">$genomes</span><span class="kw">;</span> <span class="cf">do</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a> <span class="ex">prokka</span> <span class="dt">\</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a> <span class="va">$g</span> <span class="dt">\</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a> <span class="at">--cpus</span> 6 <span class="dt">\</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a> <span class="at">--outdir</span> prokka/<span class="va">${id</span><span class="op">%</span>.fna<span class="va">}</span> <span class="dt">\</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a> <span class="at">--genus</span> Escherichia</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a> </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="bakta" class="level2">
+<h2 class="anchored" data-anchor-id="bakta">Bakta</h2>
+<p><strong>Precaución</strong> ⚠️: Necesitas 8GB de RAM, disponibilidad de tiempo y memoria en tu máquina, con más de 10 genomas podría demorar según la capacidad de nucleos que tengas. Para este tutorial solo te mostraremos como es el código pero no se utilizará este paso para los siguientes análisis.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
 </section>
 
 </main>
