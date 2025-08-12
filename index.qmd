@@ -1,0 +1,35 @@
+---
+title: "Analisis Genomas: E. coli"
+author: "OMICs Analysis"
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    theme: journal
+editor: visual
+execute:
+  engine: knitr
+lang: es
+---
+
+## Obtención de genomas
+
+Para este paso vamos a descargar los datos usando datasets de NCBI, lo puedes instalar [aquí](https://github.com/ncbi/datasets).
+
+Con el siguiente codigo vamos a descargar los genomas depoitados en NCBI de *E. coli*
+
+```{bash, eval=FALSE}
+
+$HOME/bin/datasets \
+summary genome taxon '562' \
+--assembly-level complete\
+--assembly-source refseq \
+--as-json-lines > Escherichia_coli_562.json
+```
+
+```{bash, eval=FALSE}
+$HOME/bin/dataformat tsv genome \
+--inputfile Escherichia_coli_562.json > Escherichia_coli_562.tsv
+```
+
+Este conjunto de metadatos nos servirá para seleccionar los ensambles de genoma que necesitamos.
