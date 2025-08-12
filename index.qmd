@@ -12,9 +12,11 @@ execute:
 lang: es
 ---
 
-## Obtención de genomas
+![](images/logo_OAN_for_white.png){fig-align="center" width="300"}
 
-Para este paso vamos a descargar los datos usando datasets de NCBI, lo puedes instalar [aquí](https://github.com/ncbi/datasets).
+## Introducción
+
+Para este paso vamos a descargar los datos usando `datasets` de NCBI, lo puedes instalar [aquí](https://github.com/ncbi/datasets).
 
 Con el siguiente codigo vamos a descargar los genomas depoitados en NCBI de *E. coli*
 
