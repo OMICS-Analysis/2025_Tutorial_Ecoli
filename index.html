@@ -67,20 +67,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="index_files/libs/bootstrap/bootstrap-a71a25f19e128005acb9c00d38d9c2cf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="index_files/libs/bootstrap/bootstrap-a312d171523933343ca77b5e293f9fd6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<style>html{ scroll-behavior: smooth; }</style>
 
 
 </head>
 
 <body>
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
   <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Tabla de contenidos</h2>
+    <h2 id="toc-title">Contenido</h2>
    
   <ul>
-  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción">Introducción</a></li>
+  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción">Introducción</a>
+  <ul class="collapse">
+  <li><a href="#descarga-de-archivos" id="toc-descarga-de-archivos" class="nav-link" data-scroll-target="#descarga-de-archivos">Descarga de archivos</a></li>
+  </ul></li>
   <li><a href="#anotación-de-genomas" id="toc-anotación-de-genomas" class="nav-link" data-scroll-target="#anotación-de-genomas">Anotación de genomas</a>
   <ul class="collapse">
   <li><a href="#prokka" id="toc-prokka" class="nav-link" data-scroll-target="#prokka">Prokka</a></li>
@@ -91,6 +95,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   </ul>
 </nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
 </div>
 <main class="content" id="quarto-document-content">
 
@@ -118,7 +124,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-
+<nav id="TOC-body" role="doc-toc">
+    <h2 id="toc-title">Contenido</h2>
+   
+  <ul>
+  <li><a href="#introducción" id="toc-introducción">Introducción</a>
+  <ul>
+  <li><a href="#descarga-de-archivos" id="toc-descarga-de-archivos">Descarga de archivos</a></li>
+  </ul></li>
+  <li><a href="#anotación-de-genomas" id="toc-anotación-de-genomas">Anotación de genomas</a>
+  <ul>
+  <li><a href="#prokka" id="toc-prokka">Prokka</a></li>
+  <li><a href="#bakta" id="toc-bakta">Bakta</a></li>
+  <li><a href="#amrfinder" id="toc-amrfinder">AMRfinder</a></li>
+  <li><a href="#virulence-factor-database" id="toc-virulence-factor-database">Virulence Factor DataBase</a></li>
+  <li><a href="#section" id="toc-section"></a></li>
+  </ul></li>
+  </ul>
+</nav>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/logo_OAN_for_white.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="300"></p>
@@ -134,36 +157,152 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> 1_data</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> 1_data</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="va">$HOME</span><span class="ex">/bin/datasets</span> <span class="dt">\</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">datasets</span> <span class="dt">\</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>summary genome taxon <span class="st">'562'</span> <span class="dt">\</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>--assembly-level complete<span class="dt">\</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>--assembly-source refseq <span class="dt">\</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>--as-json-lines <span class="op">&gt;</span> Escherichia_coli_562.json</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">$HOME</span><span class="ex">/bin/dataformat</span> tsv genome <span class="dt">\</span></span>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dataformat</span> tsv genome <span class="dt">\</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>--inputfile Escherichia_coli_562.json <span class="op">&gt;</span> Escherichia_coli_562.tsv</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Este conjunto de metadatos <code>Escherichia_coli_562.tsv</code> nos servirá para seleccionar los ensambles de genoma que necesitamos. Para ello puedes utilizar la plataforma o método que más prefieras, y quedarnos con un conjunto más pequeño de genomas para descagar. En este tutorial este será el archivo con el que trabajaremos <code>Escherichia_coli_Bovine_Host.tsv</code>, este archivo se ve de la siguiete forma (las primeras 5 filas):</p>
+<p>Este conjunto de metadatos <code>Escherichia_coli_562.tsv</code> nos servirá para seleccionar los ensambles de genoma que necesitamos, este archivo cuenta con <code>58533</code> filas y <code>174</code> columnas.</p>
+<p>Por ello es necesario utilizar la plataforma o método que más prefieras, y quedarnos con un conjunto más pequeño de genomas para descargar.</p>
+<p>En este tutorial haremos un ejemplo de parseo de datos con <code>R</code>.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>subsetting.R</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>raw_tsv <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_tsv</span>(<span class="st">"0_data/Escherichia_coli_562.tsv"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(raw_tsv)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Change colnames</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(raw_tsv) <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">" "</span>, <span class="st">"."</span>, <span class="fu">colnames</span>(raw_tsv))</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>cols <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Assembly.BioSample.Accession"</span>, <span class="st">"Assembly.BioSample.Attribute.Name"</span>,</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Assembly.BioSample.Attribute.Value"</span>, <span class="st">"Assembly.BioSample.Collected.by"</span>,</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Assembly.BioSample.Collection.date"</span>, <span class="st">"Assembly.BioSample.Description.Comment"</span>,</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Assembly.BioSample.Description.Organism.Name"</span>, <span class="st">"Assembly.BioSample.Description.Organism.Taxonomic.ID"</span>,</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Assembly.BioSample.Description.Title"</span>, <span class="st">"Assembly.BioSample.Geographic.location"</span>,</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Assembly.BioSample.Host"</span>, <span class="st">"Assembly.BioSample.Host.disease"</span>,</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Assembly.BioSample.Isolation.source"</span>, <span class="st">"Assembly.BioSample.Last.updated"</span>,</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Assembly.BioSample.Latitude./.Longitude"</span>, <span class="st">"Assembly.BioSample.Serovar"</span>,</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Assembly.BioSample.Owner.Name"</span>, <span class="st">"Assembly.BioSample.Strain"</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>          </span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>Refseq_for_taxon<span class="ot">&lt;-</span> raw_tsv <span class="sc">|&gt;</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="st">'Assembly.Accession'</span>,<span class="st">"Assembly.Level"</span>,</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>         <span class="st">'Organism.Name'</span>, <span class="fu">starts_with</span>(<span class="st">'ANI'</span>),<span class="fu">starts_with</span>(<span class="st">'CheckM'</span>), </span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>         cols,</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>         <span class="st">"Assembly.BioProject.Accession"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(ANI.Best.ANI.match.Organism <span class="sc">==</span> <span class="st">"Escherichia coli"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(<span class="fu">grepl</span>(<span class="st">"GCF"</span>,Assembly.Accession)) <span class="sc">|&gt;</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">distinct</span>()</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(Refseq_for_taxon) <span class="ot">&lt;-</span> stringr<span class="sc">::</span><span class="fu">str_replace</span>(<span class="fu">colnames</span>(Refseq_for_taxon), </span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>                                                   <span class="at">pattern =</span> <span class="st">"Assembly.BioSample."</span>,</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>                                                   <span class="at">replacement =</span> <span class="st">""</span>)</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the column 'Assembly.Biosample.Attribute' by combining the values and eliminating duplicates.</span></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>ecoli_df <span class="ot">&lt;-</span> Refseq_for_taxon <span class="sc">|&gt;</span></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">group_by</span>(Assembly.Accession) <span class="sc">%&gt;%</span></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">Attribute =</span> <span class="fu">paste0</span>(</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>      Attribute.Name, <span class="st">" : "</span>, </span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>      Attribute.Value, </span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>      <span class="at">collapse =</span> <span class="st">"; "</span></span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(</span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>    Refseq_for_taxon <span class="sc">%&gt;%</span> </span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>      <span class="fu">select</span>(<span class="sc">-</span>Attribute.Name, <span class="sc">-</span>Attribute.Value) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>      <span class="fu">distinct</span>(Assembly.Accession, <span class="at">.keep_all =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>    <span class="at">by =</span> <span class="st">"Assembly.Accession"</span></span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>ecoli_subset <span class="ot">&lt;-</span> ecoli_df <span class="sc">%&gt;%</span> </span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">where</span>(<span class="sc">~</span> <span class="fu">n_distinct</span>(.) <span class="sc">&gt;</span> <span class="dv">1</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">where</span>(<span class="sc">~</span> <span class="sc">!</span><span class="fu">all</span>(<span class="fu">is.na</span>(.)))) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(</span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>    <span class="sc">!</span><span class="fu">is.na</span>(CheckM.completeness),</span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>    <span class="sc">!</span><span class="fu">is.na</span>(Collection.date),</span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>    <span class="sc">!</span><span class="fu">is.na</span>(Host)</span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>ecoli_subset <span class="ot">&lt;-</span> ecoli_subset <span class="sc">%&gt;%</span> </span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">find =</span> CheckM.completeness <span class="sc">&gt;=</span> <span class="dv">90</span> <span class="sc">&amp;</span> CheckM.contamination <span class="sc">&lt;</span> <span class="dv">5</span> <span class="sc">&amp;</span> ANI.Best.ANI.match.ANI <span class="sc">&gt;=</span> <span class="dv">96</span>)</span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a>ecoli_subset <span class="ot">&lt;-</span> ecoli_subset <span class="sc">%&gt;%</span> </span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">where</span>(<span class="sc">~</span> <span class="fu">n_distinct</span>(.) <span class="sc">&gt;</span> <span class="dv">1</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">where</span>(<span class="sc">~</span> <span class="sc">!</span><span class="fu">all</span>(<span class="fu">is.na</span>(.)))) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(</span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a>    <span class="sc">!</span><span class="fu">is.na</span>(CheckM.completeness),</span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>    <span class="sc">!</span><span class="fu">is.na</span>(Collection.date),</span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>    <span class="sc">!</span><span class="fu">is.na</span>(Host)</span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a>ecoli_subset<span class="sc">$</span>Host <span class="ot">&lt;-</span> <span class="fu">tolower</span>(ecoli_subset<span class="sc">$</span>Host)</span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(ecoli_subset<span class="sc">$</span>Host)</span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a>ecoli_subset2 <span class="ot">&lt;-</span> ecoli_subset[ecoli_subset<span class="sc">$</span>Host <span class="sc">==</span> <span class="st">"bovine"</span>,]</span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>ecoli_subset2<span class="sc">$</span>Geographic.location <span class="ot">&lt;-</span> <span class="fu">tolower</span>(ecoli_subset2<span class="sc">$</span>Geographic.location)</span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>ecoli_subset2[stringr<span class="sc">::</span><span class="fu">str_detect</span>(ecoli_subset2<span class="sc">$</span>Geographic.location, <span class="at">pattern =</span> <span class="st">"china"</span>),</span>
+<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a>              <span class="st">"Geographic.location"</span>] <span class="ot">&lt;-</span> <span class="st">"china"</span></span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a>ecoli_subset2[stringr<span class="sc">::</span><span class="fu">str_detect</span>(ecoli_subset2<span class="sc">$</span>Geographic.location, <span class="at">pattern =</span> <span class="st">"usa"</span>),</span>
+<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>              <span class="st">"Geographic.location"</span>] <span class="ot">&lt;-</span> <span class="st">"usa"</span></span>
+<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a>ecoli_subset2 <span class="ot">&lt;-</span> ecoli_subset2[ecoli_subset2<span class="sc">$</span>Geographic.location <span class="sc">!=</span> <span class="st">"missing"</span>,]</span>
+<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a><span class="co"># Quiero quedarme al azar con 4 de china y 4 de usa, y conservar a francia y suiza</span></span>
+<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a>ecoli_bovine <span class="ot">&lt;-</span> ecoli_subset2 <span class="sc">%&gt;%</span> </span>
+<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Geographic.location) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_sample</span>(<span class="at">n =</span> <span class="dv">4</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Assembly.Accession, Strain, Geographic.location,</span>
+<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a>         Host, Owner.Name, Assembly.BioProject.Accession)</span>
+<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a>readr<span class="sc">::</span><span class="fu">write_tsv</span>(ecoli_bovine, <span class="st">"0_data/Ecoli_bovineHost.tsv"</span>)</span>
+<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(ecoli_subset2<span class="sc">$</span>Geographic.location)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>En este tutorial este será el archivo con el que trabajaremos <code>Ecoli_bovineHost.tsv</code>:</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="oppvlwugzw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#oppvlwugzw table {
+<div id="asgfchqzoq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#asgfchqzoq table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#oppvlwugzw thead, #oppvlwugzw tbody, #oppvlwugzw tfoot, #oppvlwugzw tr, #oppvlwugzw td, #oppvlwugzw th {
+#asgfchqzoq thead, #asgfchqzoq tbody, #asgfchqzoq tfoot, #asgfchqzoq tr, #asgfchqzoq td, #asgfchqzoq th {
   border-style: none;
 }
 
-#oppvlwugzw p {
+#asgfchqzoq p {
   margin: 0;
   padding: 0;
 }
 
-#oppvlwugzw .gt_table {
+#asgfchqzoq .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -189,12 +328,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#oppvlwugzw .gt_caption {
+#asgfchqzoq .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#oppvlwugzw .gt_title {
+#asgfchqzoq .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -206,7 +345,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#oppvlwugzw .gt_subtitle {
+#asgfchqzoq .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -218,7 +357,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#oppvlwugzw .gt_heading {
+#asgfchqzoq .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -230,13 +369,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#oppvlwugzw .gt_bottom_border {
+#asgfchqzoq .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#oppvlwugzw .gt_col_headings {
+#asgfchqzoq .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -251,7 +390,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#oppvlwugzw .gt_col_heading {
+#asgfchqzoq .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -271,7 +410,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#oppvlwugzw .gt_column_spanner_outer {
+#asgfchqzoq .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -283,15 +422,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#oppvlwugzw .gt_column_spanner_outer:first-child {
+#asgfchqzoq .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#oppvlwugzw .gt_column_spanner_outer:last-child {
+#asgfchqzoq .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#oppvlwugzw .gt_column_spanner {
+#asgfchqzoq .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -303,11 +442,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#oppvlwugzw .gt_spanner_row {
+#asgfchqzoq .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#oppvlwugzw .gt_group_heading {
+#asgfchqzoq .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -333,7 +472,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#oppvlwugzw .gt_empty_group_heading {
+#asgfchqzoq .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -348,15 +487,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#oppvlwugzw .gt_from_md > :first-child {
+#asgfchqzoq .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#oppvlwugzw .gt_from_md > :last-child {
+#asgfchqzoq .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#oppvlwugzw .gt_row {
+#asgfchqzoq .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -375,7 +514,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#oppvlwugzw .gt_stub {
+#asgfchqzoq .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -388,7 +527,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#oppvlwugzw .gt_stub_row_group {
+#asgfchqzoq .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -402,15 +541,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#oppvlwugzw .gt_row_group_first td {
+#asgfchqzoq .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#oppvlwugzw .gt_row_group_first th {
+#asgfchqzoq .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#oppvlwugzw .gt_summary_row {
+#asgfchqzoq .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -420,16 +559,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#oppvlwugzw .gt_first_summary_row {
+#asgfchqzoq .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#oppvlwugzw .gt_first_summary_row.thick {
+#asgfchqzoq .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#oppvlwugzw .gt_last_summary_row {
+#asgfchqzoq .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -439,7 +578,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#oppvlwugzw .gt_grand_summary_row {
+#asgfchqzoq .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -449,7 +588,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#oppvlwugzw .gt_first_grand_summary_row {
+#asgfchqzoq .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -459,7 +598,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#oppvlwugzw .gt_last_grand_summary_row_top {
+#asgfchqzoq .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -469,11 +608,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#oppvlwugzw .gt_striped {
+#asgfchqzoq .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#oppvlwugzw .gt_table_body {
+#asgfchqzoq .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -482,7 +621,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#oppvlwugzw .gt_footnotes {
+#asgfchqzoq .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -496,7 +635,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#oppvlwugzw .gt_footnote {
+#asgfchqzoq .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -505,7 +644,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#oppvlwugzw .gt_sourcenotes {
+#asgfchqzoq .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -519,7 +658,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#oppvlwugzw .gt_sourcenote {
+#asgfchqzoq .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -527,72 +666,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#oppvlwugzw .gt_left {
+#asgfchqzoq .gt_left {
   text-align: left;
 }
 
-#oppvlwugzw .gt_center {
+#asgfchqzoq .gt_center {
   text-align: center;
 }
 
-#oppvlwugzw .gt_right {
+#asgfchqzoq .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#oppvlwugzw .gt_font_normal {
+#asgfchqzoq .gt_font_normal {
   font-weight: normal;
 }
 
-#oppvlwugzw .gt_font_bold {
+#asgfchqzoq .gt_font_bold {
   font-weight: bold;
 }
 
-#oppvlwugzw .gt_font_italic {
+#asgfchqzoq .gt_font_italic {
   font-style: italic;
 }
 
-#oppvlwugzw .gt_super {
+#asgfchqzoq .gt_super {
   font-size: 65%;
 }
 
-#oppvlwugzw .gt_footnote_marks {
+#asgfchqzoq .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#oppvlwugzw .gt_asterisk {
+#asgfchqzoq .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#oppvlwugzw .gt_indent_1 {
+#asgfchqzoq .gt_indent_1 {
   text-indent: 5px;
 }
 
-#oppvlwugzw .gt_indent_2 {
+#asgfchqzoq .gt_indent_2 {
   text-indent: 10px;
 }
 
-#oppvlwugzw .gt_indent_3 {
+#asgfchqzoq .gt_indent_3 {
   text-indent: 15px;
 }
 
-#oppvlwugzw .gt_indent_4 {
+#asgfchqzoq .gt_indent_4 {
   text-indent: 20px;
 }
 
-#oppvlwugzw .gt_indent_5 {
+#asgfchqzoq .gt_indent_5 {
   text-indent: 25px;
 }
 
-#oppvlwugzw .katex-display {
+#asgfchqzoq .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#oppvlwugzw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#asgfchqzoq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -601,305 +740,175 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <thead>
 <tr class="gt_col_headings header">
 <th id="Assembly.Accession" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Assembly.Accession</th>
-<th id="Assembly.Level" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Assembly.Level</th>
 <th id="Strain" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Strain</th>
-<th id="Attribute" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Attribute</th>
-<th id="Organism.Name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Organism.Name</th>
-<th id="ANI.Best.ANI.match.ANI" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">ANI.Best.ANI.match.ANI</th>
-<th id="ANI.Best.ANI.match.Assembly" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">ANI.Best.ANI.match.Assembly</th>
-<th id="ANI.Best.ANI.match.Assembly.Coverage" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">ANI.Best.ANI.match.Assembly.Coverage</th>
-<th id="ANI.Best.ANI.match.Type.Category" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">ANI.Best.ANI.match.Type.Category</th>
-<th id="ANI.Best.ANI.match.Organism" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">ANI.Best.ANI.match.Organism</th>
-<th id="ANI.Best.ANI.match.Type.Assembly.Coverage" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">ANI.Best.ANI.match.Type.Assembly.Coverage</th>
-<th id="ANI.Best.match.status" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">ANI.Best.match.status</th>
-<th id="ANI.Category" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">ANI.Category</th>
-<th id="ANI.Check.status" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">ANI.Check.status</th>
-<th id="ANI.Comment" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">ANI.Comment</th>
-<th id="ANI.Declared.ANI.match.ANI" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">ANI.Declared.ANI.match.ANI</th>
-<th id="ANI.Declared.ANI.match.Assembly" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">ANI.Declared.ANI.match.Assembly</th>
-<th id="ANI.Declared.ANI.match.Assembly.Coverage" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">ANI.Declared.ANI.match.Assembly.Coverage</th>
-<th id="ANI.Declared.ANI.match.Type.Category" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">ANI.Declared.ANI.match.Type.Category</th>
-<th id="ANI.Declared.ANI.match.Organism" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">ANI.Declared.ANI.match.Organism</th>
-<th id="ANI.Declared.ANI.match.Type.Assembly.Coverage" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">ANI.Declared.ANI.match.Type.Assembly.Coverage</th>
-<th id="ANI.Submitted.organism" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">ANI.Submitted.organism</th>
-<th id="ANI.Submitted.species" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">ANI.Submitted.species</th>
-<th id="CheckM.completeness" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">CheckM.completeness</th>
-<th id="CheckM.completeness.percentile" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">CheckM.completeness.percentile</th>
-<th id="CheckM.contamination" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">CheckM.contamination</th>
-<th id="CheckM.marker.set" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">CheckM.marker.set</th>
-<th id="CheckM.marker.set.rank" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">CheckM.marker.set.rank</th>
-<th id="CheckM.species.tax.id" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">CheckM.species.tax.id</th>
-<th id="CheckM.version" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">CheckM.version</th>
-<th id="Accession" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Accession</th>
-<th id="Collected.by" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Collected.by</th>
-<th id="Collection.date" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Collection.date</th>
-<th id="Description.Comment" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Description.Comment</th>
-<th id="Description.Organism.Name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Description.Organism.Name</th>
-<th id="Description.Organism.Taxonomic.ID" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Description.Organism.Taxonomic.ID</th>
-<th id="Description.Title" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Description.Title</th>
 <th id="Geographic.location" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Geographic.location</th>
-<th id="Host" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Host</th>
-<th id="Host.disease" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Host.disease</th>
-<th id="Isolation.source" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Isolation.source</th>
-<th id="Last.updated" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Last.updated</th>
-<th id="Latitude./.Longitude" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Latitude./.Longitude</th>
-<th id="Serovar" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Serovar</th>
+<th id="Source" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Source</th>
 <th id="Owner.Name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Owner.Name</th>
 <th id="Assembly.BioProject.Accession" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Assembly.BioProject.Accession</th>
-<th id="find" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">find</th>
-<th id="source" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">source</th>
+<th id="Patotype" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Patotype</th>
+<th id="Phylogroup" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Phylogroup</th>
 </tr>
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
-<td class="gt_row gt_left" headers="Assembly.Accession">GCF_000007445.1</td>
-<td class="gt_row gt_left" headers="Assembly.Level">Complete Genome</td>
-<td class="gt_row gt_left" headers="Strain">CFT073</td>
-<td class="gt_row gt_left" headers="Attribute">strain : CFT073</td>
-<td class="gt_row gt_left" headers="Organism.Name">Escherichia coli CFT073</td>
-<td class="gt_row gt_right" headers="ANI.Best.ANI.match.ANI">99.02</td>
-<td class="gt_row gt_left" headers="ANI.Best.ANI.match.Assembly">GCA_000013265.1</td>
-<td class="gt_row gt_right" headers="ANI.Best.ANI.match.Assembly.Coverage">88.89</td>
-<td class="gt_row gt_left" headers="ANI.Best.ANI.match.Type.Category">claderef</td>
-<td class="gt_row gt_left" headers="ANI.Best.ANI.match.Organism">Escherichia coli</td>
-<td class="gt_row gt_right" headers="ANI.Best.ANI.match.Type.Assembly.Coverage">89.78</td>
-<td class="gt_row gt_left" headers="ANI.Best.match.status">species_match</td>
-<td class="gt_row gt_left" headers="ANI.Category">category_na</td>
-<td class="gt_row gt_left" headers="ANI.Check.status">OK</td>
-<td class="gt_row gt_left" headers="ANI.Comment">na</td>
-<td class="gt_row gt_right" headers="ANI.Declared.ANI.match.ANI">99.02</td>
-<td class="gt_row gt_left" headers="ANI.Declared.ANI.match.Assembly">GCA_000013265.1</td>
-<td class="gt_row gt_right" headers="ANI.Declared.ANI.match.Assembly.Coverage">88.89</td>
-<td class="gt_row gt_left" headers="ANI.Declared.ANI.match.Type.Category">claderef</td>
-<td class="gt_row gt_left" headers="ANI.Declared.ANI.match.Organism">Escherichia coli UTI89</td>
-<td class="gt_row gt_right" headers="ANI.Declared.ANI.match.Type.Assembly.Coverage">89.78</td>
-<td class="gt_row gt_left" headers="ANI.Submitted.organism">Escherichia coli CFT073</td>
-<td class="gt_row gt_left" headers="ANI.Submitted.species">Escherichia coli</td>
-<td class="gt_row gt_right" headers="CheckM.completeness">97.28</td>
-<td class="gt_row gt_right" headers="CheckM.completeness.percentile">5.92197</td>
-<td class="gt_row gt_right" headers="CheckM.contamination">0.41</td>
-<td class="gt_row gt_left" headers="CheckM.marker.set">Escherichia coli</td>
-<td class="gt_row gt_left" headers="CheckM.marker.set.rank">species</td>
-<td class="gt_row gt_right" headers="CheckM.species.tax.id">562</td>
-<td class="gt_row gt_left" headers="CheckM.version">v1.2.2</td>
-<td class="gt_row gt_left" headers="Accession">SAMN02604094</td>
-<td class="gt_row gt_left" headers="Collected.by">NA</td>
-<td class="gt_row gt_left" headers="Collection.date">NA</td>
-<td class="gt_row gt_left" headers="Description.Comment">NA</td>
-<td class="gt_row gt_left" headers="Description.Organism.Name">Escherichia coli CFT073</td>
-<td class="gt_row gt_right" headers="Description.Organism.Taxonomic.ID">199310</td>
-<td class="gt_row gt_left" headers="Description.Title">Sample from Escherichia coli CFT073</td>
-<td class="gt_row gt_left" headers="Geographic.location">NA</td>
-<td class="gt_row gt_left" headers="Host">NA</td>
-<td class="gt_row gt_left" headers="Host.disease">NA</td>
-<td class="gt_row gt_left" headers="Isolation.source">NA</td>
-<td class="gt_row gt_right" headers="Last.updated">2015-05-18 13:20:05</td>
-<td class="gt_row gt_left" headers="Latitude./.Longitude">NA</td>
-<td class="gt_row gt_left" headers="Serovar">NA</td>
-<td class="gt_row gt_left" headers="Owner.Name">NCBI</td>
-<td class="gt_row gt_left" headers="Assembly.BioProject.Accession">PRJNA313</td>
-<td class="gt_row gt_center" headers="find">TRUE</td>
-<td class="gt_row gt_left" headers="source">reference</td>
+<td class="gt_row gt_left" headers="Assembly.Accession">GCF_029625135.1</td>
+<td class="gt_row gt_left" headers="Strain">E47</td>
+<td class="gt_row gt_left" headers="Geographic.location">china</td>
+<td class="gt_row gt_left" headers="Source">bovine</td>
+<td class="gt_row gt_left" headers="Owner.Name">Chinese Academy of Agricultural Sciences</td>
+<td class="gt_row gt_left" headers="Assembly.BioProject.Accession">PRJNA949005</td>
+<td class="gt_row gt_left" headers="Patotype">NA</td>
+<td class="gt_row gt_left" headers="Phylogroup">NA</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="Assembly.Accession">GCF_000010385.1</td>
-<td class="gt_row gt_left" headers="Assembly.Level">Complete Genome</td>
-<td class="gt_row gt_left" headers="Strain">SE11</td>
-<td class="gt_row gt_left" headers="Attribute">sample_name : AP009240-AP009246; strain : SE11</td>
-<td class="gt_row gt_left" headers="Organism.Name">Escherichia coli SE11</td>
-<td class="gt_row gt_right" headers="ANI.Best.ANI.match.ANI">98.90</td>
-<td class="gt_row gt_left" headers="ANI.Best.ANI.match.Assembly">GCA_000263895.1</td>
-<td class="gt_row gt_right" headers="ANI.Best.ANI.match.Assembly.Coverage">86.71</td>
-<td class="gt_row gt_left" headers="ANI.Best.ANI.match.Type.Category">claderef</td>
-<td class="gt_row gt_left" headers="ANI.Best.ANI.match.Organism">Escherichia coli</td>
-<td class="gt_row gt_right" headers="ANI.Best.ANI.match.Type.Assembly.Coverage">84.98</td>
-<td class="gt_row gt_left" headers="ANI.Best.match.status">species_match</td>
-<td class="gt_row gt_left" headers="ANI.Category">claderef</td>
-<td class="gt_row gt_left" headers="ANI.Check.status">OK</td>
-<td class="gt_row gt_left" headers="ANI.Comment">na</td>
-<td class="gt_row gt_right" headers="ANI.Declared.ANI.match.ANI">98.90</td>
-<td class="gt_row gt_left" headers="ANI.Declared.ANI.match.Assembly">GCA_000263895.1</td>
-<td class="gt_row gt_right" headers="ANI.Declared.ANI.match.Assembly.Coverage">86.71</td>
-<td class="gt_row gt_left" headers="ANI.Declared.ANI.match.Type.Category">claderef</td>
-<td class="gt_row gt_left" headers="ANI.Declared.ANI.match.Organism">Escherichia coli O103:H25 str. CVM9340</td>
-<td class="gt_row gt_right" headers="ANI.Declared.ANI.match.Type.Assembly.Coverage">84.98</td>
-<td class="gt_row gt_left" headers="ANI.Submitted.organism">Escherichia coli SE11</td>
-<td class="gt_row gt_left" headers="ANI.Submitted.species">Escherichia coli</td>
-<td class="gt_row gt_right" headers="CheckM.completeness">99.52</td>
-<td class="gt_row gt_right" headers="CheckM.completeness.percentile">94.82860</td>
-<td class="gt_row gt_right" headers="CheckM.contamination">0.21</td>
-<td class="gt_row gt_left" headers="CheckM.marker.set">Escherichia coli</td>
-<td class="gt_row gt_left" headers="CheckM.marker.set.rank">species</td>
-<td class="gt_row gt_right" headers="CheckM.species.tax.id">562</td>
-<td class="gt_row gt_left" headers="CheckM.version">v1.2.2</td>
-<td class="gt_row gt_left" headers="Accession">SAMD00061087</td>
-<td class="gt_row gt_left" headers="Collected.by">NA</td>
-<td class="gt_row gt_left" headers="Collection.date">NA</td>
-<td class="gt_row gt_left" headers="Description.Comment">NA</td>
-<td class="gt_row gt_left" headers="Description.Organism.Name">Escherichia coli SE11</td>
-<td class="gt_row gt_right" headers="Description.Organism.Taxonomic.ID">409438</td>
-<td class="gt_row gt_left" headers="Description.Title">Generic sample from Escherichia coli SE11</td>
-<td class="gt_row gt_left" headers="Geographic.location">NA</td>
-<td class="gt_row gt_left" headers="Host">NA</td>
-<td class="gt_row gt_left" headers="Host.disease">NA</td>
-<td class="gt_row gt_left" headers="Isolation.source">NA</td>
-<td class="gt_row gt_right" headers="Last.updated">2016-09-26 20:10:59</td>
-<td class="gt_row gt_left" headers="Latitude./.Longitude">NA</td>
-<td class="gt_row gt_left" headers="Serovar">NA</td>
-<td class="gt_row gt_left" headers="Owner.Name">DDBJ</td>
-<td class="gt_row gt_left" headers="Assembly.BioProject.Accession">PRJNA18057</td>
-<td class="gt_row gt_center" headers="find">TRUE</td>
-<td class="gt_row gt_left" headers="source">reference</td>
+<td class="gt_row gt_left" headers="Assembly.Accession">GCF_025908275.1</td>
+<td class="gt_row gt_left" headers="Strain">TL-14</td>
+<td class="gt_row gt_left" headers="Geographic.location">china</td>
+<td class="gt_row gt_left" headers="Source">bovine</td>
+<td class="gt_row gt_left" headers="Owner.Name">Inner Mongolia Minzu University</td>
+<td class="gt_row gt_left" headers="Assembly.BioProject.Accession">PRJNA890057</td>
+<td class="gt_row gt_left" headers="Patotype">NA</td>
+<td class="gt_row gt_left" headers="Phylogroup">NA</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="Assembly.Accession">GCF_000010485.1</td>
-<td class="gt_row gt_left" headers="Assembly.Level">Complete Genome</td>
-<td class="gt_row gt_left" headers="Strain">SE15</td>
-<td class="gt_row gt_left" headers="Attribute">sample_name : AP009378-AP009379; strain : SE15</td>
-<td class="gt_row gt_left" headers="Organism.Name">Escherichia coli SE15</td>
-<td class="gt_row gt_right" headers="ANI.Best.ANI.match.ANI">99.56</td>
-<td class="gt_row gt_left" headers="ANI.Best.ANI.match.Assembly">GCA_024519395.1</td>
-<td class="gt_row gt_right" headers="ANI.Best.ANI.match.Assembly.Coverage">95.73</td>
-<td class="gt_row gt_left" headers="ANI.Best.ANI.match.Type.Category">neotype</td>
-<td class="gt_row gt_left" headers="ANI.Best.ANI.match.Organism">Escherichia coli</td>
-<td class="gt_row gt_right" headers="ANI.Best.ANI.match.Type.Assembly.Coverage">86.67</td>
-<td class="gt_row gt_left" headers="ANI.Best.match.status">species_match</td>
-<td class="gt_row gt_left" headers="ANI.Category">category_na</td>
-<td class="gt_row gt_left" headers="ANI.Check.status">OK</td>
-<td class="gt_row gt_left" headers="ANI.Comment">na</td>
-<td class="gt_row gt_right" headers="ANI.Declared.ANI.match.ANI">99.56</td>
-<td class="gt_row gt_left" headers="ANI.Declared.ANI.match.Assembly">GCA_024519395.1</td>
-<td class="gt_row gt_right" headers="ANI.Declared.ANI.match.Assembly.Coverage">95.73</td>
-<td class="gt_row gt_left" headers="ANI.Declared.ANI.match.Type.Category">neotype</td>
-<td class="gt_row gt_left" headers="ANI.Declared.ANI.match.Organism">Escherichia coli DSM 30083 = JCM 1649 = ATCC 11775</td>
-<td class="gt_row gt_right" headers="ANI.Declared.ANI.match.Type.Assembly.Coverage">86.67</td>
-<td class="gt_row gt_left" headers="ANI.Submitted.organism">Escherichia coli SE15</td>
-<td class="gt_row gt_left" headers="ANI.Submitted.species">Escherichia coli</td>
-<td class="gt_row gt_right" headers="CheckM.completeness">98.70</td>
-<td class="gt_row gt_right" headers="CheckM.completeness.percentile">30.20443</td>
-<td class="gt_row gt_right" headers="CheckM.contamination">0.51</td>
-<td class="gt_row gt_left" headers="CheckM.marker.set">Escherichia coli</td>
-<td class="gt_row gt_left" headers="CheckM.marker.set.rank">species</td>
-<td class="gt_row gt_right" headers="CheckM.species.tax.id">562</td>
-<td class="gt_row gt_left" headers="CheckM.version">v1.2.2</td>
-<td class="gt_row gt_left" headers="Accession">SAMD00060923</td>
-<td class="gt_row gt_left" headers="Collected.by">NA</td>
-<td class="gt_row gt_left" headers="Collection.date">NA</td>
-<td class="gt_row gt_left" headers="Description.Comment">NA</td>
-<td class="gt_row gt_left" headers="Description.Organism.Name">Escherichia coli SE15</td>
-<td class="gt_row gt_right" headers="Description.Organism.Taxonomic.ID">431946</td>
-<td class="gt_row gt_left" headers="Description.Title">Generic sample from Escherichia coli SE15</td>
-<td class="gt_row gt_left" headers="Geographic.location">NA</td>
-<td class="gt_row gt_left" headers="Host">NA</td>
-<td class="gt_row gt_left" headers="Host.disease">NA</td>
-<td class="gt_row gt_left" headers="Isolation.source">NA</td>
-<td class="gt_row gt_right" headers="Last.updated">2016-09-26 20:10:59</td>
-<td class="gt_row gt_left" headers="Latitude./.Longitude">NA</td>
-<td class="gt_row gt_left" headers="Serovar">NA</td>
-<td class="gt_row gt_left" headers="Owner.Name">DDBJ</td>
-<td class="gt_row gt_left" headers="Assembly.BioProject.Accession">PRJDA19053</td>
-<td class="gt_row gt_center" headers="find">TRUE</td>
-<td class="gt_row gt_left" headers="source">reference</td>
+<td class="gt_row gt_left" headers="Assembly.Accession">GCF_029319035.1</td>
+<td class="gt_row gt_left" headers="Strain">E94</td>
+<td class="gt_row gt_left" headers="Geographic.location">china</td>
+<td class="gt_row gt_left" headers="Source">bovine</td>
+<td class="gt_row gt_left" headers="Owner.Name">Chinese Academy of Agricultural Sciences</td>
+<td class="gt_row gt_left" headers="Assembly.BioProject.Accession">PRJNA942474</td>
+<td class="gt_row gt_left" headers="Patotype">NA</td>
+<td class="gt_row gt_left" headers="Phylogroup">NA</td>
 </tr>
 <tr class="even">
+<td class="gt_row gt_left" headers="Assembly.Accession">GCF_029227895.1</td>
+<td class="gt_row gt_left" headers="Strain">ZYB62</td>
+<td class="gt_row gt_left" headers="Geographic.location">china</td>
+<td class="gt_row gt_left" headers="Source">bovine</td>
+<td class="gt_row gt_left" headers="Owner.Name">Lanzhou Institute of Husbandry and Pharmaceutical Sciences, Chinese Academy of Agricultural Science</td>
+<td class="gt_row gt_left" headers="Assembly.BioProject.Accession">PRJNA727665</td>
+<td class="gt_row gt_left" headers="Patotype">NA</td>
+<td class="gt_row gt_left" headers="Phylogroup">NA</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Assembly.Accession">GCF_009931435.1</td>
+<td class="gt_row gt_left" headers="Strain">EC42405</td>
+<td class="gt_row gt_left" headers="Geographic.location">france</td>
+<td class="gt_row gt_left" headers="Source">bovine</td>
+<td class="gt_row gt_left" headers="Owner.Name">Anses</td>
+<td class="gt_row gt_left" headers="Assembly.BioProject.Accession">PRJNA556131</td>
+<td class="gt_row gt_left" headers="Patotype">NA</td>
+<td class="gt_row gt_left" headers="Phylogroup">NA</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Assembly.Accession">GCF_004771235.1</td>
+<td class="gt_row gt_left" headers="Strain">PF9285</td>
+<td class="gt_row gt_left" headers="Geographic.location">switzerland</td>
+<td class="gt_row gt_left" headers="Source">bovine</td>
+<td class="gt_row gt_left" headers="Owner.Name">University of Bern</td>
+<td class="gt_row gt_left" headers="Assembly.BioProject.Accession">PRJNA530748</td>
+<td class="gt_row gt_left" headers="Patotype">NA</td>
+<td class="gt_row gt_left" headers="Phylogroup">NA</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Assembly.Accession">GCF_049267065.1</td>
+<td class="gt_row gt_left" headers="Strain">F3_13_1_3</td>
+<td class="gt_row gt_left" headers="Geographic.location">usa</td>
+<td class="gt_row gt_left" headers="Source">bovine</td>
+<td class="gt_row gt_left" headers="Owner.Name">United State Department of Agriculture</td>
+<td class="gt_row gt_left" headers="Assembly.BioProject.Accession">PRJNA728709</td>
+<td class="gt_row gt_left" headers="Patotype">NA</td>
+<td class="gt_row gt_left" headers="Phylogroup">NA</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Assembly.Accession">GCF_013168215.1</td>
+<td class="gt_row gt_left" headers="Strain">7409</td>
+<td class="gt_row gt_left" headers="Geographic.location">usa</td>
+<td class="gt_row gt_left" headers="Source">bovine</td>
+<td class="gt_row gt_left" headers="Owner.Name">United State Department of Agriculture</td>
+<td class="gt_row gt_left" headers="Assembly.BioProject.Accession">PRJNA528413</td>
+<td class="gt_row gt_left" headers="Patotype">NA</td>
+<td class="gt_row gt_left" headers="Phylogroup">NA</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Assembly.Accession">GCF_013167395.1</td>
+<td class="gt_row gt_left" headers="Strain">NE122</td>
+<td class="gt_row gt_left" headers="Geographic.location">usa</td>
+<td class="gt_row gt_left" headers="Source">bovine</td>
+<td class="gt_row gt_left" headers="Owner.Name">United State Department of Agriculture</td>
+<td class="gt_row gt_left" headers="Assembly.BioProject.Accession">PRJNA528413</td>
+<td class="gt_row gt_left" headers="Patotype">NA</td>
+<td class="gt_row gt_left" headers="Phylogroup">NA</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Assembly.Accession">GCF_048571305.1</td>
+<td class="gt_row gt_left" headers="Strain">7_12_30A</td>
+<td class="gt_row gt_left" headers="Geographic.location">usa</td>
+<td class="gt_row gt_left" headers="Source">bovine</td>
+<td class="gt_row gt_left" headers="Owner.Name">United State Department of Agriculture</td>
+<td class="gt_row gt_left" headers="Assembly.BioProject.Accession">PRJNA728709</td>
+<td class="gt_row gt_left" headers="Patotype">NA</td>
+<td class="gt_row gt_left" headers="Phylogroup">NA</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Assembly.Accession">GCF_000025165.1</td>
+<td class="gt_row gt_left" headers="Strain">CB9615</td>
+<td class="gt_row gt_left" headers="Geographic.location">Germany</td>
+<td class="gt_row gt_left" headers="Source">reference</td>
+<td class="gt_row gt_left" headers="Owner.Name">Nankai University</td>
+<td class="gt_row gt_left" headers="Assembly.BioProject.Accession">PRJNA224116</td>
+<td class="gt_row gt_left" headers="Patotype">EPEC</td>
+<td class="gt_row gt_left" headers="Phylogroup">E</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Assembly.Accession">GCF_000026545.1</td>
+<td class="gt_row gt_left" headers="Strain">E2348/69</td>
+<td class="gt_row gt_left" headers="Geographic.location">UK</td>
+<td class="gt_row gt_left" headers="Source">reference</td>
+<td class="gt_row gt_left" headers="Owner.Name">The Wellcome Trust Sanger Institute</td>
+<td class="gt_row gt_left" headers="Assembly.BioProject.Accession">PRJNA224116</td>
+<td class="gt_row gt_left" headers="Patotype">EPEC</td>
+<td class="gt_row gt_left" headers="Phylogroup">B2</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Assembly.Accession">GCF_000026265.1</td>
+<td class="gt_row gt_left" headers="Strain">IAI1</td>
+<td class="gt_row gt_left" headers="Geographic.location">-</td>
+<td class="gt_row gt_left" headers="Source">reference</td>
+<td class="gt_row gt_left" headers="Owner.Name">EBI</td>
+<td class="gt_row gt_left" headers="Assembly.BioProject.Accession">PRJNA33373</td>
+<td class="gt_row gt_left" headers="Patotype">Comensal</td>
+<td class="gt_row gt_left" headers="Phylogroup">B1</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Assembly.Accession">GCF_000005845.2</td>
+<td class="gt_row gt_left" headers="Strain">K-12 MG1655</td>
+<td class="gt_row gt_left" headers="Geographic.location">usa</td>
+<td class="gt_row gt_left" headers="Source">reference</td>
+<td class="gt_row gt_left" headers="Owner.Name">Univ. Wisconsin</td>
+<td class="gt_row gt_left" headers="Assembly.BioProject.Accession">PRJNA225</td>
+<td class="gt_row gt_left" headers="Patotype">Comensal</td>
+<td class="gt_row gt_left" headers="Phylogroup">A</td>
+</tr>
+<tr class="odd">
 <td class="gt_row gt_left" headers="Assembly.Accession">GCF_000010745.1</td>
-<td class="gt_row gt_left" headers="Assembly.Level">Complete Genome</td>
 <td class="gt_row gt_left" headers="Strain">12009</td>
-<td class="gt_row gt_left" headers="Attribute">sample_name : AP010958-AP010959; serovar : O103:H2; strain : 12009</td>
-<td class="gt_row gt_left" headers="Organism.Name">Escherichia coli O103:H2 str. 12009</td>
-<td class="gt_row gt_right" headers="ANI.Best.ANI.match.ANI">99.03</td>
-<td class="gt_row gt_left" headers="ANI.Best.ANI.match.Assembly">GCA_000010385.1</td>
-<td class="gt_row gt_right" headers="ANI.Best.ANI.match.Assembly.Coverage">82.63</td>
-<td class="gt_row gt_left" headers="ANI.Best.ANI.match.Type.Category">claderef</td>
-<td class="gt_row gt_left" headers="ANI.Best.ANI.match.Organism">Escherichia coli</td>
-<td class="gt_row gt_right" headers="ANI.Best.ANI.match.Type.Assembly.Coverage">88.55</td>
-<td class="gt_row gt_left" headers="ANI.Best.match.status">species_match</td>
-<td class="gt_row gt_left" headers="ANI.Category">category_na</td>
-<td class="gt_row gt_left" headers="ANI.Check.status">OK</td>
-<td class="gt_row gt_left" headers="ANI.Comment">na</td>
-<td class="gt_row gt_right" headers="ANI.Declared.ANI.match.ANI">99.03</td>
-<td class="gt_row gt_left" headers="ANI.Declared.ANI.match.Assembly">GCA_000010385.1</td>
-<td class="gt_row gt_right" headers="ANI.Declared.ANI.match.Assembly.Coverage">82.63</td>
-<td class="gt_row gt_left" headers="ANI.Declared.ANI.match.Type.Category">claderef</td>
-<td class="gt_row gt_left" headers="ANI.Declared.ANI.match.Organism">Escherichia coli SE11</td>
-<td class="gt_row gt_right" headers="ANI.Declared.ANI.match.Type.Assembly.Coverage">88.55</td>
-<td class="gt_row gt_left" headers="ANI.Submitted.organism">Escherichia coli O103:H2 str. 12009</td>
-<td class="gt_row gt_left" headers="ANI.Submitted.species">Escherichia coli</td>
-<td class="gt_row gt_right" headers="CheckM.completeness">99.56</td>
-<td class="gt_row gt_right" headers="CheckM.completeness.percentile">99.95963</td>
-<td class="gt_row gt_right" headers="CheckM.contamination">0.15</td>
-<td class="gt_row gt_left" headers="CheckM.marker.set">Escherichia coli</td>
-<td class="gt_row gt_left" headers="CheckM.marker.set.rank">species</td>
-<td class="gt_row gt_right" headers="CheckM.species.tax.id">562</td>
-<td class="gt_row gt_left" headers="CheckM.version">v1.2.2</td>
-<td class="gt_row gt_left" headers="Accession">SAMD00060956</td>
-<td class="gt_row gt_left" headers="Collected.by">NA</td>
-<td class="gt_row gt_left" headers="Collection.date">NA</td>
-<td class="gt_row gt_left" headers="Description.Comment">NA</td>
-<td class="gt_row gt_left" headers="Description.Organism.Name">Escherichia coli O103:H2 str. 12009</td>
-<td class="gt_row gt_right" headers="Description.Organism.Taxonomic.ID">585395</td>
-<td class="gt_row gt_left" headers="Description.Title">Generic sample from Escherichia coli O103:H2 str. 12009</td>
-<td class="gt_row gt_left" headers="Geographic.location">NA</td>
-<td class="gt_row gt_left" headers="Host">NA</td>
-<td class="gt_row gt_left" headers="Host.disease">NA</td>
-<td class="gt_row gt_left" headers="Isolation.source">NA</td>
-<td class="gt_row gt_right" headers="Last.updated">2016-09-26 20:10:59</td>
-<td class="gt_row gt_left" headers="Latitude./.Longitude">NA</td>
-<td class="gt_row gt_left" headers="Serovar">O103:H2</td>
-<td class="gt_row gt_left" headers="Owner.Name">DDBJ</td>
+<td class="gt_row gt_left" headers="Geographic.location">japan</td>
+<td class="gt_row gt_left" headers="Source">reference</td>
+<td class="gt_row gt_left" headers="Owner.Name">University of Tokyo</td>
 <td class="gt_row gt_left" headers="Assembly.BioProject.Accession">PRJDA32511</td>
-<td class="gt_row gt_center" headers="find">TRUE</td>
-<td class="gt_row gt_left" headers="source">reference</td>
+<td class="gt_row gt_left" headers="Patotype">EHEC</td>
+<td class="gt_row gt_left" headers="Phylogroup">B1</td>
 </tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="Assembly.Accession">GCF_000010765.1</td>
-<td class="gt_row gt_left" headers="Assembly.Level">Complete Genome</td>
-<td class="gt_row gt_left" headers="Strain">11128</td>
-<td class="gt_row gt_left" headers="Attribute">sample_name : AP010960-AP010965; serovar : O111:H-; strain : 11128</td>
-<td class="gt_row gt_left" headers="Organism.Name">Escherichia coli O111:H- str. 11128</td>
-<td class="gt_row gt_right" headers="ANI.Best.ANI.match.ANI">98.96</td>
-<td class="gt_row gt_left" headers="ANI.Best.ANI.match.Assembly">GCA_000263895.1</td>
-<td class="gt_row gt_right" headers="ANI.Best.ANI.match.Assembly.Coverage">81.81</td>
-<td class="gt_row gt_left" headers="ANI.Best.ANI.match.Type.Category">claderef</td>
-<td class="gt_row gt_left" headers="ANI.Best.ANI.match.Organism">Escherichia coli</td>
-<td class="gt_row gt_right" headers="ANI.Best.ANI.match.Type.Assembly.Coverage">89.68</td>
-<td class="gt_row gt_left" headers="ANI.Best.match.status">species_match</td>
-<td class="gt_row gt_left" headers="ANI.Category">category_na</td>
-<td class="gt_row gt_left" headers="ANI.Check.status">OK</td>
-<td class="gt_row gt_left" headers="ANI.Comment">na</td>
-<td class="gt_row gt_right" headers="ANI.Declared.ANI.match.ANI">98.96</td>
-<td class="gt_row gt_left" headers="ANI.Declared.ANI.match.Assembly">GCA_000263895.1</td>
-<td class="gt_row gt_right" headers="ANI.Declared.ANI.match.Assembly.Coverage">81.81</td>
-<td class="gt_row gt_left" headers="ANI.Declared.ANI.match.Type.Category">claderef</td>
-<td class="gt_row gt_left" headers="ANI.Declared.ANI.match.Organism">Escherichia coli O103:H25 str. CVM9340</td>
-<td class="gt_row gt_right" headers="ANI.Declared.ANI.match.Type.Assembly.Coverage">89.68</td>
-<td class="gt_row gt_left" headers="ANI.Submitted.organism">Escherichia coli O111:H_ str. 11128</td>
-<td class="gt_row gt_left" headers="ANI.Submitted.species">Escherichia coli</td>
-<td class="gt_row gt_right" headers="CheckM.completeness">99.08</td>
-<td class="gt_row gt_right" headers="CheckM.completeness.percentile">57.10379</td>
-<td class="gt_row gt_right" headers="CheckM.contamination">1.19</td>
-<td class="gt_row gt_left" headers="CheckM.marker.set">Escherichia coli</td>
-<td class="gt_row gt_left" headers="CheckM.marker.set.rank">species</td>
-<td class="gt_row gt_right" headers="CheckM.species.tax.id">562</td>
-<td class="gt_row gt_left" headers="CheckM.version">v1.2.2</td>
-<td class="gt_row gt_left" headers="Accession">SAMD00060957</td>
-<td class="gt_row gt_left" headers="Collected.by">NA</td>
-<td class="gt_row gt_left" headers="Collection.date">NA</td>
-<td class="gt_row gt_left" headers="Description.Comment">NA</td>
-<td class="gt_row gt_left" headers="Description.Organism.Name">Escherichia coli O111:H- str. 11128</td>
-<td class="gt_row gt_right" headers="Description.Organism.Taxonomic.ID">585396</td>
-<td class="gt_row gt_left" headers="Description.Title">Generic sample from Escherichia coli O111:H- str. 11128</td>
-<td class="gt_row gt_left" headers="Geographic.location">NA</td>
-<td class="gt_row gt_left" headers="Host">NA</td>
-<td class="gt_row gt_left" headers="Host.disease">NA</td>
-<td class="gt_row gt_left" headers="Isolation.source">NA</td>
-<td class="gt_row gt_right" headers="Last.updated">2016-09-26 20:10:59</td>
-<td class="gt_row gt_left" headers="Latitude./.Longitude">NA</td>
-<td class="gt_row gt_left" headers="Serovar">O111:H-</td>
-<td class="gt_row gt_left" headers="Owner.Name">DDBJ</td>
-<td class="gt_row gt_left" headers="Assembly.BioProject.Accession">PRJDA32513</td>
-<td class="gt_row gt_center" headers="find">TRUE</td>
-<td class="gt_row gt_left" headers="source">reference</td>
+<tr class="even">
+<td class="gt_row gt_left" headers="Assembly.Accession">GCF_029962285.1</td>
+<td class="gt_row gt_left" headers="Strain">EDL933</td>
+<td class="gt_row gt_left" headers="Geographic.location">china</td>
+<td class="gt_row gt_left" headers="Source">reference</td>
+<td class="gt_row gt_left" headers="Owner.Name">East China University of Science and Technology</td>
+<td class="gt_row gt_left" headers="Assembly.BioProject.Accession">PRJNA963085</td>
+<td class="gt_row gt_left" headers="Patotype">EHEC</td>
+<td class="gt_row gt_left" headers="Phylogroup">E</td>
 </tr>
 </tbody>
 </table>
@@ -907,27 +916,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<section id="descarga-de-archivos" class="level3">
+<h3 class="anchored" data-anchor-id="descarga-de-archivos">Descarga de archivos</h3>
 <p>Para descargar los archivos vamos a utilizar el siguiente código:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> g <span class="kw">in</span> <span class="dt">\$</span><span class="er">(</span><span class="fu">cut</span> <span class="at">-f1</span> Escherichia_coli_Bovine_Host.tsv <span class="kw">|</span> <span class="fu">awk</span> <span class="st">'NR &gt; 1'</span><span class="kw">);</span> <span class="cf">do</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">[</span> <span class="ot">-f</span> <span class="dt">\$</span>g.zip <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>            <span class="bu">echo</span> <span class="dt">\$</span>g<span class="st">'.zip exists'</span><span class="kw">;</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>            <span class="va">$HOME</span><span class="ex">/bin/datasets</span> download genome accession <span class="dt">\$</span>g <span class="dt">\</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">--include</span> genome <span class="at">--filename</span> <span class="dt">\$</span>g<span class="st">'.zip'</span><span class="kw">;</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>            <span class="fu">sleep</span> 2<span class="kw">;</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">fi</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">done</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> g <span class="kw">in</span> <span class="va">$(</span><span class="fu">cut</span> <span class="at">-f1</span> Ecoli_bovineHost.tsv <span class="kw">|</span> <span class="fu">awk</span> <span class="st">'NR &gt; 1'</span><span class="va">)</span><span class="kw">;</span> <span class="cf">do</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">[</span> <span class="ot">-f</span> <span class="va">$g</span>.zip <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>            <span class="bu">echo</span> <span class="va">$g</span><span class="st">'.zip exists'</span><span class="kw">;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>            <span class="ex">datasets</span> download genome accession <span class="va">$g</span> <span class="dt">\ </span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>            <span class="ex">--include</span> genome <span class="at">--filename</span> <span class="va">$g</span><span class="st">'.zip'</span><span class="kw">;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>            <span class="fu">sleep</span> 2<span class="kw">;</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">fi</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">done</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Descomprimir los archivos</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> g <span class="kw">in</span> <span class="dt">\$</span><span class="er">(</span><span class="fu">cut</span> <span class="at">-f1</span> Escherichia_coli_Bovine_Host.tsv <span class="kw">|</span> <span class="fu">awk</span> <span class="st">'NR &gt; 1'</span><span class="kw">);</span> <span class="cf">do</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">unzip</span> <span class="dt">\$</span>g.zip <span class="at">-d</span> <span class="dt">\$</span>g<span class="kw">;</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mv</span> <span class="dt">\$</span>g/ncbi_dataset/data/\$g/<span class="pp">*</span>.fna <span class="dt">\$</span>g.fna<span class="kw">;</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        <span class="fu">rm</span> <span class="at">-r</span> <span class="dt">\$</span>g/<span class="kw">;</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">done</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> g <span class="kw">in</span> <span class="va">$(</span><span class="fu">cut</span> <span class="at">-f1</span> Ecoli_bovineHost.tsv <span class="kw">|</span> <span class="fu">awk</span> <span class="st">'NR &gt; 1'</span><span class="va">)</span><span class="kw">;</span> <span class="cf">do</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">unzip</span> <span class="va">$g</span>.zip <span class="at">-d</span> <span class="va">$g</span><span class="kw">;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mv</span> <span class="va">$g</span>/ncbi_dataset/data/<span class="va">$g</span>/<span class="pp">*</span>.fna <span class="va">$g</span>.fna<span class="kw">;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>        <span class="fu">rm</span> <span class="at">-r</span> <span class="va">$g</span>/<span class="kw">;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="pp">*</span>.zip</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Con esto ya contamos con un sub conjunto de datos listo para trabajar.</p>
+</section>
 </section>
 <section id="anotación-de-genomas" class="level1">
 <h1>Anotación de genomas</h1>
@@ -935,16 +949,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="prokka">Prokka</h2>
 <p><code>Prokka</code> es un anotador de genomas para organismos procariontes, lo puedes descargar de <a href="https://github.com/tseemann/prokka">aquí</a>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="va">genomes</span><span class="op">=</span><span class="va">$(</span> <span class="fu">ls</span> <span class="va">$HOME</span>/1_data/<span class="pp">*</span>.fna <span class="va">)</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> g <span class="kw">in</span> <span class="va">$genomes</span><span class="kw">;</span> <span class="cf">do</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a> <span class="ex">prokka</span> <span class="dt">\</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a> <span class="va">$g</span> <span class="dt">\</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a> <span class="at">--cpus</span> 6 <span class="dt">\</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a> <span class="at">--outdir</span> prokka/<span class="va">${id</span><span class="op">%</span>.fna<span class="va">}</span> <span class="dt">\</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a> <span class="at">--genus</span> Escherichia</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a> </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="va">genomes</span><span class="op">=</span><span class="va">$(</span> <span class="fu">ls</span> <span class="va">$HOME</span>/1_data/<span class="pp">*</span>.fna <span class="va">)</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> g <span class="kw">in</span> <span class="va">$genomes</span><span class="kw">;</span> <span class="cf">do</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a> <span class="ex">prokka</span> <span class="dt">\</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a> <span class="va">$g</span> <span class="dt">\</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a> <span class="at">--cpus</span> 6 <span class="dt">\</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a> <span class="at">--outdir</span> prokka/<span class="va">${id</span><span class="op">%</span>.fna<span class="va">}</span> <span class="dt">\</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a> <span class="at">--genus</span> Escherichia</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a> </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="bakta" class="level2">
@@ -952,57 +966,57 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Bakta es uno de los anotadores de genomas “más” completos ya que usa distintas bases, utiliza a <code>DIAMOND</code> de alineador. Lo puedes descargar <a href="https://github.com/oschwengers/bakta">aquí</a>. Es necesario descargar la base de datos para poder ejecutarlo, para este ejemplo se guardó en el directorio <code>$HOME/db</code></p>
 <p><strong>Precaución</strong> ⚠️: Necesitas 8GB de RAM, disponibilidad de tiempo y memoria en tu máquina, con más de 10 genomas podría demorar según la capacidad de nucleos que tengas. Para este tutorial solo te mostraremos como es el código pero no se utilizará este paso para los siguientes análisis.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> <span class="va">$HOME</span>/bin/bakta-env/bin/activate</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> <span class="va">$HOME</span>/bin/bakta-env/bin/activate</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <details class="code-fold">
 <summary>Muestra el código</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="va">genomes</span><span class="op">=</span><span class="va">$(</span><span class="fu">ls</span> <span class="va">$HOME</span>/1_data<span class="va">)</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="va">experiment_file</span><span class="op">=</span><span class="st">"</span><span class="va">$HOME</span><span class="st">/Experiment_Design.tsv"</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> g <span class="kw">in</span> <span class="va">$genomes</span><span class="kw">;</span> <span class="cf">do</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="va">id</span><span class="op">=</span><span class="va">$(</span><span class="fu">basename</span> <span class="st">"</span><span class="va">$g</span><span class="st">"</span> <span class="kw">|</span> <span class="fu">awk</span> <span class="at">-F</span><span class="st">'/'</span> <span class="st">'{print $NF}'</span> <span class="kw">|</span> <span class="fu">sed</span> <span class="st">'s/.fna$//'</span><span class="va">)</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="va">strain</span><span class="op">=</span><span class="va">$(</span><span class="fu">awk</span> <span class="at">-F</span><span class="st">'\t'</span> <span class="at">-v</span> id=<span class="st">"</span><span class="va">$id</span><span class="st">"</span> <span class="st">'$1 == id {print $3}'</span> <span class="st">"</span><span class="va">$experiment_file</span><span class="st">"</span><span class="va">)</span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    <span class="ex">bakta</span> <span class="dt">\</span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">--db</span> <span class="va">$HOME</span>/db <span class="dt">\</span></span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">--output</span> <span class="va">$HOME</span>/2_annotation/bakta/<span class="va">${id}</span> <span class="dt">\</span></span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">--genus</span> Escherichia <span class="dt">\</span></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">--strain</span> <span class="st">"</span><span class="va">$strain</span><span class="st">"</span> <span class="dt">\</span></span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">--threads</span> 6 <span class="dt">\</span></span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">--force</span> <span class="va">$HOME</span>/1_data/<span class="va">${g}</span></span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="va">genomes</span><span class="op">=</span><span class="va">$(</span><span class="fu">ls</span> <span class="va">$HOME</span>/1_data<span class="va">)</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="va">experiment_file</span><span class="op">=</span><span class="st">"</span><span class="va">$HOME</span><span class="st">/Experiment_Design.tsv"</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> g <span class="kw">in</span> <span class="va">$genomes</span><span class="kw">;</span> <span class="cf">do</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="va">id</span><span class="op">=</span><span class="va">$(</span><span class="fu">basename</span> <span class="st">"</span><span class="va">$g</span><span class="st">"</span> <span class="kw">|</span> <span class="fu">awk</span> <span class="at">-F</span><span class="st">'/'</span> <span class="st">'{print $NF}'</span> <span class="kw">|</span> <span class="fu">sed</span> <span class="st">'s/.fna$//'</span><span class="va">)</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    <span class="va">strain</span><span class="op">=</span><span class="va">$(</span><span class="fu">awk</span> <span class="at">-F</span><span class="st">'\t'</span> <span class="at">-v</span> id=<span class="st">"</span><span class="va">$id</span><span class="st">"</span> <span class="st">'$1 == id {print $3}'</span> <span class="st">"</span><span class="va">$experiment_file</span><span class="st">"</span><span class="va">)</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="ex">bakta</span> <span class="dt">\</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">--db</span> <span class="va">$HOME</span>/db <span class="dt">\</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">--output</span> <span class="va">$HOME</span>/2_annotation/bakta/<span class="va">${id}</span> <span class="dt">\</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">--genus</span> Escherichia <span class="dt">\</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">--strain</span> <span class="st">"</span><span class="va">$strain</span><span class="st">"</span> <span class="dt">\</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">--threads</span> 6 <span class="dt">\</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">--force</span> <span class="va">$HOME</span>/1_data/<span class="va">${g}</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
 <section id="amrfinder" class="level2">
 <h2 class="anchored" data-anchor-id="amrfinder">AMRfinder</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="va">workdir</span><span class="op">=</span><span class="va">$HOME</span>/2_annotation/prokka</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="va">output_dir</span><span class="op">=</span><span class="va">$HOME</span>/2_annotation/AMR</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> dir <span class="kw">in</span> <span class="va">$workdir</span>/<span class="pp">*</span><span class="kw">;</span> <span class="cf">do</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="bu">[</span> <span class="ot">-d</span> <span class="st">"</span><span class="va">$dir</span><span class="st">"</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>      <span class="va">sample</span><span class="op">=</span><span class="va">$(</span><span class="fu">basename</span> <span class="st">"</span><span class="va">$dir</span><span class="st">"</span><span class="va">)</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>      <span class="va">protein</span><span class="op">=</span><span class="va">$dir</span>/<span class="va">$sample</span>.faa</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>      <span class="va">dna</span><span class="op">=</span><span class="va">$dir</span>/<span class="va">$sample</span>.fna</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>      <span class="va">gff</span><span class="op">=</span><span class="va">$dir</span>/<span class="va">$sample</span>.gff3</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  <span class="va">temp_gff</span><span class="op">=</span><span class="st">"</span><span class="va">${output_dir}</span><span class="st">/amrfinder_</span><span class="va">${sample}</span><span class="st">.gff"</span></span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>        <span class="fu">perl</span> <span class="at">-pe</span> <span class="st">'/^##FASTA/ &amp;&amp; exit; s/(\W)Name=/$1OldName=/i; s/ID=([^;]+)/ID=$1;Name=$1/'</span> <span class="va">$gff</span> <span class="op">&gt;</span> <span class="va">$temp_gff</span></span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>      <span class="ex">amrfinder</span> <span class="dt">\</span></span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>      <span class="at">-p</span> <span class="va">$protein</span> <span class="dt">\</span></span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>      <span class="at">-n</span> <span class="va">$dna</span> <span class="dt">\</span></span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>      <span class="at">-g</span> <span class="va">$temp_gff</span> <span class="dt">\</span></span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>      <span class="at">--plus</span> <span class="at">--organism</span> Escherichia <span class="dt">\</span></span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>      <span class="at">-o</span> <span class="va">$output_dir</span>/<span class="va">${sample}</span>_amrfinder.tsv <span class="dt">\</span></span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>      <span class="at">--threads</span> 6</span>
-<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="va">workdir</span><span class="op">=</span><span class="va">$HOME</span>/2_annotation/prokka</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="va">output_dir</span><span class="op">=</span><span class="va">$HOME</span>/2_annotation/AMR</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> dir <span class="kw">in</span> <span class="va">$workdir</span>/<span class="pp">*</span><span class="kw">;</span> <span class="cf">do</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="bu">[</span> <span class="ot">-d</span> <span class="st">"</span><span class="va">$dir</span><span class="st">"</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>      <span class="va">sample</span><span class="op">=</span><span class="va">$(</span><span class="fu">basename</span> <span class="st">"</span><span class="va">$dir</span><span class="st">"</span><span class="va">)</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>      <span class="va">protein</span><span class="op">=</span><span class="va">$dir</span>/<span class="va">$sample</span>.faa</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>      <span class="va">dna</span><span class="op">=</span><span class="va">$dir</span>/<span class="va">$sample</span>.fna</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>      <span class="va">gff</span><span class="op">=</span><span class="va">$dir</span>/<span class="va">$sample</span>.gff3</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="va">temp_gff</span><span class="op">=</span><span class="st">"</span><span class="va">${output_dir}</span><span class="st">/amrfinder_</span><span class="va">${sample}</span><span class="st">.gff"</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>        <span class="fu">perl</span> <span class="at">-pe</span> <span class="st">'/^##FASTA/ &amp;&amp; exit; s/(\W)Name=/$1OldName=/i; s/ID=([^;]+)/ID=$1;Name=$1/'</span> <span class="va">$gff</span> <span class="op">&gt;</span> <span class="va">$temp_gff</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>      <span class="ex">amrfinder</span> <span class="dt">\</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>      <span class="at">-p</span> <span class="va">$protein</span> <span class="dt">\</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>      <span class="at">-n</span> <span class="va">$dna</span> <span class="dt">\</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>      <span class="at">-g</span> <span class="va">$temp_gff</span> <span class="dt">\</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>      <span class="at">--plus</span> <span class="at">--organism</span> Escherichia <span class="dt">\</span></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>      <span class="at">-o</span> <span class="va">$output_dir</span>/<span class="va">${sample}</span>_amrfinder.tsv <span class="dt">\</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>      <span class="at">--threads</span> 6</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="virulence-factor-database" class="level2">
@@ -1437,4 +1451,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
+<script src="index_files/libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

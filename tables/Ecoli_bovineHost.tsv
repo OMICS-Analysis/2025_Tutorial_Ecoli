@@ -1,0 +1,17 @@
+Assembly.Accession	Strain	Geographic.location	Source	Owner.Name	Assembly.BioProject.Accession	Patotype	Phylogroup
+GCF_029625135.1	E47	china	bovine	Chinese Academy of Agricultural Sciences	PRJNA949005		
+GCF_025908275.1	TL-14	china	bovine	Inner Mongolia Minzu University	PRJNA890057		
+GCF_029319035.1	E94	china	bovine	Chinese Academy of Agricultural Sciences	PRJNA942474		
+GCF_029227895.1	ZYB62	china	bovine	Lanzhou Institute of Husbandry and Pharmaceutical Sciences, Chinese Academy of Agricultural Science	PRJNA727665		
+GCF_009931435.1	EC42405	france	bovine	Anses	PRJNA556131		
+GCF_004771235.1	PF9285	switzerland	bovine	University of Bern	PRJNA530748		
+GCF_049267065.1	F3_13_1_3	usa	bovine	United State Department of Agriculture	PRJNA728709		
+GCF_013168215.1	7409	usa	bovine	United State Department of Agriculture	PRJNA528413		
+GCF_013167395.1	NE122	usa	bovine	United State Department of Agriculture	PRJNA528413		
+GCF_048571305.1	7_12_30A	usa	bovine	United State Department of Agriculture	PRJNA728709		
+GCF_000025165.1	CB9615	Germany	reference	Nankai University	PRJNA224116	EPEC	E
+GCF_000026545.1	E2348/69	UK	reference	The Wellcome Trust Sanger Institute	PRJNA224116	EPEC	B2
+GCF_000026265.1	IAI1	-	reference	EBI	PRJNA33373	Comensal	B1
+GCF_000005845.2	K-12 MG1655	usa	reference	Univ. Wisconsin	PRJNA225	Comensal	A
+GCF_000010745.1	12009	japan	reference	University of Tokyo	PRJDA32511	EHEC	B1
+GCF_029962285.1	EDL933	china	reference	East China University of Science and Technology	PRJNA963085	EHEC	E

@@ -5,7 +5,10 @@ format:
   html:
     toc: true
     toc-depth: 3
-    theme: journal
+    theme: yeti
+    toc-location: left-body
+    smooth-scroll: true
+    toc-title: "Contenido"
 editor: visual
 execute:
   engine: knitr
@@ -28,7 +31,7 @@ Con el siguiente código vamos a descargar los genomas depoitados en NCBI de *E.
 mkdir 1_data
 cd 1_data
 
-$HOME/bin/datasets \
+datasets \
 summary genome taxon '562' \
 --assembly-level complete\
 --assembly-source refseq \
@@ -36,27 +39,150 @@ summary genome taxon '562' \
 ```
 
 ```{bash, eval=FALSE}
-$HOME/bin/dataformat tsv genome \
+dataformat tsv genome \
 --inputfile Escherichia_coli_562.json > Escherichia_coli_562.tsv
 ```
 
-Este conjunto de metadatos `Escherichia_coli_562.tsv` nos servirá para seleccionar los ensambles de genoma que necesitamos. Para ello puedes utilizar la plataforma o método que más prefieras, y quedarnos con un conjunto más pequeño de genomas para descagar. En este tutorial este será el archivo con el que trabajaremos `Escherichia_coli_Bovine_Host.tsv`, este archivo se ve de la siguiete forma (las primeras 5 filas):
+Este conjunto de metadatos `Escherichia_coli_562.tsv` nos servirá para seleccionar los ensambles de genoma que necesitamos, este archivo cuenta con `58533` filas y `174` columnas.
+
+Por ello es necesario utilizar la plataforma o método que más prefieras, y quedarnos con un conjunto más pequeño de genomas para descargar.
+
+En este tutorial haremos un ejemplo de parseo de datos con `R`.
+
+```{r, message=FALSE, eval=FALSE}
+#| code-fold: true
+#| code-summary: "subsetting.R"
+
+raw_tsv <- readr::read_tsv("0_data/Escherichia_coli_562.tsv")
+dim(raw_tsv)
+
+
+# Change colnames
+colnames(raw_tsv) <- gsub(" ", ".", colnames(raw_tsv))
+
+cols <- c("Assembly.BioSample.Accession", "Assembly.BioSample.Attribute.Name",
+          "Assembly.BioSample.Attribute.Value", "Assembly.BioSample.Collected.by",
+          "Assembly.BioSample.Collection.date", "Assembly.BioSample.Description.Comment",
+          "Assembly.BioSample.Description.Organism.Name", "Assembly.BioSample.Description.Organism.Taxonomic.ID",
+          "Assembly.BioSample.Description.Title", "Assembly.BioSample.Geographic.location",
+          "Assembly.BioSample.Host", "Assembly.BioSample.Host.disease",
+          "Assembly.BioSample.Isolation.source", "Assembly.BioSample.Last.updated",
+          "Assembly.BioSample.Latitude./.Longitude", "Assembly.BioSample.Serovar",
+          "Assembly.BioSample.Owner.Name", "Assembly.BioSample.Strain"
+          
+)
+
+
+
+Refseq_for_taxon<- raw_tsv |>
+  dplyr::select('Assembly.Accession',"Assembly.Level",
+         'Organism.Name', starts_with('ANI'),starts_with('CheckM'), 
+         cols,
+         "Assembly.BioProject.Accession") |>
+  dplyr::filter(ANI.Best.ANI.match.Organism == "Escherichia coli") |>
+  dplyr::filter(grepl("GCF",Assembly.Accession)) |>
+  dplyr::distinct()
+
+colnames(Refseq_for_taxon) <- stringr::str_replace(colnames(Refseq_for_taxon), 
+                                                   pattern = "Assembly.BioSample.",
+                                                   replacement = "")
+
+library(dplyr)
+
+
+# Create the column 'Assembly.Biosample.Attribute' by combining the values and eliminating duplicates.
+ecoli_df <- Refseq_for_taxon |>
+  dplyr::group_by(Assembly.Accession) %>%
+  summarise(
+    Attribute = paste0(
+      Attribute.Name, " : ", 
+      Attribute.Value, 
+      collapse = "; "
+    ),
+    .groups = "drop"
+  ) %>%
+  left_join(
+    Refseq_for_taxon %>% 
+      select(-Attribute.Name, -Attribute.Value) %>% 
+      distinct(Assembly.Accession, .keep_all = TRUE),
+    by = "Assembly.Accession"
+  )
+
+
+ecoli_subset <- ecoli_df %>% 
+  select(where(~ n_distinct(.) > 1)) %>% 
+  select(where(~ !all(is.na(.)))) %>% 
+  filter(
+    !is.na(CheckM.completeness),
+    !is.na(Collection.date),
+    !is.na(Host)
+  )
+
+
+ecoli_subset <- ecoli_subset %>% 
+  mutate(find = CheckM.completeness >= 90 & CheckM.contamination < 5 & ANI.Best.ANI.match.ANI >= 96)
+
+
+ecoli_subset <- ecoli_subset %>% 
+  select(where(~ n_distinct(.) > 1)) %>% 
+  select(where(~ !all(is.na(.)))) %>% 
+  filter(
+    !is.na(CheckM.completeness),
+    !is.na(Collection.date),
+    !is.na(Host)
+  )
+
+
+ecoli_subset$Host <- tolower(ecoli_subset$Host)
+
+table(ecoli_subset$Host)
+
+ecoli_subset2 <- ecoli_subset[ecoli_subset$Host == "bovine",]
+
+ecoli_subset2$Geographic.location <- tolower(ecoli_subset2$Geographic.location)
+
+ecoli_subset2[stringr::str_detect(ecoli_subset2$Geographic.location, pattern = "china"),
+              "Geographic.location"] <- "china"
+
+ecoli_subset2[stringr::str_detect(ecoli_subset2$Geographic.location, pattern = "usa"),
+              "Geographic.location"] <- "usa"
+
+ecoli_subset2 <- ecoli_subset2[ecoli_subset2$Geographic.location != "missing",]
+
+# Quiero quedarme al azar con 4 de china y 4 de usa, y conservar a francia y suiza
+
+ecoli_bovine <- ecoli_subset2 %>% 
+  group_by(Geographic.location) %>% 
+  slice_sample(n = 4) %>% 
+  ungroup() %>% 
+  select(Assembly.Accession, Strain, Geographic.location,
+         Host, Owner.Name, Assembly.BioProject.Accession)
+
+readr::write_tsv(ecoli_bovine, "0_data/Ecoli_bovineHost.tsv")
+
+table(ecoli_subset2$Geographic.location)
+```
+
+En este tutorial este será el archivo con el que trabajaremos `Ecoli_bovineHost.tsv`:
 
 ```{r, echo=FALSE, message=FALSE}
-df <- readr::read_tsv("tables/Escherichia_coli_Bovine_Host.tsv")|> head(5)
+
+df <- readr::read_tsv("tables/Ecoli_bovineHost.tsv")
 
 gt::gt(df)
 ```
 
+### Descarga de archivos
+
 Para descargar los archivos vamos a utilizar el siguiente código:
 
 ```{bash, eval=FALSE}
-for g in \$(cut -f1 Escherichia_coli_Bovine_Host.tsv | awk 'NR > 1'); do
-        if [ -f \$g.zip ]; then
-            echo \$g'.zip exists';
+for g in $(cut -f1 Ecoli_bovineHost.tsv | awk 'NR > 1'); do
+        if [ -f $g.zip ]; then
+            echo $g'.zip exists';
         else
-            $HOME/bin/datasets download genome accession \$g \
-            --include genome --filename \$g'.zip';
+            datasets download genome accession $g \ 
+            --include genome --filename $g'.zip';
             sleep 2;
         fi
     done
@@ -65,11 +191,13 @@ for g in \$(cut -f1 Escherichia_coli_Bovine_Host.tsv | awk 'NR > 1'); do
 Descomprimir los archivos
 
 ```{bash, eval=FALSE}
-for g in \$(cut -f1 Escherichia_coli_Bovine_Host.tsv | awk 'NR > 1'); do
-        unzip \$g.zip -d \$g;
-        mv \$g/ncbi_dataset/data/\$g/*.fna \$g.fna;
-        rm -r \$g/;
-    done
+for g in $(cut -f1 Ecoli_bovineHost.tsv | awk 'NR > 1'); do
+        unzip $g.zip -d $g;
+        mv $g/ncbi_dataset/data/$g/*.fna $g.fna;
+        rm -r $g/;
+done
+
+rm *.zip
 ```
 
 Con esto ya contamos con un sub conjunto de datos listo para trabajar.
