@@ -209,7 +209,7 @@ Con esto ya contamos con un sub conjunto de datos listo para trabajar.
 ```{bash, eval=FALSE}
 fastANI \
 --ql $HOME/2025_Demo_ecoli/1_QC/ANI/all_genomes.list \
---rl $HOME/2024_Demo_01/1_QC/ANI/all_genomes.list \
+--rl $HOME/2025_Demo_ecoli/1_QC/ANI/all_genomes.list \
 -o ecoli_all_to_all.out\
 --matrix
 ```
@@ -245,7 +245,7 @@ for g in $genomes; do
 `Prokka` es un anotador de genomas para organismos procariontes, lo puedes descargar de [aquí](https://github.com/tseemann/prokka).
 
 ```{bash, eval=FALSE}
-genomes=$( ls $HOME/1_data/*.fna )
+genomes=$( ls $HOME/2025_Demo_ecoli/1_data/*.fna )
 
 for g in $genomes; do
  prokka \
@@ -270,9 +270,9 @@ source $HOME/bin/bakta-env/bin/activate
 ```{bash, eval=FALSE}
 #| code-fold: true
 #| code-summary: "Muestra el código"
-genomes=$(ls $HOME/1_data)
+genomes=$(ls $HOME/2025_Demo_ecoli/1_data)
 
-experiment_file="$HOME/Experiment_Design.tsv"
+experiment_file="$HOME/2025_Demo_ecoli/Experiment_Design.tsv"
 
 
 for g in $genomes; do
@@ -281,8 +281,8 @@ for g in $genomes; do
     strain=$(awk -F'\t' -v id="$id" '$1 == id {print $3}' "$experiment_file")
 
     bakta \
-    --db $HOME/db \
-    --output $HOME/2_annotation/bakta/${id} \
+    --db $HOME/2025_Demo_ecoli/db \
+    --output $HOME/2025_Demo_ecoli/2_annotation/bakta/${id} \
     --genus Escherichia \
     --strain "$strain" \
     --threads 6 \
@@ -294,7 +294,7 @@ done
 
 ```{bash, eval=FALSE}
 
-workdir=$HOME/2_annotation/prokka
+workdir=$HOME/2025_Demo_ecoli/2_annotation/prokka
 output_dir=$HOME/2_annotation/AMR
 
 for dir in $workdir/*; do
