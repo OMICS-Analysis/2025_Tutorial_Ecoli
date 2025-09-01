@@ -206,9 +206,37 @@ Con esto ya contamos con un sub conjunto de datos listo para trabajar.
 
 ## FastANI
 
+```{bash, eval=FALSE}
+fastANI \
+--ql $HOME/2025_Demo_ecoli/1_QC/ANI/all_genomes.list \
+--rl $HOME/2024_Demo_01/1_QC/ANI/all_genomes.list \
+-o ecoli_all_to_all.out\
+--matrix
+```
+
 ## CheckM
 
 ## BUSCO
+
+```{bash, eval=FALSE}
+source $HOME/bin/busco-env/bin/activate
+
+genomes=$(ls $HOME/2025_Demo_ecoli/0_data/*.fna)
+
+for g in $genomes; do
+   
+      id=$(echo $g | awk -F'/' '{print $NF}')
+
+      /usr/bin/time -v \
+        busco \
+        -i "$g" \
+        -l bacteria_odb10 \
+        -m geno \
+        -o 1_QC/busco/${id%.fna} \
+        --cpu 8 \
+        --force 
+  done 
+```
 
 # Anotación de genomas
 
@@ -285,7 +313,7 @@ for dir in $workdir/*; do
       -g $temp_gff \
       --plus --organism Escherichia \
       -o $output_dir/${sample}_amrfinder.tsv \
-      --threads 6
+      --threads 8
 done
 ```
 
