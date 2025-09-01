@@ -295,4 +295,39 @@ done
 
 # Pangenoma
 
-# Filogenía 
+Vamos a utilizar Roary, lo puedes descargar [aquí](https://github.com/sanger-pathogens/Roary).
+
+Preparamos los archivos `.gff` obtenidos de la anotación con `Prokka` o `Bakta` para poder realizar el análisis de pangenoma.
+
+```{bash, eval=FALSE}
+DIR_ORIGEN="$HOME/2025_Demo_ecoli/2_annotation/prokka"
+DIR_DESTINO="$HOME/2025_Demo_ecoli/3_pangenome/data_genomes"
+for carpeta in "$DIR_ORIGEN"/*; do
+        if [[ -d "$carpeta" ]]; then
+            nombre_carpeta=$(basename "$carpeta")
+
+            # Buscar el primer archivo .gff o .gff3 en la carpeta 
+            archivo_gff=$(find "$carpeta" -maxdepth 1 -type f \( -iname "*.gff" -o -iname "*.gff3" \) -print -quit || true)
+
+            if [[ -n "$archivo_gff" ]]; then
+                destino="$DIR_DESTINO/${nombre_carpeta}.gff"
+                cp -f -- "$archivo_gff" "$destino"
+                echo "Archivo $archivo_gff copiado como $destino"
+            else
+                echo "No se encontró archivo .gff/.gff3 en $carpeta"
+            fi
+        fi
+    done
+```
+
+```{bash, eval=FALSE}
+DIR_ORIGEN="$HOME/OMICS/2025_Demo_ecoli/2_annotation/prokka"
+DIR_DESTINO="$HOME/2025_Demo_ecoli/3_pangenome/data_genomes"
+
+roary -f "$OUTDIR" \
+-e \
+-p 8 \
+-v "$DIR_DESTINO/pangenome_prokka_prank"/*.gff
+```
+
+# Filogénia 
