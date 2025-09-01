@@ -25,7 +25,7 @@ Vamos a trabajar con ensambles de distintas cepas de E. coli hospedero Bovino.
 
 Para iniciar vamos a descargar los datos disponibles que existan usando `datasets` de NCBI, lo puedes instalar [aquí](https://github.com/ncbi/datasets).
 
-Con el siguiente código vamos a descargar los genomas depoitados en NCBI de *E. coli*
+Con el siguiente código vamos a descargar los genomas depositados en NCBI de *E. coli*
 
 ```{bash, eval=FALSE}
 mkdir 1_data
@@ -202,6 +202,14 @@ rm *.zip
 
 Con esto ya contamos con un sub conjunto de datos listo para trabajar.
 
+# Control de Calidad
+
+## FastANI
+
+## CheckM
+
+## BUSCO
+
 # Anotación de genomas
 
 ## Prokka
@@ -284,3 +292,7 @@ done
 ## Virulence Factor DataBase
 
 ## 
+
+# Pangenoma
+
+# Filogenía 

@@ -67,7 +67,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="index_files/libs/bootstrap/bootstrap-a312d171523933343ca77b5e293f9fd6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="index_files/libs/bootstrap/bootstrap-2d3eda03c92479f049b3c91298edf26b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <style>html{ scroll-behavior: smooth; }</style>
 
 
@@ -85,6 +85,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#descarga-de-archivos" id="toc-descarga-de-archivos" class="nav-link" data-scroll-target="#descarga-de-archivos">Descarga de archivos</a></li>
   </ul></li>
+  <li><a href="#control-de-calidad" id="toc-control-de-calidad" class="nav-link" data-scroll-target="#control-de-calidad">Control de Calidad</a>
+  <ul class="collapse">
+  <li><a href="#fastani" id="toc-fastani" class="nav-link" data-scroll-target="#fastani">FastANI</a></li>
+  <li><a href="#checkm" id="toc-checkm" class="nav-link" data-scroll-target="#checkm">CheckM</a></li>
+  <li><a href="#busco" id="toc-busco" class="nav-link" data-scroll-target="#busco">BUSCO</a></li>
+  </ul></li>
   <li><a href="#anotación-de-genomas" id="toc-anotación-de-genomas" class="nav-link" data-scroll-target="#anotación-de-genomas">Anotación de genomas</a>
   <ul class="collapse">
   <li><a href="#prokka" id="toc-prokka" class="nav-link" data-scroll-target="#prokka">Prokka</a></li>
@@ -93,6 +99,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#virulence-factor-database" id="toc-virulence-factor-database" class="nav-link" data-scroll-target="#virulence-factor-database">Virulence Factor DataBase</a></li>
   <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
   </ul></li>
+  <li><a href="#pangenoma" id="toc-pangenoma" class="nav-link" data-scroll-target="#pangenoma">Pangenoma</a></li>
+  <li><a href="#filogenía" id="toc-filogenía" class="nav-link" data-scroll-target="#filogenía">Filogenía</a></li>
   </ul>
 </nav>
 </div>
@@ -132,6 +140,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#descarga-de-archivos" id="toc-descarga-de-archivos">Descarga de archivos</a></li>
   </ul></li>
+  <li><a href="#control-de-calidad" id="toc-control-de-calidad">Control de Calidad</a>
+  <ul>
+  <li><a href="#fastani" id="toc-fastani">FastANI</a></li>
+  <li><a href="#checkm" id="toc-checkm">CheckM</a></li>
+  <li><a href="#busco" id="toc-busco">BUSCO</a></li>
+  </ul></li>
   <li><a href="#anotación-de-genomas" id="toc-anotación-de-genomas">Anotación de genomas</a>
   <ul>
   <li><a href="#prokka" id="toc-prokka">Prokka</a></li>
@@ -140,6 +154,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#virulence-factor-database" id="toc-virulence-factor-database">Virulence Factor DataBase</a></li>
   <li><a href="#section" id="toc-section"></a></li>
   </ul></li>
+  <li><a href="#pangenoma" id="toc-pangenoma">Pangenoma</a></li>
+  <li><a href="#filogenía" id="toc-filogenía">Filogenía</a></li>
   </ul>
 </nav>
 <div class="quarto-figure quarto-figure-center">
@@ -152,7 +168,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Vamos a trabajar con ensambles de distintas cepas de E. coli hospedero Bovino.</p>
 <p><strong>NOTA</strong> ⚠️👁️‍🗨️: Para las figuras del curso se utilizaron todos los 110 genomas con hospedero Bovino. Para este tutorial generaremos un subconjunto de 15, ya incluidos genomas de referencia para patotipos EHEC y EPEC.</p>
 <p>Para iniciar vamos a descargar los datos disponibles que existan usando <code>datasets</code> de NCBI, lo puedes instalar <a href="https://github.com/ncbi/datasets">aquí</a>.</p>
-<p>Con el siguiente código vamos a descargar los genomas depoitados en NCBI de <em>E. coli</em></p>
+<p>Con el siguiente código vamos a descargar los genomas depositados en NCBI de <em>E. coli</em></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> 1_data</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> 1_data</span>
@@ -286,23 +302,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>En este tutorial este será el archivo con el que trabajaremos <code>Ecoli_bovineHost.tsv</code>:</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="chlxgtrslz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#chlxgtrslz table {
+<div id="ywcwiayuco" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ywcwiayuco table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#chlxgtrslz thead, #chlxgtrslz tbody, #chlxgtrslz tfoot, #chlxgtrslz tr, #chlxgtrslz td, #chlxgtrslz th {
+#ywcwiayuco thead, #ywcwiayuco tbody, #ywcwiayuco tfoot, #ywcwiayuco tr, #ywcwiayuco td, #ywcwiayuco th {
   border-style: none;
 }
 
-#chlxgtrslz p {
+#ywcwiayuco p {
   margin: 0;
   padding: 0;
 }
 
-#chlxgtrslz .gt_table {
+#ywcwiayuco .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -328,12 +344,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#chlxgtrslz .gt_caption {
+#ywcwiayuco .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#chlxgtrslz .gt_title {
+#ywcwiayuco .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -345,7 +361,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#chlxgtrslz .gt_subtitle {
+#ywcwiayuco .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -357,7 +373,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#chlxgtrslz .gt_heading {
+#ywcwiayuco .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -369,13 +385,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#chlxgtrslz .gt_bottom_border {
+#ywcwiayuco .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#chlxgtrslz .gt_col_headings {
+#ywcwiayuco .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -390,7 +406,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#chlxgtrslz .gt_col_heading {
+#ywcwiayuco .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -410,7 +426,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#chlxgtrslz .gt_column_spanner_outer {
+#ywcwiayuco .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -422,15 +438,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#chlxgtrslz .gt_column_spanner_outer:first-child {
+#ywcwiayuco .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#chlxgtrslz .gt_column_spanner_outer:last-child {
+#ywcwiayuco .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#chlxgtrslz .gt_column_spanner {
+#ywcwiayuco .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -442,11 +458,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#chlxgtrslz .gt_spanner_row {
+#ywcwiayuco .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#chlxgtrslz .gt_group_heading {
+#ywcwiayuco .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -472,7 +488,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#chlxgtrslz .gt_empty_group_heading {
+#ywcwiayuco .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -487,15 +503,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#chlxgtrslz .gt_from_md > :first-child {
+#ywcwiayuco .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#chlxgtrslz .gt_from_md > :last-child {
+#ywcwiayuco .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#chlxgtrslz .gt_row {
+#ywcwiayuco .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -514,7 +530,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#chlxgtrslz .gt_stub {
+#ywcwiayuco .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -527,7 +543,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#chlxgtrslz .gt_stub_row_group {
+#ywcwiayuco .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -541,15 +557,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#chlxgtrslz .gt_row_group_first td {
+#ywcwiayuco .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#chlxgtrslz .gt_row_group_first th {
+#ywcwiayuco .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#chlxgtrslz .gt_summary_row {
+#ywcwiayuco .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -559,16 +575,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#chlxgtrslz .gt_first_summary_row {
+#ywcwiayuco .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#chlxgtrslz .gt_first_summary_row.thick {
+#ywcwiayuco .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#chlxgtrslz .gt_last_summary_row {
+#ywcwiayuco .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -578,7 +594,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#chlxgtrslz .gt_grand_summary_row {
+#ywcwiayuco .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -588,7 +604,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#chlxgtrslz .gt_first_grand_summary_row {
+#ywcwiayuco .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -598,7 +614,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#chlxgtrslz .gt_last_grand_summary_row_top {
+#ywcwiayuco .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -608,11 +624,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#chlxgtrslz .gt_striped {
+#ywcwiayuco .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#chlxgtrslz .gt_table_body {
+#ywcwiayuco .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -621,7 +637,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#chlxgtrslz .gt_footnotes {
+#ywcwiayuco .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -635,7 +651,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#chlxgtrslz .gt_footnote {
+#ywcwiayuco .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -644,7 +660,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#chlxgtrslz .gt_sourcenotes {
+#ywcwiayuco .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -658,7 +674,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#chlxgtrslz .gt_sourcenote {
+#ywcwiayuco .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -666,72 +682,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#chlxgtrslz .gt_left {
+#ywcwiayuco .gt_left {
   text-align: left;
 }
 
-#chlxgtrslz .gt_center {
+#ywcwiayuco .gt_center {
   text-align: center;
 }
 
-#chlxgtrslz .gt_right {
+#ywcwiayuco .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#chlxgtrslz .gt_font_normal {
+#ywcwiayuco .gt_font_normal {
   font-weight: normal;
 }
 
-#chlxgtrslz .gt_font_bold {
+#ywcwiayuco .gt_font_bold {
   font-weight: bold;
 }
 
-#chlxgtrslz .gt_font_italic {
+#ywcwiayuco .gt_font_italic {
   font-style: italic;
 }
 
-#chlxgtrslz .gt_super {
+#ywcwiayuco .gt_super {
   font-size: 65%;
 }
 
-#chlxgtrslz .gt_footnote_marks {
+#ywcwiayuco .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#chlxgtrslz .gt_asterisk {
+#ywcwiayuco .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#chlxgtrslz .gt_indent_1 {
+#ywcwiayuco .gt_indent_1 {
   text-indent: 5px;
 }
 
-#chlxgtrslz .gt_indent_2 {
+#ywcwiayuco .gt_indent_2 {
   text-indent: 10px;
 }
 
-#chlxgtrslz .gt_indent_3 {
+#ywcwiayuco .gt_indent_3 {
   text-indent: 15px;
 }
 
-#chlxgtrslz .gt_indent_4 {
+#ywcwiayuco .gt_indent_4 {
   text-indent: 20px;
 }
 
-#chlxgtrslz .gt_indent_5 {
+#ywcwiayuco .gt_indent_5 {
   text-indent: 25px;
 }
 
-#chlxgtrslz .katex-display {
+#ywcwiayuco .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#chlxgtrslz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ywcwiayuco div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -943,6 +959,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Con esto ya contamos con un sub conjunto de datos listo para trabajar.</p>
 </section>
 </section>
+<section id="control-de-calidad" class="level1">
+<h1>Control de Calidad</h1>
+<section id="fastani" class="level2">
+<h2 class="anchored" data-anchor-id="fastani">FastANI</h2>
+</section>
+<section id="checkm" class="level2">
+<h2 class="anchored" data-anchor-id="checkm">CheckM</h2>
+</section>
+<section id="busco" class="level2">
+<h2 class="anchored" data-anchor-id="busco">BUSCO</h2>
+</section>
+</section>
 <section id="anotación-de-genomas" class="level1">
 <h1>Anotación de genomas</h1>
 <section id="prokka" class="level2">
@@ -1025,6 +1053,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="section" class="level2">
 <h2 class="anchored" data-anchor-id="section"></h2>
 </section>
+</section>
+<section id="pangenoma" class="level1">
+<h1>Pangenoma</h1>
+</section>
+<section id="filogenía" class="level1">
+<h1>Filogenía</h1>
 </section>
 
 </main>
