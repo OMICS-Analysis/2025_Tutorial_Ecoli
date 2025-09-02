@@ -43,7 +43,7 @@ dataformat tsv genome \
 --inputfile Escherichia_coli_562.json > Escherichia_coli_562.tsv
 ```
 
-Este conjunto de metadatos `Escherichia_coli_562.tsv` nos servirá para seleccionar los ensambles de genoma que necesitamos, este archivo cuenta con `58533` filas y `174` columnas.
+Este conjunto de metadatos [`Escherichia_coli_562.tsv`](https://drive.google.com/file/d/19wuoj6hUPrJPmzf6d3KLo_OFpjnNykz4/view?usp=drive_link) nos servirá para seleccionar los ensambles de genoma que necesitamos, este archivo cuenta con `58533` filas y `174` columnas.
 
 Por ello es necesario utilizar la plataforma o método que más prefieras, y quedarnos con un conjunto más pequeño de genomas para descargar.
 
@@ -163,7 +163,7 @@ readr::write_tsv(ecoli_bovine, "0_data/Ecoli_bovineHost.tsv")
 table(ecoli_subset2$Geographic.location)
 ```
 
-En este tutorial este será el archivo con el que trabajaremos `Ecoli_bovineHost.tsv`:
+En este tutorial este será el archivo con el que trabajaremos [`Ecoli_bovineHost.tsv`](https://drive.google.com/file/d/19wuoj6hUPrJPmzf6d3KLo_OFpjnNykz4/view?usp=drive_link):
 
 ```{r, echo=FALSE, message=FALSE}
 
@@ -358,4 +358,4 @@ roary -f "$DIR_DESTINO/pangenome_prokka_prank" \
 -v "$DIR_DESTINO"/*.gff
 ```
 
-# Filogénia 
+# Filogénia
