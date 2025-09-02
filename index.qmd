@@ -19,13 +19,13 @@ lang: es
 
 # Introducción
 
-Vamos a trabajar con ensambles de distintas cepas de E. coli hospedero Bovino.
+Vamos a trabajar con ensambles de distintas cepas de *E. coli* hospedero *Bovino*.
 
 **NOTA** ⚠️👁️‍🗨️: Para las figuras del curso se utilizaron todos los 110 genomas con hospedero Bovino. Para este tutorial generaremos un subconjunto de 16, ya incluidos genomas de referencia para patotipos EHEC y EPEC.
 
 Para iniciar vamos a descargar los datos disponibles que existan usando `datasets` de NCBI, lo puedes instalar [aquí](https://github.com/ncbi/datasets).
 
-Con el siguiente código vamos a descargar los genomas depositados en NCBI de *E. coli*
+Con el siguiente código vamos a descargar los genomas depositados en **NCBI** de *E. coli*
 
 ```{bash, eval=FALSE}
 mkdir 1_data
