@@ -349,13 +349,13 @@ for carpeta in "$DIR_ORIGEN"/*; do
 ```
 
 ```{bash, eval=FALSE}
-DIR_ORIGEN="$HOME/OMICS/2025_Demo_ecoli/2_annotation/prokka"
+DIR_ORIGEN="$HOME/2025_Demo_ecoli/2_annotation/prokka"
 DIR_DESTINO="$HOME/2025_Demo_ecoli/3_pangenome/data_genomes"
 
-roary -f "$OUTDIR" \
+roary -f "$DIR_DESTINO/pangenome_prokka_prank" \
 -e \
 -p 8 \
--v "$DIR_DESTINO/pangenome_prokka_prank"/*.gff
+-v "$DIR_DESTINO"/*.gff
 ```
 
 # Filogénia 
