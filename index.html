@@ -67,7 +67,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="index_files/libs/bootstrap/bootstrap-2d3eda03c92479f049b3c91298edf26b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="index_files/libs/bootstrap/bootstrap-a312d171523933343ca77b5e293f9fd6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <style>html{ scroll-behavior: smooth; }</style>
 
 
@@ -94,7 +94,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#anotación-de-genomas" id="toc-anotación-de-genomas" class="nav-link" data-scroll-target="#anotación-de-genomas">Anotación de genomas</a>
   <ul class="collapse">
   <li><a href="#prokka" id="toc-prokka" class="nav-link" data-scroll-target="#prokka">Prokka</a></li>
+  </ul></li>
   <li><a href="#bakta" id="toc-bakta" class="nav-link" data-scroll-target="#bakta">Bakta</a></li>
+  <li><a href="#consejos-para-decidir-cuál-usar-en-tu-pipeline" id="toc-consejos-para-decidir-cuál-usar-en-tu-pipeline" class="nav-link" data-scroll-target="#consejos-para-decidir-cuál-usar-en-tu-pipeline">Consejos para decidir cuál usar en tu pipeline</a>
+  <ul class="collapse">
   <li><a href="#amrfinder" id="toc-amrfinder" class="nav-link" data-scroll-target="#amrfinder">AMRfinder</a></li>
   <li><a href="#virulence-factor-database" id="toc-virulence-factor-database" class="nav-link" data-scroll-target="#virulence-factor-database">Virulence Factor DataBase</a></li>
   <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
@@ -149,7 +152,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#anotación-de-genomas" id="toc-anotación-de-genomas">Anotación de genomas</a>
   <ul>
   <li><a href="#prokka" id="toc-prokka">Prokka</a></li>
+  </ul></li>
   <li><a href="#bakta" id="toc-bakta">Bakta</a></li>
+  <li><a href="#consejos-para-decidir-cuál-usar-en-tu-pipeline" id="toc-consejos-para-decidir-cuál-usar-en-tu-pipeline">Consejos para decidir cuál usar en tu pipeline</a>
+  <ul>
   <li><a href="#amrfinder" id="toc-amrfinder">AMRfinder</a></li>
   <li><a href="#virulence-factor-database" id="toc-virulence-factor-database">Virulence Factor DataBase</a></li>
   <li><a href="#section" id="toc-section"></a></li>
@@ -302,23 +308,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>En este tutorial este será el archivo con el que trabajaremos <a href="https://drive.google.com/file/d/19wuoj6hUPrJPmzf6d3KLo_OFpjnNykz4/view?usp=drive_link"><code>Ecoli_bovineHost.tsv</code></a>:</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="esntuqreds" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#esntuqreds table {
+<div id="vvepbzyadh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#vvepbzyadh table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#esntuqreds thead, #esntuqreds tbody, #esntuqreds tfoot, #esntuqreds tr, #esntuqreds td, #esntuqreds th {
+#vvepbzyadh thead, #vvepbzyadh tbody, #vvepbzyadh tfoot, #vvepbzyadh tr, #vvepbzyadh td, #vvepbzyadh th {
   border-style: none;
 }
 
-#esntuqreds p {
+#vvepbzyadh p {
   margin: 0;
   padding: 0;
 }
 
-#esntuqreds .gt_table {
+#vvepbzyadh .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -344,12 +350,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#esntuqreds .gt_caption {
+#vvepbzyadh .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#esntuqreds .gt_title {
+#vvepbzyadh .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -361,7 +367,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#esntuqreds .gt_subtitle {
+#vvepbzyadh .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -373,7 +379,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#esntuqreds .gt_heading {
+#vvepbzyadh .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -385,13 +391,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#esntuqreds .gt_bottom_border {
+#vvepbzyadh .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#esntuqreds .gt_col_headings {
+#vvepbzyadh .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -406,7 +412,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#esntuqreds .gt_col_heading {
+#vvepbzyadh .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -426,7 +432,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#esntuqreds .gt_column_spanner_outer {
+#vvepbzyadh .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -438,15 +444,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#esntuqreds .gt_column_spanner_outer:first-child {
+#vvepbzyadh .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#esntuqreds .gt_column_spanner_outer:last-child {
+#vvepbzyadh .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#esntuqreds .gt_column_spanner {
+#vvepbzyadh .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -458,11 +464,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#esntuqreds .gt_spanner_row {
+#vvepbzyadh .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#esntuqreds .gt_group_heading {
+#vvepbzyadh .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -488,7 +494,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#esntuqreds .gt_empty_group_heading {
+#vvepbzyadh .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -503,15 +509,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#esntuqreds .gt_from_md > :first-child {
+#vvepbzyadh .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#esntuqreds .gt_from_md > :last-child {
+#vvepbzyadh .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#esntuqreds .gt_row {
+#vvepbzyadh .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -530,7 +536,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#esntuqreds .gt_stub {
+#vvepbzyadh .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -543,7 +549,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#esntuqreds .gt_stub_row_group {
+#vvepbzyadh .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -557,15 +563,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#esntuqreds .gt_row_group_first td {
+#vvepbzyadh .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#esntuqreds .gt_row_group_first th {
+#vvepbzyadh .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#esntuqreds .gt_summary_row {
+#vvepbzyadh .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -575,16 +581,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#esntuqreds .gt_first_summary_row {
+#vvepbzyadh .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#esntuqreds .gt_first_summary_row.thick {
+#vvepbzyadh .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#esntuqreds .gt_last_summary_row {
+#vvepbzyadh .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -594,7 +600,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#esntuqreds .gt_grand_summary_row {
+#vvepbzyadh .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -604,7 +610,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#esntuqreds .gt_first_grand_summary_row {
+#vvepbzyadh .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -614,7 +620,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#esntuqreds .gt_last_grand_summary_row_top {
+#vvepbzyadh .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -624,11 +630,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#esntuqreds .gt_striped {
+#vvepbzyadh .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#esntuqreds .gt_table_body {
+#vvepbzyadh .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -637,7 +643,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#esntuqreds .gt_footnotes {
+#vvepbzyadh .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -651,7 +657,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#esntuqreds .gt_footnote {
+#vvepbzyadh .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -660,7 +666,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#esntuqreds .gt_sourcenotes {
+#vvepbzyadh .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -674,7 +680,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#esntuqreds .gt_sourcenote {
+#vvepbzyadh .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -682,72 +688,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#esntuqreds .gt_left {
+#vvepbzyadh .gt_left {
   text-align: left;
 }
 
-#esntuqreds .gt_center {
+#vvepbzyadh .gt_center {
   text-align: center;
 }
 
-#esntuqreds .gt_right {
+#vvepbzyadh .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#esntuqreds .gt_font_normal {
+#vvepbzyadh .gt_font_normal {
   font-weight: normal;
 }
 
-#esntuqreds .gt_font_bold {
+#vvepbzyadh .gt_font_bold {
   font-weight: bold;
 }
 
-#esntuqreds .gt_font_italic {
+#vvepbzyadh .gt_font_italic {
   font-style: italic;
 }
 
-#esntuqreds .gt_super {
+#vvepbzyadh .gt_super {
   font-size: 65%;
 }
 
-#esntuqreds .gt_footnote_marks {
+#vvepbzyadh .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#esntuqreds .gt_asterisk {
+#vvepbzyadh .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#esntuqreds .gt_indent_1 {
+#vvepbzyadh .gt_indent_1 {
   text-indent: 5px;
 }
 
-#esntuqreds .gt_indent_2 {
+#vvepbzyadh .gt_indent_2 {
   text-indent: 10px;
 }
 
-#esntuqreds .gt_indent_3 {
+#vvepbzyadh .gt_indent_3 {
   text-indent: 15px;
 }
 
-#esntuqreds .gt_indent_4 {
+#vvepbzyadh .gt_indent_4 {
   text-indent: 20px;
 }
 
-#esntuqreds .gt_indent_5 {
+#vvepbzyadh .gt_indent_5 {
   text-indent: 25px;
 }
 
-#esntuqreds .katex-display {
+#vvepbzyadh .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#esntuqreds div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#vvepbzyadh div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1001,7 +1007,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Anotación de genomas</h1>
 <section id="prokka" class="level2">
 <h2 class="anchored" data-anchor-id="prokka">Prokka</h2>
-<p><code>Prokka</code> es un anotador de genomas para organismos procariontes, lo puedes descargar de <a href="https://github.com/tseemann/prokka">aquí</a>.</p>
+<p><strong>Qué es / para qué sirve</strong><br>
+</p>
+<p><code>Prokka</code> es un anotador rápido y estándar para genomas procariontes (bacterias, arqueas y virus asociados) que identifica características genómicas (CDS, tRNAs, rRNAs, ncRNAs, etc.), las anota con nombres/IDs y genera archivos listos para análisis posteriores o envío a bases públicas.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="va">genomes</span><span class="op">=</span><span class="va">$(</span> <span class="fu">ls</span> <span class="va">$HOME</span>/2025_Demo_ecoli/1_data/<span class="pp">*</span>.fna <span class="va">)</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1011,66 +1019,813 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a> <span class="at">--cpus</span> 6 <span class="dt">\</span></span>
 <span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a> <span class="at">--outdir</span> prokka/<span class="va">${id</span><span class="op">%</span>.fna<span class="va">}</span> <span class="dt">\</span></span>
 <span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a> <span class="at">--genus</span> Escherichia</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a> </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<ul>
+<li><p><code>genomes=.../*.fna</code> — crea la lista de archivos FASTA de contigs/consensos que serán anotados.</p></li>
+<li><p>El <code>for g in $genomes; do ... done</code> recorre cada ensamblaje.</p></li>
+<li><p><code>prokka $g</code> — indica a Prokka el archivo de entrada (.fna/.fasta).</p></li>
+<li><p><code>--cpus 6</code> — usa 6 hilos para acelerar pasos paralelizables (e.g., búsquedas).</p></li>
+<li><p><code>--outdir prokka/${id%.fna}</code> — dirige la salida a una carpeta por genoma (nota: en el snippet que enviaste la variable <code>id</code> <strong>no está definida</strong> dentro del bucle; ver corrección más abajo).</p></li>
+<li><p><code>--genus Escherichia</code> — parámetro opcional que ayuda a priorizar nombres/funciones (mejorará la selección de nombres genéricos). (<a href="https://github.com/tseemann/prokka?utm_source=chatgpt.com" title="Prokka - zap: Rapid prokaryotic genome annotation">GitHub</a>)</p></li>
+</ul>
+<p><strong>Principales archivos que genera Prokka y para qué sirven</strong></p>
+<ul>
+<li><p><code>&lt;sample&gt;.gff</code> — <em>archivo maestro</em> en formato GFF3 que contiene las características anotadas (coordenadas, tipos, anotaciones). Usarlo para cargar en IGV/Artemis o como entrada a pipelines que esperan GFF. (<a href="https://nf-co.re/modules/prokka?utm_source=chatgpt.com" title="modules/prokka">nf-co.re</a>, <a href="https://stab.st-andrews.ac.uk/wiki/index.php/Prokka?utm_source=chatgpt.com" title="Prokka - wiki">stab.st-andrews.ac.uk</a>)</p></li>
+<li><p><code>&lt;sample&gt;.gbk</code> (o <code>.gbk.gz</code>) — archivo en formato GenBank (útil para visualización/depósito y para herramientas que leen GenBank). (<a href="https://nf-co.re/modules/prokka?utm_source=chatgpt.com" title="modules/prokka">nf-co.re</a>)</p></li>
+<li><p><code>&lt;sample&gt;.fna</code> — la secuencia de nucleótidos (contigs) usada/normalizada por Prokka (puede incluir cambios en nombres de secuencia). (<a href="https://stab.st-andrews.ac.uk/wiki/index.php/Prokka?utm_source=chatgpt.com" title="Prokka - wiki">stab.st-andrews.ac.uk</a>)</p></li>
+<li><p><code>&lt;sample&gt;.ffn</code> — secuencias de nucleótidos de los genes codificantes (CDS) extraídas. (<a href="https://stab.st-andrews.ac.uk/wiki/index.php/Prokka?utm_source=chatgpt.com" title="Prokka - wiki">stab.st-andrews.ac.uk</a>)</p></li>
+<li><p><code>&lt;sample&gt;.faa</code> — traducciones (secuencias proteicas) de los CDS; útil para búsquedas funcionales (BLAST/DIAMOND), clustering o análisis de pangenoma. (<a href="https://stab.st-andrews.ac.uk/wiki/index.php/Prokka?utm_source=chatgpt.com" title="Prokka - wiki">stab.st-andrews.ac.uk</a>)</p></li>
+<li><p><code>&lt;sample&gt;.tbl</code> — tabla sencilla con información de anotación (útil para envío a GenBank/ENA en algunos workflows). (<a href="https://hpc.nih.gov/apps/prokka.html?utm_source=chatgpt.com" title="prokka on Biowulf">HPC NIH</a>)</p></li>
+<li><p><code>&lt;sample&gt;.sqn</code> (opcional) — formato Sequin para enviar a NCBI (si se generan). (<a href="https://hpc.nih.gov/apps/prokka.html?utm_source=chatgpt.com" title="prokka on Biowulf">HPC NIH</a>)</p></li>
+<li><p><code>PROKKA_*.log</code> / <code>prokka.err</code> — logs que detallan programas internos y pasos realizados (útil para depuración).</p></li>
+</ul>
+<p><strong>Notas prácticas y recomendaciones para Prokka</strong></p>
+<ul>
+<li><p>Si tu entrada es multi-FASTA con múltiples contigs, Prokka generará un GenBank multi-registro con uno por contig.</p></li>
+<li><p>Ajusta <code>--kingdom</code>, <code>--genus</code>, <code>--species</code>, <code>--strain</code> para mejorar la nomenclatura.</p></li>
+<li><p>Prokka usa varias bases (p.&nbsp;ej. UniProt/Swiss-Prot) y heurísticas; para anotaciones más «exhaustivas» posteriores se pueden re-analizar las proteínas (<code>.faa</code>) con herramientas especializadas. (<a href="https://github.com/tseemann/prokka?utm_source=chatgpt.com" title="Prokka - zap: Rapid prokaryotic genome annotation">GitHub</a>)</p></li>
+</ul>
+<hr>
 </section>
-<section id="bakta" class="level2">
-<h2 class="anchored" data-anchor-id="bakta">Bakta</h2>
-<p>Bakta es uno de los anotadores de genomas “más” completos ya que usa distintas bases, utiliza a <code>DIAMOND</code> de alineador. Lo puedes descargar <a href="https://github.com/oschwengers/bakta">aquí</a>. Es necesario descargar la base de datos para poder ejecutarlo, para este ejemplo se guardó en el directorio <code>$HOME/db</code></p>
-<p><strong>Precaución</strong> ⚠️: Necesitas 8GB de RAM, disponibilidad de tiempo y memoria en tu máquina, con más de 10 genomas podría demorar según la capacidad de nucleos que tengas. Para este tutorial solo te mostraremos como es el código pero no se utilizará este paso para los siguientes análisis.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> <span class="va">$HOME</span>/bin/bakta-env/bin/activate</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+</section>
+<section id="bakta" class="level1">
+<h1>Bakta</h1>
+<p><strong>Qué es / para qué sirve</strong></p>
+<p><code>Bakta</code> es un anotador diseñado para obtener anotaciones amplias, normalizadas y «dbxref-ricas» (múltiples referencias cruzadas) en genomas bacterianos y plásmidos. Está pensado para producir salidas estandarizadas (incluyendo JSON legible por máquina) y sORFs (small ORFs) además de las características estándar (CDS, tRNA, rRNA, ncRNA, CRISPR, etc.). Usa una base de datos local y herramientas rápidas (p.&nbsp;ej. DIAMOND) para hacer búsquedas de homología. (<a href="https://bakta.readthedocs.io/?utm_source=chatgpt.com" title="Bakta Documentation: Introduction">Bakta Documentation</a>, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8743544/?utm_source=chatgpt.com" title="Bakta: rapid and standardized annotation of bacterial ...">PMC</a>)</p>
+<pre><code>source $HOME/bin/bakta-env/bin/activate</code></pre>
 <div class="cell">
 <details class="code-fold">
 <summary>Muestra el código</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="va">genomes</span><span class="op">=</span><span class="va">$(</span><span class="fu">ls</span> <span class="va">$HOME</span>/2025_Demo_ecoli/1_data<span class="va">)</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="va">experiment_file</span><span class="op">=</span><span class="st">"</span><span class="va">$HOME</span><span class="st">/2025_Demo_ecoli/Experiment_Design.tsv"</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="va">genomes</span><span class="op">=</span><span class="va">$(</span><span class="fu">ls</span> <span class="va">$HOME</span>/2025_Demo_ecoli/1_data<span class="va">)</span></span>
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> g <span class="kw">in</span> <span class="va">$genomes</span><span class="kw">;</span> <span class="cf">do</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="va">id</span><span class="op">=</span><span class="va">$(</span><span class="fu">basename</span> <span class="st">"</span><span class="va">$g</span><span class="st">"</span> <span class="kw">|</span> <span class="fu">awk</span> <span class="at">-F</span><span class="st">'/'</span> <span class="st">'{print $NF}'</span> <span class="kw">|</span> <span class="fu">sed</span> <span class="st">'s/.fna$//'</span><span class="va">)</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="va">strain</span><span class="op">=</span><span class="va">$(</span><span class="fu">awk</span> <span class="at">-F</span><span class="st">'\t'</span> <span class="at">-v</span> id=<span class="st">"</span><span class="va">$id</span><span class="st">"</span> <span class="st">'$1 == id {print $3}'</span> <span class="st">"</span><span class="va">$experiment_file</span><span class="st">"</span><span class="va">)</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="va">experiment_file</span><span class="op">=</span><span class="st">"</span><span class="va">$HOME</span><span class="st">/2025_Demo_ecoli/Experiment_Design.tsv"</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> g <span class="kw">in</span> <span class="va">$genomes</span><span class="kw">;</span> <span class="cf">do</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="va">id</span><span class="op">=</span><span class="va">$(</span><span class="fu">basename</span> <span class="st">"</span><span class="va">$g</span><span class="st">"</span> <span class="kw">|</span> <span class="fu">awk</span> <span class="at">-F</span><span class="st">'/'</span> <span class="st">'{print $NF}'</span> <span class="kw">|</span> <span class="fu">sed</span> <span class="st">'s/.fna$//'</span><span class="va">)</span></span>
 <span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    <span class="ex">bakta</span> <span class="dt">\</span></span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">--db</span> <span class="va">$HOME</span>/2025_Demo_ecoli/db <span class="dt">\</span></span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">--output</span> <span class="va">$HOME</span>/2025_Demo_ecoli/2_annotation/bakta/<span class="va">${id}</span> <span class="dt">\</span></span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">--genus</span> Escherichia <span class="dt">\</span></span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">--strain</span> <span class="st">"</span><span class="va">$strain</span><span class="st">"</span> <span class="dt">\</span></span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">--threads</span> 6 <span class="dt">\</span></span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">--force</span> <span class="va">$HOME</span>/1_data/<span class="va">${g}</span></span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    <span class="va">strain</span><span class="op">=</span><span class="va">$(</span><span class="fu">awk</span> <span class="at">-F</span><span class="st">'\t'</span> <span class="at">-v</span> id=<span class="st">"</span><span class="va">$id</span><span class="st">"</span> <span class="st">'$1 == id {print $3}'</span> <span class="st">"</span><span class="va">$experiment_file</span><span class="st">"</span><span class="va">)</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    <span class="ex">bakta</span> <span class="dt">\</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">--db</span> <span class="va">$HOME</span>/2025_Demo_ecoli/db <span class="dt">\</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">--output</span> <span class="va">$HOME</span>/2025_Demo_ecoli/2_annotation/bakta/<span class="va">${id}</span> <span class="dt">\</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">--genus</span> Escherichia <span class="dt">\</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">--strain</span> <span class="st">"</span><span class="va">$strain</span><span class="st">"</span> <span class="dt">\</span></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">--threads</span> 6 <span class="dt">\</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">--force</span> <span class="va">$HOME</span>/1_data/<span class="va">${g}</span></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
+<ul>
+<li><p><code>source .../bin/activate</code> — activa el entorno (p.&nbsp;ej. virtualenv/conda) donde está Bakta.</p></li>
+<li><p><code>--db $HOME/.../db</code> — ubicación de la base de datos compacta de Bakta (necesaria; puede ocupar decenas de GB). (<a href="https://bakta.readthedocs.io/en/latest/cli/database.html?utm_source=chatgpt.com" title="Database - Bakta Documentation - Read the Docs">Bakta Documentation</a>)</p></li>
+<li><p><code>--output ...</code> — carpeta por genoma para guardar resultados.</p></li>
+<li><p><code>--genus</code> / <code>--strain</code> — ayudan en la anotación y en la generación de nombres.</p></li>
+<li><p><code>--threads 6</code> — número de hilos para paralelizar búsquedas.</p></li>
+<li><p><code>--force</code> — sobrescribir salidas existentes.</p></li>
+<li><p>Bakta internamente usa búsquedas con DIAMOND/BLAST y una base SQLite con digest y anotaciones preasignadas (esto acelera y estandariza el proceso). (<a href="https://bakta.readthedocs.io/en/latest/cli/database.html?utm_source=chatgpt.com" title="Database - Bakta Documentation - Read the Docs">Bakta Documentation</a>, <a href="https://bactopia.github.io/v3.0.0/bactopia-tools/bakta/?utm_source=chatgpt.com" title="bakta - Bactopia">Bactopia</a>)</p></li>
+</ul>
+<p><strong>Precauciones de recursos</strong> ⚠️<br>
+</p>
+<p>Bakta requiere memoria y disco para su base y para los pasos intermedios; es habitual necesitar varios GB de RAM (tu nota de 8 GB es razonable como mínimo) y tiempo cuando se procesan muchos genomas. Si tienes &gt;10 genomas, espera que el tiempo total aumente y planifica en un clúster o máquina con suficientes recursos. (<a href="https://bactopia.github.io/v3.0.0/bactopia-tools/bakta/?utm_source=chatgpt.com" title="bakta - Bactopia">Bactopia</a>, <a href="https://software.cqls.oregonstate.edu/updates/bakta-1.8.0/?utm_source=chatgpt.com" title="Bakta 1.8.0 - CQLS Software Update List">software.cqls.oregonstate.edu</a>)</p>
+<p><strong>Archivos y salidas importantes que produce Bakta</strong></p>
+<ul>
+<li><p><code>annotation.gff</code> / <code>&lt;id&gt;.gff</code> — GFF3 con anotaciones (coordenadas y atributos). (<a href="https://bakta.readthedocs.io/?utm_source=chatgpt.com" title="Bakta Documentation: Introduction">Bakta Documentation</a>)</p></li>
+<li><p><code>&lt;id&gt;.gbk</code> — GenBank (cuando se solicita o se genera). (<a href="https://bakta.readthedocs.io/?utm_source=chatgpt.com" title="Bakta Documentation: Introduction">Bakta Documentation</a>)</p></li>
+<li><p><code>&lt;id&gt;.faa</code>, <code>&lt;id&gt;.ffn</code> — proteínas y secuencias nucleotídicas de CDS (similares a Prokka). (<a href="https://bakta.readthedocs.io/?utm_source=chatgpt.com" title="Bakta Documentation: Introduction">Bakta Documentation</a>)</p></li>
+<li><p><code>report.json</code> — salida JSON rica en metadatos y dbxrefs (útil para pipelines automatizados). Bakta hace énfasis en producir JSON estandarizado que puede alimentar otras herramientas. (<a href="https://bakta.readthedocs.io/?utm_source=chatgpt.com" title="Bakta Documentation: Introduction">Bakta Documentation</a>, <a href="https://github.com/oschwengers/bakta/discussions/300?utm_source=chatgpt.com" title="(Re-)Generating bakta outputs from the JSON only #300">GitHub</a>)</p></li>
+<li><p><code>bakta.log</code> / registros — salida estándar y errores para depuración. (<a href="https://bakta.readthedocs.io/en/latest/api/logs.html?utm_source=chatgpt.com" title="Logs - Bakta Documentation - Read the Docs">Bakta Documentation</a>)</p></li>
+</ul>
+<p><strong>Ventajas frente a Prokka</strong></p>
+<ul>
+<li><p>Bakta genera metadatos más ricos / dbxrefs y JSON preparado para downstream automático.</p></li>
+<li><p>Usa una base precomprimida con mapeos a UniProt (y otras colecciones), lo que suele producir IDs más estandarizados.</p></li>
+<li><p>Prokka es muy rápido y ampliamente usado; Bakta tiende a ser más exhaustivo y «estandarizado» pero con requisitos mayores de disco/DB. Para workflows, muchos usuarios ejecutan <strong>Prokka</strong> para anotaciones rápidas y <strong>Bakta</strong> cuando quieren anotaciones más normalizadas y ricas en dbxrefs. (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8743544/?utm_source=chatgpt.com" title="Bakta: rapid and standardized annotation of bacterial ...">PMC</a>, <a href="https://bactopia.github.io/v3.0.0/bactopia-tools/bakta/?utm_source=chatgpt.com" title="bakta - Bactopia">Bactopia</a>)</p></li>
+</ul>
 </section>
+<section id="consejos-para-decidir-cuál-usar-en-tu-pipeline" class="level1">
+<h1>Consejos para decidir cuál usar en tu pipeline</h1>
+<ul>
+<li><p>Si quieres <strong>velocidad</strong> y una anotación estándar rápida para muchas muestras: usa <strong>Prokka</strong> y luego procesa los <code>.faa</code> con herramientas funcionales (eg. EggNOG, InterProScan) según necesites. (<a href="https://github.com/tseemann/prokka?utm_source=chatgpt.com" title="Prokka - zap: Rapid prokaryotic genome annotation">GitHub</a>)</p></li>
+<li><p>Si quieres <strong>anotaciones más ricas, normalizadas y con dbxrefs/JSON</strong> para downstream automático (p.&nbsp;ej. bases de datos locales, comparaciones taxonómicas o reporte estandarizado), usa <strong>Bakta</strong> (pero planifica la DB y recursos). (<a href="https://bakta.readthedocs.io/?utm_source=chatgpt.com" title="Bakta Documentation: Introduction">Bakta Documentation</a>, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8743544/?utm_source=chatgpt.com" title="Bakta: rapid and standardized annotation of bacterial ...">PMC</a>)</p></li>
+</ul>
 <section id="amrfinder" class="level2">
 <h2 class="anchored" data-anchor-id="amrfinder">AMRfinder</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="va">workdir</span><span class="op">=</span><span class="va">$HOME</span>/2025_Demo_ecoli/2_annotation/prokka</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="va">output_dir</span><span class="op">=</span><span class="va">$HOME</span>/2_annotation/AMR</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> dir <span class="kw">in</span> <span class="va">$workdir</span>/<span class="pp">*</span><span class="kw">;</span> <span class="cf">do</span></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="bu">[</span> <span class="ot">-d</span> <span class="st">"</span><span class="va">$dir</span><span class="st">"</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>      <span class="va">sample</span><span class="op">=</span><span class="va">$(</span><span class="fu">basename</span> <span class="st">"</span><span class="va">$dir</span><span class="st">"</span><span class="va">)</span></span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>      <span class="va">protein</span><span class="op">=</span><span class="va">$dir</span>/<span class="va">$sample</span>.faa</span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>      <span class="va">dna</span><span class="op">=</span><span class="va">$dir</span>/<span class="va">$sample</span>.fna</span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>      <span class="va">gff</span><span class="op">=</span><span class="va">$dir</span>/<span class="va">$sample</span>.gff3</span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>  <span class="va">temp_gff</span><span class="op">=</span><span class="st">"</span><span class="va">${output_dir}</span><span class="st">/amrfinder_</span><span class="va">${sample}</span><span class="st">.gff"</span></span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>        <span class="fu">perl</span> <span class="at">-pe</span> <span class="st">'/^##FASTA/ &amp;&amp; exit; s/(\W)Name=/$1OldName=/i; s/ID=([^;]+)/ID=$1;Name=$1/'</span> <span class="va">$gff</span> <span class="op">&gt;</span> <span class="va">$temp_gff</span></span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>      <span class="ex">amrfinder</span> <span class="dt">\</span></span>
-<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>      <span class="at">-p</span> <span class="va">$protein</span> <span class="dt">\</span></span>
-<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>      <span class="at">-n</span> <span class="va">$dna</span> <span class="dt">\</span></span>
-<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>      <span class="at">-g</span> <span class="va">$temp_gff</span> <span class="dt">\</span></span>
-<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>      <span class="at">--plus</span> <span class="at">--organism</span> Escherichia <span class="dt">\</span></span>
-<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>      <span class="at">-o</span> <span class="va">$output_dir</span>/<span class="va">${sample}</span>_amrfinder.tsv <span class="dt">\</span></span>
-<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>      <span class="at">--threads</span> 8</span>
-<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate amrfinder</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> faa <span class="kw">in</span> 2_annotation/prokka/<span class="pp">*</span>/<span class="pp">*</span>.faa<span class="kw">;</span> <span class="cf">do</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="va">sample</span><span class="op">=</span><span class="va">$(</span><span class="fu">basename</span> <span class="st">"</span><span class="va">${faa</span><span class="op">%%</span>.<span class="pp">*</span><span class="va">}</span><span class="st">"</span><span class="va">)</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="va">out</span><span class="op">=</span><span class="st">"8_AMR/</span><span class="va">${sample}</span><span class="st">_amrfinder_prot.tsv"</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">echo</span> <span class="st">"Running amrfinder -p </span><span class="va">$faa</span><span class="st"> -&gt; </span><span class="va">$out</span><span class="st">"</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="ex">amrfinder</span> <span class="at">-p</span> <span class="st">"</span><span class="va">$faa</span><span class="st">"</span> <span class="at">--plus</span> <span class="at">--threads</span> 4 <span class="at">-o</span> <span class="st">"</span><span class="va">$out</span><span class="st">"</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>El <code>output</code> de cada genoma se ve de la siguiente manera:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="ihnmbfvmvv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ihnmbfvmvv table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#ihnmbfvmvv thead, #ihnmbfvmvv tbody, #ihnmbfvmvv tfoot, #ihnmbfvmvv tr, #ihnmbfvmvv td, #ihnmbfvmvv th {
+  border-style: none;
+}
+
+#ihnmbfvmvv p {
+  margin: 0;
+  padding: 0;
+}
+
+#ihnmbfvmvv .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#ihnmbfvmvv .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#ihnmbfvmvv .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#ihnmbfvmvv .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#ihnmbfvmvv .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ihnmbfvmvv .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ihnmbfvmvv .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ihnmbfvmvv .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#ihnmbfvmvv .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#ihnmbfvmvv .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#ihnmbfvmvv .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#ihnmbfvmvv .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#ihnmbfvmvv .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#ihnmbfvmvv .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#ihnmbfvmvv .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#ihnmbfvmvv .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#ihnmbfvmvv .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#ihnmbfvmvv .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#ihnmbfvmvv .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ihnmbfvmvv .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#ihnmbfvmvv .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#ihnmbfvmvv .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#ihnmbfvmvv .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ihnmbfvmvv .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#ihnmbfvmvv .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#ihnmbfvmvv .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ihnmbfvmvv .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ihnmbfvmvv .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#ihnmbfvmvv .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ihnmbfvmvv .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#ihnmbfvmvv .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ihnmbfvmvv .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ihnmbfvmvv .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ihnmbfvmvv .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ihnmbfvmvv .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ihnmbfvmvv .gt_left {
+  text-align: left;
+}
+
+#ihnmbfvmvv .gt_center {
+  text-align: center;
+}
+
+#ihnmbfvmvv .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#ihnmbfvmvv .gt_font_normal {
+  font-weight: normal;
+}
+
+#ihnmbfvmvv .gt_font_bold {
+  font-weight: bold;
+}
+
+#ihnmbfvmvv .gt_font_italic {
+  font-style: italic;
+}
+
+#ihnmbfvmvv .gt_super {
+  font-size: 65%;
+}
+
+#ihnmbfvmvv .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#ihnmbfvmvv .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#ihnmbfvmvv .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#ihnmbfvmvv .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#ihnmbfvmvv .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#ihnmbfvmvv .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#ihnmbfvmvv .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#ihnmbfvmvv .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#ihnmbfvmvv div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="Protein-id" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Protein id</th>
+<th id="Element-symbol" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Element symbol</th>
+<th id="Element-name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Element name</th>
+<th id="Scope" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Scope</th>
+<th id="Type" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Type</th>
+<th id="Subtype" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Subtype</th>
+<th id="Class" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Class</th>
+<th id="Subclass" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Subclass</th>
+<th id="Method" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Method</th>
+<th id="Target-length" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Target length</th>
+<th id="Reference-sequence-length" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Reference sequence length</th>
+<th id="a%-Coverage-of-reference" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">% Coverage of reference</th>
+<th id="a%-Identity-to-reference" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">% Identity to reference</th>
+<th id="Alignment-length" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Alignment length</th>
+<th id="Closest-reference-accession" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Closest reference accession</th>
+<th id="Closest-reference-name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Closest reference name</th>
+<th id="HMM-accession" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">HMM accession</th>
+<th id="HMM-description" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">HMM description</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="Protein id">PICPPNBC_00538</td>
+<td class="gt_row gt_left" headers="Element symbol">emrE</td>
+<td class="gt_row gt_left" headers="Element name">multidrug efflux SMR transporter EmrE</td>
+<td class="gt_row gt_left" headers="Scope">plus</td>
+<td class="gt_row gt_left" headers="Type">STRESS</td>
+<td class="gt_row gt_left" headers="Subtype">BIOCIDE</td>
+<td class="gt_row gt_left" headers="Class">EFFLUX</td>
+<td class="gt_row gt_left" headers="Subclass">EFFLUX</td>
+<td class="gt_row gt_left" headers="Method">EXACTP</td>
+<td class="gt_row gt_right" headers="Target length">110</td>
+<td class="gt_row gt_right" headers="Reference sequence length">110</td>
+<td class="gt_row gt_right" headers="% Coverage of reference">100</td>
+<td class="gt_row gt_right" headers="% Identity to reference">100.00</td>
+<td class="gt_row gt_right" headers="Alignment length">110</td>
+<td class="gt_row gt_left" headers="Closest reference accession">CAA77936.1</td>
+<td class="gt_row gt_left" headers="Closest reference name">multidrug efflux SMR transporter EmrE</td>
+<td class="gt_row gt_left" headers="HMM accession">NF042984.1</td>
+<td class="gt_row gt_left" headers="HMM description">multidrug efflux SMR transporter EmrE</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Protein id">PICPPNBC_01161</td>
+<td class="gt_row gt_left" headers="Element symbol">ariR</td>
+<td class="gt_row gt_left" headers="Element name">biofilm/acid-resistance regulator AriR</td>
+<td class="gt_row gt_left" headers="Scope">plus</td>
+<td class="gt_row gt_left" headers="Type">STRESS</td>
+<td class="gt_row gt_left" headers="Subtype">ACID</td>
+<td class="gt_row gt_left" headers="Class">NA</td>
+<td class="gt_row gt_left" headers="Subclass">NA</td>
+<td class="gt_row gt_left" headers="Method">EXACTP</td>
+<td class="gt_row gt_right" headers="Target length">88</td>
+<td class="gt_row gt_right" headers="Reference sequence length">88</td>
+<td class="gt_row gt_right" headers="% Coverage of reference">100</td>
+<td class="gt_row gt_right" headers="% Identity to reference">100.00</td>
+<td class="gt_row gt_right" headers="Alignment length">88</td>
+<td class="gt_row gt_left" headers="Closest reference accession">AAC74250.1</td>
+<td class="gt_row gt_left" headers="Closest reference name">biofilm/acid-resistance regulator AriR</td>
+<td class="gt_row gt_left" headers="HMM accession">NA</td>
+<td class="gt_row gt_left" headers="HMM description">NA</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Protein id">PICPPNBC_01599</td>
+<td class="gt_row gt_left" headers="Element symbol">asr</td>
+<td class="gt_row gt_left" headers="Element name">acid resistance repetitive basic protein Asr</td>
+<td class="gt_row gt_left" headers="Scope">plus</td>
+<td class="gt_row gt_left" headers="Type">STRESS</td>
+<td class="gt_row gt_left" headers="Subtype">ACID</td>
+<td class="gt_row gt_left" headers="Class">NA</td>
+<td class="gt_row gt_left" headers="Subclass">NA</td>
+<td class="gt_row gt_left" headers="Method">EXACTP</td>
+<td class="gt_row gt_right" headers="Target length">102</td>
+<td class="gt_row gt_right" headers="Reference sequence length">102</td>
+<td class="gt_row gt_right" headers="% Coverage of reference">100</td>
+<td class="gt_row gt_right" headers="% Identity to reference">100.00</td>
+<td class="gt_row gt_right" headers="Alignment length">102</td>
+<td class="gt_row gt_left" headers="Closest reference accession">BAA15331.2</td>
+<td class="gt_row gt_left" headers="Closest reference name">acid resistance repetitive basic protein Asr</td>
+<td class="gt_row gt_left" headers="HMM accession">NF033636.1</td>
+<td class="gt_row gt_left" headers="HMM description">acid resistance repetitive basic protein Asr</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Protein id">PICPPNBC_02975</td>
+<td class="gt_row gt_left" headers="Element symbol">sslE</td>
+<td class="gt_row gt_left" headers="Element name">lipoprotein metalloprotease SslE</td>
+<td class="gt_row gt_left" headers="Scope">plus</td>
+<td class="gt_row gt_left" headers="Type">VIRULENCE</td>
+<td class="gt_row gt_left" headers="Subtype">VIRULENCE</td>
+<td class="gt_row gt_left" headers="Class">NA</td>
+<td class="gt_row gt_left" headers="Subclass">NA</td>
+<td class="gt_row gt_left" headers="Method">HMM</td>
+<td class="gt_row gt_right" headers="Target length">1520</td>
+<td class="gt_row gt_right" headers="Reference sequence length">1520</td>
+<td class="gt_row gt_right" headers="% Coverage of reference">100</td>
+<td class="gt_row gt_right" headers="% Identity to reference">88.03</td>
+<td class="gt_row gt_right" headers="Alignment length">1521</td>
+<td class="gt_row gt_left" headers="Closest reference accession">ADE89421.1</td>
+<td class="gt_row gt_left" headers="Closest reference name">lipoprotein metalloprotease SslE</td>
+<td class="gt_row gt_left" headers="HMM accession">NF037973.1</td>
+<td class="gt_row gt_left" headers="HMM description">lipoprotein metalloprotease SslE</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Protein id">PICPPNBC_03259</td>
+<td class="gt_row gt_left" headers="Element symbol">acrF</td>
+<td class="gt_row gt_left" headers="Element name">multidrug efflux RND transporter permease subunit AcrF</td>
+<td class="gt_row gt_left" headers="Scope">plus</td>
+<td class="gt_row gt_left" headers="Type">AMR</td>
+<td class="gt_row gt_left" headers="Subtype">AMR</td>
+<td class="gt_row gt_left" headers="Class">EFFLUX</td>
+<td class="gt_row gt_left" headers="Subclass">EFFLUX</td>
+<td class="gt_row gt_left" headers="Method">EXACTP</td>
+<td class="gt_row gt_right" headers="Target length">1034</td>
+<td class="gt_row gt_right" headers="Reference sequence length">1034</td>
+<td class="gt_row gt_right" headers="% Coverage of reference">100</td>
+<td class="gt_row gt_right" headers="% Identity to reference">100.00</td>
+<td class="gt_row gt_right" headers="Alignment length">1034</td>
+<td class="gt_row gt_left" headers="Closest reference accession">AAC76298.1</td>
+<td class="gt_row gt_left" headers="Closest reference name">multidrug efflux RND transporter permease subunit AcrF</td>
+<td class="gt_row gt_left" headers="HMM accession">NA</td>
+<td class="gt_row gt_left" headers="HMM description">NA</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Protein id">PICPPNBC_03497</td>
+<td class="gt_row gt_left" headers="Element symbol">arsR</td>
+<td class="gt_row gt_left" headers="Element name">As(III)-sensing metalloregulatory transcriptional repressor ArsR</td>
+<td class="gt_row gt_left" headers="Scope">plus</td>
+<td class="gt_row gt_left" headers="Type">STRESS</td>
+<td class="gt_row gt_left" headers="Subtype">METAL</td>
+<td class="gt_row gt_left" headers="Class">ARSENIC</td>
+<td class="gt_row gt_left" headers="Subclass">ARSENIC</td>
+<td class="gt_row gt_left" headers="Method">EXACTP</td>
+<td class="gt_row gt_right" headers="Target length">117</td>
+<td class="gt_row gt_right" headers="Reference sequence length">117</td>
+<td class="gt_row gt_right" headers="% Coverage of reference">100</td>
+<td class="gt_row gt_right" headers="% Identity to reference">100.00</td>
+<td class="gt_row gt_right" headers="Alignment length">117</td>
+<td class="gt_row gt_left" headers="Closest reference accession">BAE77793.1</td>
+<td class="gt_row gt_left" headers="Closest reference name">As(III)-sensing metalloregulatory transcriptional repressor ArsR</td>
+<td class="gt_row gt_left" headers="HMM accession">NA</td>
+<td class="gt_row gt_left" headers="HMM description">NA</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Protein id">PICPPNBC_03499</td>
+<td class="gt_row gt_left" headers="Element symbol">arsC</td>
+<td class="gt_row gt_left" headers="Element name">glutaredoxin-dependent arsenate reductase</td>
+<td class="gt_row gt_left" headers="Scope">plus</td>
+<td class="gt_row gt_left" headers="Type">STRESS</td>
+<td class="gt_row gt_left" headers="Subtype">METAL</td>
+<td class="gt_row gt_left" headers="Class">ARSENIC</td>
+<td class="gt_row gt_left" headers="Subclass">ARSENATE</td>
+<td class="gt_row gt_left" headers="Method">BLASTP</td>
+<td class="gt_row gt_right" headers="Target length">141</td>
+<td class="gt_row gt_right" headers="Reference sequence length">141</td>
+<td class="gt_row gt_right" headers="% Coverage of reference">100</td>
+<td class="gt_row gt_right" headers="% Identity to reference">94.33</td>
+<td class="gt_row gt_right" headers="Alignment length">141</td>
+<td class="gt_row gt_left" headers="Closest reference accession">AAA21096.1</td>
+<td class="gt_row gt_left" headers="Closest reference name">glutaredoxin-dependent arsenate reductase</td>
+<td class="gt_row gt_left" headers="HMM accession">NF007456.1</td>
+<td class="gt_row gt_left" headers="HMM description">glutaredoxin-dependent arsenate reductase</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Protein id">PICPPNBC_03676</td>
+<td class="gt_row gt_left" headers="Element symbol">emrD</td>
+<td class="gt_row gt_left" headers="Element name">multidrug efflux MFS transporter EmrD</td>
+<td class="gt_row gt_left" headers="Scope">plus</td>
+<td class="gt_row gt_left" headers="Type">AMR</td>
+<td class="gt_row gt_left" headers="Subtype">AMR</td>
+<td class="gt_row gt_left" headers="Class">EFFLUX</td>
+<td class="gt_row gt_left" headers="Subclass">EFFLUX</td>
+<td class="gt_row gt_left" headers="Method">EXACTP</td>
+<td class="gt_row gt_right" headers="Target length">394</td>
+<td class="gt_row gt_right" headers="Reference sequence length">394</td>
+<td class="gt_row gt_right" headers="% Coverage of reference">100</td>
+<td class="gt_row gt_right" headers="% Identity to reference">100.00</td>
+<td class="gt_row gt_right" headers="Alignment length">394</td>
+<td class="gt_row gt_left" headers="Closest reference accession">BAE77620.1</td>
+<td class="gt_row gt_left" headers="Closest reference name">multidrug efflux MFS transporter EmrD</td>
+<td class="gt_row gt_left" headers="HMM accession">NA</td>
+<td class="gt_row gt_left" headers="HMM description">NA</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Protein id">PICPPNBC_03916</td>
+<td class="gt_row gt_left" headers="Element symbol">fieF</td>
+<td class="gt_row gt_left" headers="Element name">CDF family cation-efflux transporter FieF</td>
+<td class="gt_row gt_left" headers="Scope">plus</td>
+<td class="gt_row gt_left" headers="Type">STRESS</td>
+<td class="gt_row gt_left" headers="Subtype">METAL</td>
+<td class="gt_row gt_left" headers="Class">NA</td>
+<td class="gt_row gt_left" headers="Subclass">NA</td>
+<td class="gt_row gt_left" headers="Method">EXACTP</td>
+<td class="gt_row gt_right" headers="Target length">300</td>
+<td class="gt_row gt_right" headers="Reference sequence length">300</td>
+<td class="gt_row gt_right" headers="% Coverage of reference">100</td>
+<td class="gt_row gt_right" headers="% Identity to reference">100.00</td>
+<td class="gt_row gt_right" headers="Alignment length">300</td>
+<td class="gt_row gt_left" headers="Closest reference accession">BAE77395.1</td>
+<td class="gt_row gt_left" headers="Closest reference name">CDF family cation-efflux transporter FieF</td>
+<td class="gt_row gt_left" headers="HMM accession">NA</td>
+<td class="gt_row gt_left" headers="HMM description">NA</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Protein id">PICPPNBC_04160</td>
+<td class="gt_row gt_left" headers="Element symbol">blaEC</td>
+<td class="gt_row gt_left" headers="Element name">BlaEC family class C beta-lactamase</td>
+<td class="gt_row gt_left" headers="Scope">plus</td>
+<td class="gt_row gt_left" headers="Type">AMR</td>
+<td class="gt_row gt_left" headers="Subtype">AMR</td>
+<td class="gt_row gt_left" headers="Class">BETA-LACTAM</td>
+<td class="gt_row gt_left" headers="Subclass">BETA-LACTAM</td>
+<td class="gt_row gt_left" headers="Method">EXACTP</td>
+<td class="gt_row gt_right" headers="Target length">377</td>
+<td class="gt_row gt_right" headers="Reference sequence length">377</td>
+<td class="gt_row gt_right" headers="% Coverage of reference">100</td>
+<td class="gt_row gt_right" headers="% Identity to reference">100.00</td>
+<td class="gt_row gt_right" headers="Alignment length">377</td>
+<td class="gt_row gt_left" headers="Closest reference accession">AAC77110.1</td>
+<td class="gt_row gt_left" headers="Closest reference name">BlaEC family class C beta-lactamase</td>
+<td class="gt_row gt_left" headers="HMM accession">NF000185.2</td>
+<td class="gt_row gt_left" headers="HMM description">BlaEC family class C beta-lactamase</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Protein id">PICPPNBC_04349</td>
+<td class="gt_row gt_left" headers="Element symbol">mdtM</td>
+<td class="gt_row gt_left" headers="Element name">multidrug efflux MFS transporter MdtM</td>
+<td class="gt_row gt_left" headers="Scope">plus</td>
+<td class="gt_row gt_left" headers="Type">AMR</td>
+<td class="gt_row gt_left" headers="Subtype">AMR</td>
+<td class="gt_row gt_left" headers="Class">EFFLUX</td>
+<td class="gt_row gt_left" headers="Subclass">EFFLUX</td>
+<td class="gt_row gt_left" headers="Method">EXACTP</td>
+<td class="gt_row gt_right" headers="Target length">410</td>
+<td class="gt_row gt_right" headers="Reference sequence length">410</td>
+<td class="gt_row gt_right" headers="% Coverage of reference">100</td>
+<td class="gt_row gt_right" headers="% Identity to reference">100.00</td>
+<td class="gt_row gt_right" headers="Alignment length">410</td>
+<td class="gt_row gt_left" headers="Closest reference accession">AAC77293.1</td>
+<td class="gt_row gt_left" headers="Closest reference name">multidrug efflux MFS transporter MdtM</td>
+<td class="gt_row gt_left" headers="HMM accession">NA</td>
+<td class="gt_row gt_left" headers="HMM description">NA</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
 </div>
 </section>
 <section id="virulence-factor-database" class="level2">
