@@ -88,19 +88,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#control-de-calidad" id="toc-control-de-calidad" class="nav-link" data-scroll-target="#control-de-calidad">Control de Calidad</a>
   <ul class="collapse">
   <li><a href="#fastani" id="toc-fastani" class="nav-link" data-scroll-target="#fastani">FastANI</a></li>
-  <li><a href="#checkm" id="toc-checkm" class="nav-link" data-scroll-target="#checkm">CheckM</a></li>
   <li><a href="#busco" id="toc-busco" class="nav-link" data-scroll-target="#busco">BUSCO</a></li>
   </ul></li>
   <li><a href="#anotación-de-genomas" id="toc-anotación-de-genomas" class="nav-link" data-scroll-target="#anotación-de-genomas">Anotación de genomas</a>
   <ul class="collapse">
   <li><a href="#prokka" id="toc-prokka" class="nav-link" data-scroll-target="#prokka">Prokka</a></li>
-  </ul></li>
   <li><a href="#bakta" id="toc-bakta" class="nav-link" data-scroll-target="#bakta">Bakta</a></li>
-  <li><a href="#consejos-para-decidir-cuál-usar-en-tu-pipeline" id="toc-consejos-para-decidir-cuál-usar-en-tu-pipeline" class="nav-link" data-scroll-target="#consejos-para-decidir-cuál-usar-en-tu-pipeline">Consejos para decidir cuál usar en tu pipeline</a>
-  <ul class="collapse">
-  <li><a href="#amrfinder" id="toc-amrfinder" class="nav-link" data-scroll-target="#amrfinder">AMRfinder</a></li>
+  <li><a href="#consejos-para-decidir-cuál-usar-en-tu-pipeline" id="toc-consejos-para-decidir-cuál-usar-en-tu-pipeline" class="nav-link" data-scroll-target="#consejos-para-decidir-cuál-usar-en-tu-pipeline">Consejos para decidir cuál usar en tu pipeline</a></li>
+  <li><a href="#amrfinderplus" id="toc-amrfinderplus" class="nav-link" data-scroll-target="#amrfinderplus">AMRfinderPlus</a></li>
   <li><a href="#virulence-factor-database" id="toc-virulence-factor-database" class="nav-link" data-scroll-target="#virulence-factor-database">Virulence Factor DataBase</a></li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
   </ul></li>
   <li><a href="#pangenoma" id="toc-pangenoma" class="nav-link" data-scroll-target="#pangenoma">Pangenoma</a></li>
   <li><a href="#filogénia" id="toc-filogénia" class="nav-link" data-scroll-target="#filogénia">Filogénia</a></li>
@@ -146,19 +142,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#control-de-calidad" id="toc-control-de-calidad">Control de Calidad</a>
   <ul>
   <li><a href="#fastani" id="toc-fastani">FastANI</a></li>
-  <li><a href="#checkm" id="toc-checkm">CheckM</a></li>
   <li><a href="#busco" id="toc-busco">BUSCO</a></li>
   </ul></li>
   <li><a href="#anotación-de-genomas" id="toc-anotación-de-genomas">Anotación de genomas</a>
   <ul>
   <li><a href="#prokka" id="toc-prokka">Prokka</a></li>
-  </ul></li>
   <li><a href="#bakta" id="toc-bakta">Bakta</a></li>
-  <li><a href="#consejos-para-decidir-cuál-usar-en-tu-pipeline" id="toc-consejos-para-decidir-cuál-usar-en-tu-pipeline">Consejos para decidir cuál usar en tu pipeline</a>
-  <ul>
-  <li><a href="#amrfinder" id="toc-amrfinder">AMRfinder</a></li>
+  <li><a href="#consejos-para-decidir-cuál-usar-en-tu-pipeline" id="toc-consejos-para-decidir-cuál-usar-en-tu-pipeline">Consejos para decidir cuál usar en tu pipeline</a></li>
+  <li><a href="#amrfinderplus" id="toc-amrfinderplus">AMRfinderPlus</a></li>
   <li><a href="#virulence-factor-database" id="toc-virulence-factor-database">Virulence Factor DataBase</a></li>
-  <li><a href="#section" id="toc-section"></a></li>
   </ul></li>
   <li><a href="#pangenoma" id="toc-pangenoma">Pangenoma</a></li>
   <li><a href="#filogénia" id="toc-filogénia">Filogénia</a></li>
@@ -308,23 +300,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>En este tutorial este será el archivo con el que trabajaremos <a href="https://drive.google.com/file/d/19wuoj6hUPrJPmzf6d3KLo_OFpjnNykz4/view?usp=drive_link"><code>Ecoli_bovineHost.tsv</code></a>:</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="vvepbzyadh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#vvepbzyadh table {
+<div id="vwzgjrmsfb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#vwzgjrmsfb table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#vvepbzyadh thead, #vvepbzyadh tbody, #vvepbzyadh tfoot, #vvepbzyadh tr, #vvepbzyadh td, #vvepbzyadh th {
+#vwzgjrmsfb thead, #vwzgjrmsfb tbody, #vwzgjrmsfb tfoot, #vwzgjrmsfb tr, #vwzgjrmsfb td, #vwzgjrmsfb th {
   border-style: none;
 }
 
-#vvepbzyadh p {
+#vwzgjrmsfb p {
   margin: 0;
   padding: 0;
 }
 
-#vvepbzyadh .gt_table {
+#vwzgjrmsfb .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -350,12 +342,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#vvepbzyadh .gt_caption {
+#vwzgjrmsfb .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#vvepbzyadh .gt_title {
+#vwzgjrmsfb .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -367,7 +359,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#vvepbzyadh .gt_subtitle {
+#vwzgjrmsfb .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -379,7 +371,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#vvepbzyadh .gt_heading {
+#vwzgjrmsfb .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -391,13 +383,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#vvepbzyadh .gt_bottom_border {
+#vwzgjrmsfb .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#vvepbzyadh .gt_col_headings {
+#vwzgjrmsfb .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -412,7 +404,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#vvepbzyadh .gt_col_heading {
+#vwzgjrmsfb .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -432,7 +424,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#vvepbzyadh .gt_column_spanner_outer {
+#vwzgjrmsfb .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -444,15 +436,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#vvepbzyadh .gt_column_spanner_outer:first-child {
+#vwzgjrmsfb .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#vvepbzyadh .gt_column_spanner_outer:last-child {
+#vwzgjrmsfb .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#vvepbzyadh .gt_column_spanner {
+#vwzgjrmsfb .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -464,11 +456,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#vvepbzyadh .gt_spanner_row {
+#vwzgjrmsfb .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#vvepbzyadh .gt_group_heading {
+#vwzgjrmsfb .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -494,7 +486,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#vvepbzyadh .gt_empty_group_heading {
+#vwzgjrmsfb .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -509,15 +501,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#vvepbzyadh .gt_from_md > :first-child {
+#vwzgjrmsfb .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#vvepbzyadh .gt_from_md > :last-child {
+#vwzgjrmsfb .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#vvepbzyadh .gt_row {
+#vwzgjrmsfb .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -536,7 +528,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#vvepbzyadh .gt_stub {
+#vwzgjrmsfb .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -549,7 +541,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#vvepbzyadh .gt_stub_row_group {
+#vwzgjrmsfb .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -563,15 +555,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#vvepbzyadh .gt_row_group_first td {
+#vwzgjrmsfb .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#vvepbzyadh .gt_row_group_first th {
+#vwzgjrmsfb .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#vvepbzyadh .gt_summary_row {
+#vwzgjrmsfb .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -581,16 +573,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#vvepbzyadh .gt_first_summary_row {
+#vwzgjrmsfb .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#vvepbzyadh .gt_first_summary_row.thick {
+#vwzgjrmsfb .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#vvepbzyadh .gt_last_summary_row {
+#vwzgjrmsfb .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -600,7 +592,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#vvepbzyadh .gt_grand_summary_row {
+#vwzgjrmsfb .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -610,7 +602,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#vvepbzyadh .gt_first_grand_summary_row {
+#vwzgjrmsfb .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -620,7 +612,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#vvepbzyadh .gt_last_grand_summary_row_top {
+#vwzgjrmsfb .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -630,11 +622,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#vvepbzyadh .gt_striped {
+#vwzgjrmsfb .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#vvepbzyadh .gt_table_body {
+#vwzgjrmsfb .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -643,7 +635,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#vvepbzyadh .gt_footnotes {
+#vwzgjrmsfb .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -657,7 +649,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#vvepbzyadh .gt_footnote {
+#vwzgjrmsfb .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -666,7 +658,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#vvepbzyadh .gt_sourcenotes {
+#vwzgjrmsfb .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -680,7 +672,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#vvepbzyadh .gt_sourcenote {
+#vwzgjrmsfb .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -688,72 +680,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#vvepbzyadh .gt_left {
+#vwzgjrmsfb .gt_left {
   text-align: left;
 }
 
-#vvepbzyadh .gt_center {
+#vwzgjrmsfb .gt_center {
   text-align: center;
 }
 
-#vvepbzyadh .gt_right {
+#vwzgjrmsfb .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#vvepbzyadh .gt_font_normal {
+#vwzgjrmsfb .gt_font_normal {
   font-weight: normal;
 }
 
-#vvepbzyadh .gt_font_bold {
+#vwzgjrmsfb .gt_font_bold {
   font-weight: bold;
 }
 
-#vvepbzyadh .gt_font_italic {
+#vwzgjrmsfb .gt_font_italic {
   font-style: italic;
 }
 
-#vvepbzyadh .gt_super {
+#vwzgjrmsfb .gt_super {
   font-size: 65%;
 }
 
-#vvepbzyadh .gt_footnote_marks {
+#vwzgjrmsfb .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#vvepbzyadh .gt_asterisk {
+#vwzgjrmsfb .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#vvepbzyadh .gt_indent_1 {
+#vwzgjrmsfb .gt_indent_1 {
   text-indent: 5px;
 }
 
-#vvepbzyadh .gt_indent_2 {
+#vwzgjrmsfb .gt_indent_2 {
   text-indent: 10px;
 }
 
-#vvepbzyadh .gt_indent_3 {
+#vwzgjrmsfb .gt_indent_3 {
   text-indent: 15px;
 }
 
-#vvepbzyadh .gt_indent_4 {
+#vwzgjrmsfb .gt_indent_4 {
   text-indent: 20px;
 }
 
-#vvepbzyadh .gt_indent_5 {
+#vwzgjrmsfb .gt_indent_5 {
   text-indent: 25px;
 }
 
-#vvepbzyadh .katex-display {
+#vwzgjrmsfb .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#vvepbzyadh div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#vwzgjrmsfb div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -977,9 +969,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>--matrix</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="checkm" class="level2">
-<h2 class="anchored" data-anchor-id="checkm">CheckM</h2>
-</section>
 <section id="busco" class="level2">
 <h2 class="anchored" data-anchor-id="busco">BUSCO</h2>
 <div class="cell">
@@ -1048,9 +1037,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <hr>
 </section>
-</section>
-<section id="bakta" class="level1">
-<h1>Bakta</h1>
+<section id="bakta" class="level2">
+<h2 class="anchored" data-anchor-id="bakta">Bakta</h2>
 <p><strong>Qué es / para qué sirve</strong></p>
 <p><code>Bakta</code> es un anotador diseñado para obtener anotaciones amplias, normalizadas y «dbxref-ricas» (múltiples referencias cruzadas) en genomas bacterianos y plásmidos. Está pensado para producir salidas estandarizadas (incluyendo JSON legible por máquina) y sORFs (small ORFs) además de las características estándar (CDS, tRNA, rRNA, ncRNA, CRISPR, etc.). Usa una base de datos local y herramientas rápidas (p.&nbsp;ej. DIAMOND) para hacer búsquedas de homología. (<a href="https://bakta.readthedocs.io/?utm_source=chatgpt.com" title="Bakta Documentation: Introduction">Bakta Documentation</a>, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8743544/?utm_source=chatgpt.com" title="Bakta: rapid and standardized annotation of bacterial ...">PMC</a>)</p>
 <pre><code>source $HOME/bin/bakta-env/bin/activate</code></pre>
@@ -1106,14 +1094,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>Prokka es muy rápido y ampliamente usado; Bakta tiende a ser más exhaustivo y «estandarizado» pero con requisitos mayores de disco/DB. Para workflows, muchos usuarios ejecutan <strong>Prokka</strong> para anotaciones rápidas y <strong>Bakta</strong> cuando quieren anotaciones más normalizadas y ricas en dbxrefs. (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8743544/?utm_source=chatgpt.com" title="Bakta: rapid and standardized annotation of bacterial ...">PMC</a>, <a href="https://bactopia.github.io/v3.0.0/bactopia-tools/bakta/?utm_source=chatgpt.com" title="bakta - Bactopia">Bactopia</a>)</p></li>
 </ul>
 </section>
-<section id="consejos-para-decidir-cuál-usar-en-tu-pipeline" class="level1">
-<h1>Consejos para decidir cuál usar en tu pipeline</h1>
+<section id="consejos-para-decidir-cuál-usar-en-tu-pipeline" class="level2">
+<h2 class="anchored" data-anchor-id="consejos-para-decidir-cuál-usar-en-tu-pipeline">Consejos para decidir cuál usar en tu pipeline</h2>
 <ul>
 <li><p>Si quieres <strong>velocidad</strong> y una anotación estándar rápida para muchas muestras: usa <strong>Prokka</strong> y luego procesa los <code>.faa</code> con herramientas funcionales (eg. EggNOG, InterProScan) según necesites. (<a href="https://github.com/tseemann/prokka?utm_source=chatgpt.com" title="Prokka - zap: Rapid prokaryotic genome annotation">GitHub</a>)</p></li>
 <li><p>Si quieres <strong>anotaciones más ricas, normalizadas y con dbxrefs/JSON</strong> para downstream automático (p.&nbsp;ej. bases de datos locales, comparaciones taxonómicas o reporte estandarizado), usa <strong>Bakta</strong> (pero planifica la DB y recursos). (<a href="https://bakta.readthedocs.io/?utm_source=chatgpt.com" title="Bakta Documentation: Introduction">Bakta Documentation</a>, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8743544/?utm_source=chatgpt.com" title="Bakta: rapid and standardized annotation of bacterial ...">PMC</a>)</p></li>
 </ul>
-<section id="amrfinder" class="level2">
-<h2 class="anchored" data-anchor-id="amrfinder">AMRfinder</h2>
+</section>
+<section id="amrfinderplus" class="level2">
+<h2 class="anchored" data-anchor-id="amrfinderplus">AMRfinderPlus</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate amrfinder</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1127,23 +1116,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>El <code>output</code> de cada genoma se ve de la siguiente manera:</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="ihnmbfvmvv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ihnmbfvmvv table {
+<div id="uhywkywybf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#uhywkywybf table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ihnmbfvmvv thead, #ihnmbfvmvv tbody, #ihnmbfvmvv tfoot, #ihnmbfvmvv tr, #ihnmbfvmvv td, #ihnmbfvmvv th {
+#uhywkywybf thead, #uhywkywybf tbody, #uhywkywybf tfoot, #uhywkywybf tr, #uhywkywybf td, #uhywkywybf th {
   border-style: none;
 }
 
-#ihnmbfvmvv p {
+#uhywkywybf p {
   margin: 0;
   padding: 0;
 }
 
-#ihnmbfvmvv .gt_table {
+#uhywkywybf .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1169,12 +1158,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#ihnmbfvmvv .gt_caption {
+#uhywkywybf .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ihnmbfvmvv .gt_title {
+#uhywkywybf .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1186,7 +1175,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#ihnmbfvmvv .gt_subtitle {
+#uhywkywybf .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1198,7 +1187,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#ihnmbfvmvv .gt_heading {
+#uhywkywybf .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1210,13 +1199,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#ihnmbfvmvv .gt_bottom_border {
+#uhywkywybf .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ihnmbfvmvv .gt_col_headings {
+#uhywkywybf .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1231,7 +1220,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#ihnmbfvmvv .gt_col_heading {
+#uhywkywybf .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1251,7 +1240,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#ihnmbfvmvv .gt_column_spanner_outer {
+#uhywkywybf .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1263,15 +1252,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#ihnmbfvmvv .gt_column_spanner_outer:first-child {
+#uhywkywybf .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ihnmbfvmvv .gt_column_spanner_outer:last-child {
+#uhywkywybf .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ihnmbfvmvv .gt_column_spanner {
+#uhywkywybf .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1283,11 +1272,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#ihnmbfvmvv .gt_spanner_row {
+#uhywkywybf .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ihnmbfvmvv .gt_group_heading {
+#uhywkywybf .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1313,7 +1302,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#ihnmbfvmvv .gt_empty_group_heading {
+#uhywkywybf .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1328,15 +1317,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#ihnmbfvmvv .gt_from_md > :first-child {
+#uhywkywybf .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ihnmbfvmvv .gt_from_md > :last-child {
+#uhywkywybf .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ihnmbfvmvv .gt_row {
+#uhywkywybf .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1355,7 +1344,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#ihnmbfvmvv .gt_stub {
+#uhywkywybf .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1368,7 +1357,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#ihnmbfvmvv .gt_stub_row_group {
+#uhywkywybf .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1382,15 +1371,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#ihnmbfvmvv .gt_row_group_first td {
+#uhywkywybf .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ihnmbfvmvv .gt_row_group_first th {
+#uhywkywybf .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ihnmbfvmvv .gt_summary_row {
+#uhywkywybf .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1400,16 +1389,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#ihnmbfvmvv .gt_first_summary_row {
+#uhywkywybf .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ihnmbfvmvv .gt_first_summary_row.thick {
+#uhywkywybf .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ihnmbfvmvv .gt_last_summary_row {
+#uhywkywybf .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1419,7 +1408,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#ihnmbfvmvv .gt_grand_summary_row {
+#uhywkywybf .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1429,7 +1418,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#ihnmbfvmvv .gt_first_grand_summary_row {
+#uhywkywybf .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1439,7 +1428,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#ihnmbfvmvv .gt_last_grand_summary_row_top {
+#uhywkywybf .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1449,11 +1438,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#ihnmbfvmvv .gt_striped {
+#uhywkywybf .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ihnmbfvmvv .gt_table_body {
+#uhywkywybf .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1462,7 +1451,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#ihnmbfvmvv .gt_footnotes {
+#uhywkywybf .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1476,7 +1465,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#ihnmbfvmvv .gt_footnote {
+#uhywkywybf .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1485,7 +1474,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#ihnmbfvmvv .gt_sourcenotes {
+#uhywkywybf .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1499,7 +1488,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#ihnmbfvmvv .gt_sourcenote {
+#uhywkywybf .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1507,72 +1496,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#ihnmbfvmvv .gt_left {
+#uhywkywybf .gt_left {
   text-align: left;
 }
 
-#ihnmbfvmvv .gt_center {
+#uhywkywybf .gt_center {
   text-align: center;
 }
 
-#ihnmbfvmvv .gt_right {
+#uhywkywybf .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ihnmbfvmvv .gt_font_normal {
+#uhywkywybf .gt_font_normal {
   font-weight: normal;
 }
 
-#ihnmbfvmvv .gt_font_bold {
+#uhywkywybf .gt_font_bold {
   font-weight: bold;
 }
 
-#ihnmbfvmvv .gt_font_italic {
+#uhywkywybf .gt_font_italic {
   font-style: italic;
 }
 
-#ihnmbfvmvv .gt_super {
+#uhywkywybf .gt_super {
   font-size: 65%;
 }
 
-#ihnmbfvmvv .gt_footnote_marks {
+#uhywkywybf .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ihnmbfvmvv .gt_asterisk {
+#uhywkywybf .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ihnmbfvmvv .gt_indent_1 {
+#uhywkywybf .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ihnmbfvmvv .gt_indent_2 {
+#uhywkywybf .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ihnmbfvmvv .gt_indent_3 {
+#uhywkywybf .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ihnmbfvmvv .gt_indent_4 {
+#uhywkywybf .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ihnmbfvmvv .gt_indent_5 {
+#uhywkywybf .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ihnmbfvmvv .katex-display {
+#uhywkywybf .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ihnmbfvmvv div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#uhywkywybf div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1830,9 +1819,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="virulence-factor-database" class="level2">
 <h2 class="anchored" data-anchor-id="virulence-factor-database">Virulence Factor DataBase</h2>
-</section>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section"></h2>
+<p>Primero vamos a descargar los FASTA de VFDB <a href="https://www.mgc.ac.cn/VFs/download.htm">aquí</a>. Y vamos a crear la base de datos para poder usar posteriormente blastp. <strong>NOTA</strong>: esto lo puedes aplicar a cualquier otra base de datos!!</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">makeblastdb</span> <span class="dt">\</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>-in data/VFDB/VFDB_setB_pro.fas <span class="dt">\</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>-dbtype prot <span class="dt">\</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>-out data/VFDB/vfdb</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 </section>
 <section id="pangenoma" class="level1">
@@ -1840,33 +1833,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Vamos a utilizar Roary, lo puedes descargar <a href="https://github.com/sanger-pathogens/Roary">aquí</a>.</p>
 <p>Preparamos los archivos <code>.gff</code> obtenidos de la anotación con <code>Prokka</code> o <code>Bakta</code> para poder realizar el análisis de pangenoma.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="va">DIR_ORIGEN</span><span class="op">=</span><span class="st">"</span><span class="va">$HOME</span><span class="st">/2025_Demo_ecoli/2_annotation/prokka"</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="va">DIR_DESTINO</span><span class="op">=</span><span class="st">"</span><span class="va">$HOME</span><span class="st">/2025_Demo_ecoli/3_pangenome/data_genomes"</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> carpeta <span class="kw">in</span> <span class="st">"</span><span class="va">$DIR_ORIGEN</span><span class="st">"</span>/<span class="pp">*</span><span class="kw">;</span> <span class="cf">do</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">[[</span> <span class="ot">-d</span> <span class="st">"</span><span class="va">$carpeta</span><span class="st">"</span> <span class="kw">]];</span> <span class="cf">then</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>            <span class="va">nombre_carpeta</span><span class="op">=</span><span class="va">$(</span><span class="fu">basename</span> <span class="st">"</span><span class="va">$carpeta</span><span class="st">"</span><span class="va">)</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Buscar el primer archivo .gff o .gff3 en la carpeta </span></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>            <span class="va">archivo_gff</span><span class="op">=</span><span class="va">$(</span><span class="fu">find</span> <span class="st">"</span><span class="va">$carpeta</span><span class="st">"</span> <span class="at">-maxdepth</span> 1 <span class="at">-type</span> f <span class="dt">\(</span> <span class="at">-iname</span> <span class="st">"*.gff"</span> <span class="at">-o</span> <span class="at">-iname</span> <span class="st">"*.gff3"</span> <span class="dt">\)</span> <span class="at">-print</span> <span class="at">-quit</span> <span class="kw">||</span> <span class="fu">true</span><span class="va">)</span></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="kw">[[</span> <span class="ot">-n</span> <span class="st">"</span><span class="va">$archivo_gff</span><span class="st">"</span> <span class="kw">]];</span> <span class="cf">then</span></span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>                <span class="va">destino</span><span class="op">=</span><span class="st">"</span><span class="va">$DIR_DESTINO</span><span class="st">/</span><span class="va">${nombre_carpeta}</span><span class="st">.gff"</span></span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>                <span class="fu">cp</span> <span class="at">-f</span> <span class="at">--</span> <span class="st">"</span><span class="va">$archivo_gff</span><span class="st">"</span> <span class="st">"</span><span class="va">$destino</span><span class="st">"</span></span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>                <span class="bu">echo</span> <span class="st">"Archivo </span><span class="va">$archivo_gff</span><span class="st"> copiado como </span><span class="va">$destino</span><span class="st">"</span></span>
-<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span></span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>                <span class="bu">echo</span> <span class="st">"No se encontró archivo .gff/.gff3 en </span><span class="va">$carpeta</span><span class="st">"</span></span>
-<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>            <span class="cf">fi</span></span>
-<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>        <span class="cf">fi</span></span>
-<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">done</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="va">DIR_ORIGEN</span><span class="op">=</span><span class="st">"</span><span class="va">$HOME</span><span class="st">/2025_Demo_ecoli/2_annotation/prokka"</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="va">DIR_DESTINO</span><span class="op">=</span><span class="st">"</span><span class="va">$HOME</span><span class="st">/2025_Demo_ecoli/3_pangenome/data_genomes"</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="ex">roary</span> <span class="at">-f</span> <span class="st">"</span><span class="va">$DIR_DESTINO</span><span class="st">/pangenome_prokka_prank"</span> <span class="dt">\</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>-e <span class="dt">\</span></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>-p 8 <span class="dt">\</span></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>-v <span class="st">"</span><span class="va">$DIR_DESTINO</span><span class="st">"</span>/<span class="pp">*</span>.gff</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> carpeta <span class="kw">in</span> <span class="st">"</span><span class="va">$DIR_ORIGEN</span><span class="st">"</span>/<span class="pp">*</span><span class="kw">;</span> <span class="cf">do</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">[[</span> <span class="ot">-d</span> <span class="st">"</span><span class="va">$carpeta</span><span class="st">"</span> <span class="kw">]];</span> <span class="cf">then</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>            <span class="va">nombre_carpeta</span><span class="op">=</span><span class="va">$(</span><span class="fu">basename</span> <span class="st">"</span><span class="va">$carpeta</span><span class="st">"</span><span class="va">)</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Buscar el primer archivo .gff o .gff3 en la carpeta </span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>            <span class="va">archivo_gff</span><span class="op">=</span><span class="va">$(</span><span class="fu">find</span> <span class="st">"</span><span class="va">$carpeta</span><span class="st">"</span> <span class="at">-maxdepth</span> 1 <span class="at">-type</span> f <span class="dt">\(</span> <span class="at">-iname</span> <span class="st">"*.gff"</span> <span class="at">-o</span> <span class="at">-iname</span> <span class="st">"*.gff3"</span> <span class="dt">\)</span> <span class="at">-print</span> <span class="at">-quit</span> <span class="kw">||</span> <span class="fu">true</span><span class="va">)</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="kw">[[</span> <span class="ot">-n</span> <span class="st">"</span><span class="va">$archivo_gff</span><span class="st">"</span> <span class="kw">]];</span> <span class="cf">then</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>                <span class="va">destino</span><span class="op">=</span><span class="st">"</span><span class="va">$DIR_DESTINO</span><span class="st">/</span><span class="va">${nombre_carpeta}</span><span class="st">.gff"</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>                <span class="fu">cp</span> <span class="at">-f</span> <span class="at">--</span> <span class="st">"</span><span class="va">$archivo_gff</span><span class="st">"</span> <span class="st">"</span><span class="va">$destino</span><span class="st">"</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>                <span class="bu">echo</span> <span class="st">"Archivo </span><span class="va">$archivo_gff</span><span class="st"> copiado como </span><span class="va">$destino</span><span class="st">"</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>                <span class="bu">echo</span> <span class="st">"No se encontró archivo .gff/.gff3 en </span><span class="va">$carpeta</span><span class="st">"</span></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>            <span class="cf">fi</span></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>        <span class="cf">fi</span></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">done</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="va">DIR_ORIGEN</span><span class="op">=</span><span class="st">"</span><span class="va">$HOME</span><span class="st">/2025_Demo_ecoli/2_annotation/prokka"</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="va">DIR_DESTINO</span><span class="op">=</span><span class="st">"</span><span class="va">$HOME</span><span class="st">/2025_Demo_ecoli/3_pangenome/data_genomes"</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="ex">roary</span> <span class="at">-f</span> <span class="st">"</span><span class="va">$DIR_DESTINO</span><span class="st">/pangenome_prokka_prank"</span> <span class="dt">\</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>-e <span class="dt">\</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>-p 8 <span class="dt">\</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>-v <span class="st">"</span><span class="va">$DIR_DESTINO</span><span class="st">"</span>/<span class="pp">*</span>.gff</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="filogénia" class="level1">

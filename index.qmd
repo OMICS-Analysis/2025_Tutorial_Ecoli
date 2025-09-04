@@ -214,8 +214,6 @@ fastANI \
 --matrix
 ```
 
-## CheckM
-
 ## BUSCO
 
 ```{bash, eval=FALSE}
@@ -238,16 +236,15 @@ for g in $genomes; do
   done 
 ```
 
-
 # Anotación de genomas
 
-## Prokka 
+## Prokka
 
 **Qué es / para qué sirve**\
 
 `Prokka` es un anotador rápido y estándar para genomas procariontes (bacterias, arqueas y virus asociados) que identifica características genómicas (CDS, tRNAs, rRNAs, ncRNAs, etc.), las anota con nombres/IDs y genera archivos listos para análisis posteriores o envío a bases públicas.
 
-``` {bash, eval=FALSE}        
+```{bash, eval=FALSE}
 genomes=$( ls $HOME/2025_Demo_ecoli/1_data/*.fna )
 
 for g in $genomes; do
@@ -299,7 +296,7 @@ done
 
 ------------------------------------------------------------------------
 
-# Bakta 
+## Bakta
 
 **Qué es / para qué sirve**
 
@@ -372,13 +369,13 @@ Bakta requiere memoria y disco para su base y para los pasos intermedios; es hab
 
 -   Prokka es muy rápido y ampliamente usado; Bakta tiende a ser más exhaustivo y «estandarizado» pero con requisitos mayores de disco/DB. Para workflows, muchos usuarios ejecutan **Prokka** para anotaciones rápidas y **Bakta** cuando quieren anotaciones más normalizadas y ricas en dbxrefs. ([PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8743544/?utm_source=chatgpt.com "Bakta: rapid and standardized annotation of bacterial ..."), [Bactopia](https://bactopia.github.io/v3.0.0/bactopia-tools/bakta/?utm_source=chatgpt.com "bakta - Bactopia"))
 
-# Consejos para decidir cuál usar en tu pipeline
+## Consejos para decidir cuál usar en tu pipeline
 
 -   Si quieres **velocidad** y una anotación estándar rápida para muchas muestras: usa **Prokka** y luego procesa los `.faa` con herramientas funcionales (eg. EggNOG, InterProScan) según necesites. ([GitHub](https://github.com/tseemann/prokka?utm_source=chatgpt.com "Prokka - zap: Rapid prokaryotic genome annotation"))
 
 -   Si quieres **anotaciones más ricas, normalizadas y con dbxrefs/JSON** para downstream automático (p. ej. bases de datos locales, comparaciones taxonómicas o reporte estandarizado), usa **Bakta** (pero planifica la DB y recursos). ([Bakta Documentation](https://bakta.readthedocs.io/?utm_source=chatgpt.com "Bakta Documentation: Introduction"), [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8743544/?utm_source=chatgpt.com "Bakta: rapid and standardized annotation of bacterial ..."))
 
-## AMRfinder
+## AMRfinderPlus
 
 ```{bash, eval=FALSE}
 conda activate amrfinder
@@ -402,7 +399,14 @@ gt::gt(df)
 
 ## Virulence Factor DataBase
 
-## 
+Primero vamos a descargar los FASTA de VFDB [aquí](https://www.mgc.ac.cn/VFs/download.htm). Y vamos a crear la base de datos para poder usar posteriormente blastp. **NOTA**: esto lo puedes aplicar a cualquier otra base de datos!!
+
+```{bash, eval=FALSE}
+makeblastdb \
+-in data/VFDB/VFDB_setB_pro.fas \
+-dbtype prot \
+-out data/VFDB/vfdb
+```
 
 # Pangenoma
 
