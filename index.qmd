@@ -240,8 +240,6 @@ for g in $genomes; do
 
 ## Prokka
 
-**Qué es / para qué sirve**\
-
 `Prokka` es un anotador rápido y estándar para genomas procariontes (bacterias, arqueas y virus asociados) que identifica características genómicas (CDS, tRNAs, rRNAs, ncRNAs, etc.), las anota con nombres/IDs y genera archivos listos para análisis posteriores o envío a bases públicas.
 
 ```{bash, eval=FALSE}
@@ -297,8 +295,6 @@ done
 ------------------------------------------------------------------------
 
 ## Bakta
-
-**Qué es / para qué sirve**
 
 `Bakta` es un anotador diseñado para obtener anotaciones amplias, normalizadas y «dbxref-ricas» (múltiples referencias cruzadas) en genomas bacterianos y plásmidos. Está pensado para producir salidas estandarizadas (incluyendo JSON legible por máquina) y sORFs (small ORFs) además de las características estándar (CDS, tRNA, rRNA, ncRNA, CRISPR, etc.). Usa una base de datos local y herramientas rápidas (p. ej. DIAMOND) para hacer búsquedas de homología. ([Bakta Documentation](https://bakta.readthedocs.io/?utm_source=chatgpt.com "Bakta Documentation: Introduction"), [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8743544/?utm_source=chatgpt.com "Bakta: rapid and standardized annotation of bacterial ..."))
 
