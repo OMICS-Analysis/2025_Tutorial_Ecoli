@@ -1,5 +1,5 @@
 ---
-title: "Análisis Genomas: E. coli"
+title: "Genómica Comparativa"
 author: "OMICs Analysis"
 format: 
   html:
