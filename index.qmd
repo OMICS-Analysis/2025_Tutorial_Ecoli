@@ -640,7 +640,7 @@ library(tidyverse)
 tree <- read.newick("ecoli_tree.newick")
 
 #Cargar información de las cepas de E. coli
-metadata <- readr::read_tsv("tables/Ecoli_bovineHost.tsv")
+metadata <- readr::read_tsv("Ecoli_bovineHost.tsv")
 
 metadata_ordered <- metadata %>%
   filter(Assembly.Accession %in% tree$tip.label) %>%
