@@ -206,6 +206,24 @@ Con esto ya contamos con un sub conjunto de datos listo para trabajar.
 
 ## FastANI
 
+Puedes descargar `FastANI` [aquí](https://github.com/ParBLiSS/FastANI).
+
+FastANI (Fast Average Nucleotide Identity) calcula la **identidad promedio de nucleótidos (ANI)** entre dos genomas para determinar su similitud genética, útil para identificar especies o cepas.
+
+**Cómo funciona**:
+
+1.  **Entrada**: Dos o más ensamblajes genómicos (FASTA, .fna).
+
+2.  **Proceso**:
+
+    -   Divide los genomas en fragmentos (k-mers).
+
+    -   Compara fragmentos homólogos entre genomas usando un enfoque rápido basado en alineamiento.
+
+    -   Calcula el porcentaje de ANI (por ejemplo, \>95% indica misma especie).
+
+3.  **Salida**: Un archivo tabular con valores de ANI entre pares de genomas (por ejemplo, .ani o .txt).
+
 ```{bash, eval=FALSE}
 fastANI \
 --ql $HOME/2025_Demo_ecoli/1_QC/ANI/all_genomes.list \
@@ -215,6 +233,24 @@ fastANI \
 ```
 
 ## BUSCO
+
+Puedes descargar `BUSCO` [aquí](https://busco.ezlab.org/).
+
+BUSCO (Benchmarking Universal Single-Copy Orthologs) evalúa la **completitud** y calidad de un ensamblaje genómico o anotaciones genéticas al buscar genes de copia única (ortólogos) que son altamente conservados en un grupo taxonómico específico (por ejemplo, bacterias, mamíferos).
+
+**Cómo funciona**:
+
+1.  **Entrada**: Un ensamblaje genómico (FASTA, .fna) o archivo de proteínas anotadas (.faa).
+
+2.  **Base de datos**: Compara contra un conjunto de genes ortólogos específicos del linaje (por ejemplo, bacteria_odb10 para bacterias).
+
+3.  **Proceso**:
+
+    -   Usa HMMER para buscar genes ortólogos en el genoma.
+
+    -   Clasifica los genes como **Completos** (presentes y completos), **Fragmentados** (parciales), **Ausentes** (no encontrados), o **Duplicados**.
+
+4.  **Salida**: Un informe con porcentajes de completitud (por ejemplo, 95% completos, 3% fragmentados, 2% ausentes) y archivos detallados.
 
 ```{bash, eval=FALSE}
 source $HOME/bin/busco-env/bin/activate
