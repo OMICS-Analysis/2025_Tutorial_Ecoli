@@ -336,23 +336,23 @@ done
 
 -   `--outdir prokka/${id%.fna}` — dirige la salida a una carpeta por genoma (nota: en el snippet que enviaste la variable `id` **no está definida** dentro del bucle; ver corrección más abajo).
 
--   `--genus Escherichia` — parámetro opcional que ayuda a priorizar nombres/funciones (mejorará la selección de nombres genéricos). ([GitHub](https://github.com/tseemann/prokka?utm_source=chatgpt.com "Prokka - zap: Rapid prokaryotic genome annotation"))
+-   `--genus Escherichia` — parámetro opcional que ayuda a priorizar nombres/funciones (mejorará la selección de nombres genéricos).
 
 **Principales archivos que genera Prokka y para qué sirven**
 
--   `<sample>.gff` — *archivo maestro* en formato GFF3 que contiene las características anotadas (coordenadas, tipos, anotaciones). Usarlo para cargar en IGV/Artemis o como entrada a pipelines que esperan GFF. ([nf-co.re](https://nf-co.re/modules/prokka?utm_source=chatgpt.com "modules/prokka"), [stab.st-andrews.ac.uk](https://stab.st-andrews.ac.uk/wiki/index.php/Prokka?utm_source=chatgpt.com "Prokka - wiki"))
+-   `<sample>.gff` — *archivo maestro* en formato GFF3 que contiene las características anotadas (coordenadas, tipos, anotaciones). Usarlo para cargar en IGV/Artemis o como entrada a pipelines que esperan GFF.
 
--   `<sample>.gbk` (o `.gbk.gz`) — archivo en formato GenBank (útil para visualización/depósito y para herramientas que leen GenBank). ([nf-co.re](https://nf-co.re/modules/prokka?utm_source=chatgpt.com "modules/prokka"))
+-   `<sample>.gbk` (o `.gbk.gz`) — archivo en formato GenBank (útil para visualización/depósito y para herramientas que leen GenBank).
 
--   `<sample>.fna` — la secuencia de nucleótidos (contigs) usada/normalizada por Prokka (puede incluir cambios en nombres de secuencia). ([stab.st-andrews.ac.uk](https://stab.st-andrews.ac.uk/wiki/index.php/Prokka?utm_source=chatgpt.com "Prokka - wiki"))
+-   `<sample>.fna` — la secuencia de nucleótidos (contigs) usada/normalizada por Prokka (puede incluir cambios en nombres de secuencia).
 
--   `<sample>.ffn` — secuencias de nucleótidos de los genes codificantes (CDS) extraídas. ([stab.st-andrews.ac.uk](https://stab.st-andrews.ac.uk/wiki/index.php/Prokka?utm_source=chatgpt.com "Prokka - wiki"))
+-   `<sample>.ffn` — secuencias de nucleótidos de los genes codificantes (CDS) extraídas.
 
--   `<sample>.faa` — traducciones (secuencias proteicas) de los CDS; útil para búsquedas funcionales (BLAST/DIAMOND), clustering o análisis de pangenoma. ([stab.st-andrews.ac.uk](https://stab.st-andrews.ac.uk/wiki/index.php/Prokka?utm_source=chatgpt.com "Prokka - wiki"))
+-   `<sample>.faa` — traducciones (secuencias proteicas) de los CDS; útil para búsquedas funcionales (BLAST/DIAMOND), clustering o análisis de pangenoma.
 
--   `<sample>.tbl` — tabla sencilla con información de anotación (útil para envío a GenBank/ENA en algunos workflows). ([HPC NIH](https://hpc.nih.gov/apps/prokka.html?utm_source=chatgpt.com "prokka on Biowulf"))
+-   `<sample>.tbl` — tabla sencilla con información de anotación (útil para envío a GenBank/ENA en algunos workflows).
 
--   `<sample>.sqn` (opcional) — formato Sequin para enviar a NCBI (si se generan). ([HPC NIH](https://hpc.nih.gov/apps/prokka.html?utm_source=chatgpt.com "prokka on Biowulf"))
+-   `<sample>.sqn` (opcional) — formato Sequin para enviar a NCBI (si se generan).
 
 -   `PROKKA_*.log` / `prokka.err` — logs que detallan programas internos y pasos realizados (útil para depuración).
 
@@ -368,7 +368,7 @@ done
 
 ## Bakta
 
-`Bakta` es un anotador diseñado para obtener anotaciones amplias, normalizadas y «dbxref-ricas» (múltiples referencias cruzadas) en genomas bacterianos y plásmidos. Está pensado para producir salidas estandarizadas (incluyendo JSON legible por máquina) y sORFs (small ORFs) además de las características estándar (CDS, tRNA, rRNA, ncRNA, CRISPR, etc.). Usa una base de datos local y herramientas rápidas (p. ej. DIAMOND) para hacer búsquedas de homología. ([Bakta Documentation](https://bakta.readthedocs.io/?utm_source=chatgpt.com "Bakta Documentation: Introduction"), [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8743544/?utm_source=chatgpt.com "Bakta: rapid and standardized annotation of bacterial ..."))
+`Bakta` es un anotador diseñado para obtener anotaciones amplias, normalizadas y «dbxref-ricas» (múltiples referencias cruzadas) en genomas bacterianos y plásmidos. Está pensado para producir salidas estandarizadas (incluyendo JSON legible por máquina) y sORFs (small ORFs) además de las características estándar (CDS, tRNA, rRNA, ncRNA, CRISPR, etc.). Usa una base de datos local y herramientas rápidas (p. ej. DIAMOND) para hacer búsquedas de homología.
 
 ```         
 source $HOME/bin/bakta-env/bin/activate
@@ -401,7 +401,7 @@ done
 
 -   `source .../bin/activate` — activa el entorno (p. ej. virtualenv/conda) donde está Bakta.
 
--   `--db $HOME/.../db` — ubicación de la base de datos compacta de Bakta (necesaria; puede ocupar decenas de GB). ([Bakta Documentation](https://bakta.readthedocs.io/en/latest/cli/database.html?utm_source=chatgpt.com "Database - Bakta Documentation - Read the Docs"))
+-   `--db $HOME/.../db` — ubicación de la base de datos compacta de Bakta (necesaria; puede ocupar decenas de GB).
 
 -   `--output ...` — carpeta por genoma para guardar resultados.
 
@@ -411,23 +411,23 @@ done
 
 -   `--force` — sobrescribir salidas existentes.
 
--   Bakta internamente usa búsquedas con DIAMOND/BLAST y una base SQLite con digest y anotaciones preasignadas (esto acelera y estandariza el proceso). ([Bakta Documentation](https://bakta.readthedocs.io/en/latest/cli/database.html?utm_source=chatgpt.com "Database - Bakta Documentation - Read the Docs"), [Bactopia](https://bactopia.github.io/v3.0.0/bactopia-tools/bakta/?utm_source=chatgpt.com "bakta - Bactopia"))
+-   Bakta internamente usa búsquedas con DIAMOND/BLAST y una base SQLite con digest y anotaciones preasignadas (esto acelera y estandariza el proceso).
 
 **Precauciones de recursos** ⚠️\
 
-Bakta requiere memoria y disco para su base y para los pasos intermedios; es habitual necesitar varios GB de RAM (tu nota de 8 GB es razonable como mínimo) y tiempo cuando se procesan muchos genomas. Si tienes \>10 genomas, espera que el tiempo total aumente y planifica en un clúster o máquina con suficientes recursos. ([Bactopia](https://bactopia.github.io/v3.0.0/bactopia-tools/bakta/?utm_source=chatgpt.com "bakta - Bactopia"), [software.cqls.oregonstate.edu](https://software.cqls.oregonstate.edu/updates/bakta-1.8.0/?utm_source=chatgpt.com "Bakta 1.8.0 - CQLS Software Update List"))
+Bakta requiere memoria y disco para su base y para los pasos intermedios; es habitual necesitar varios GB de RAM y tiempo cuando se procesan muchos genomas. Si tienes \>10 genomas, espera que el tiempo total aumente y planifica en un clúster o máquina con suficientes recursos.
 
 **Archivos y salidas importantes que produce Bakta**
 
--   `annotation.gff` / `<id>.gff` — GFF3 con anotaciones (coordenadas y atributos). ([Bakta Documentation](https://bakta.readthedocs.io/?utm_source=chatgpt.com "Bakta Documentation: Introduction"))
+-   `annotation.gff` / `<id>.gff` — GFF3 con anotaciones (coordenadas y atributos).
 
--   `<id>.gbk` — GenBank (cuando se solicita o se genera). ([Bakta Documentation](https://bakta.readthedocs.io/?utm_source=chatgpt.com "Bakta Documentation: Introduction"))
+-   `<id>.gbk` — GenBank (cuando se solicita o se genera).
 
--   `<id>.faa`, `<id>.ffn` — proteínas y secuencias nucleotídicas de CDS (similares a Prokka). ([Bakta Documentation](https://bakta.readthedocs.io/?utm_source=chatgpt.com "Bakta Documentation: Introduction"))
+-   `<id>.faa`, `<id>.ffn` — proteínas y secuencias nucleotídicas de CDS (similares a Prokka).
 
--   `report.json` — salida JSON rica en metadatos y dbxrefs (útil para pipelines automatizados). Bakta hace énfasis en producir JSON estandarizado que puede alimentar otras herramientas. ([Bakta Documentation](https://bakta.readthedocs.io/?utm_source=chatgpt.com "Bakta Documentation: Introduction"), [GitHub](https://github.com/oschwengers/bakta/discussions/300?utm_source=chatgpt.com "(Re-)Generating bakta outputs from the JSON only #300"))
+-   `report.json` — salida JSON rica en metadatos y dbxrefs (útil para pipelines automatizados). Bakta hace énfasis en producir JSON estandarizado que puede alimentar otras herramientas.
 
--   `bakta.log` / registros — salida estándar y errores para depuración. ([Bakta Documentation](https://bakta.readthedocs.io/en/latest/api/logs.html?utm_source=chatgpt.com "Logs - Bakta Documentation - Read the Docs"))
+-   `bakta.log` / registros — salida estándar y errores para depuración.
 
 **Ventajas frente a Prokka**
 
@@ -435,13 +435,13 @@ Bakta requiere memoria y disco para su base y para los pasos intermedios; es hab
 
 -   Usa una base precomprimida con mapeos a UniProt (y otras colecciones), lo que suele producir IDs más estandarizados.
 
--   Prokka es muy rápido y ampliamente usado; Bakta tiende a ser más exhaustivo y «estandarizado» pero con requisitos mayores de disco/DB. Para workflows, muchos usuarios ejecutan **Prokka** para anotaciones rápidas y **Bakta** cuando quieren anotaciones más normalizadas y ricas en dbxrefs. ([PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8743544/?utm_source=chatgpt.com "Bakta: rapid and standardized annotation of bacterial ..."), [Bactopia](https://bactopia.github.io/v3.0.0/bactopia-tools/bakta/?utm_source=chatgpt.com "bakta - Bactopia"))
+-   Prokka es muy rápido y ampliamente usado; Bakta tiende a ser más exhaustivo y «estandarizado» pero con requisitos mayores de disco/DB. Para workflows, muchos usuarios ejecutan **Prokka** para anotaciones rápidas y **Bakta** cuando quieren anotaciones más normalizadas y ricas en dbxrefs.
 
 ## Consejos para decidir cuál usar en tu pipeline
 
--   Si quieres **velocidad** y una anotación estándar rápida para muchas muestras: usa **Prokka** y luego procesa los `.faa` con herramientas funcionales (eg. EggNOG, InterProScan) según necesites. ([GitHub](https://github.com/tseemann/prokka?utm_source=chatgpt.com "Prokka - zap: Rapid prokaryotic genome annotation"))
+-   Si quieres **velocidad** y una anotación estándar rápida para muchas muestras: usa **Prokka** y luego procesa los `.faa` con herramientas funcionales (eg. EggNOG, InterProScan) según necesites.
 
--   Si quieres **anotaciones más ricas, normalizadas y con dbxrefs/JSON** para downstream automático (p. ej. bases de datos locales, comparaciones taxonómicas o reporte estandarizado), usa **Bakta** (pero planifica la DB y recursos). ([Bakta Documentation](https://bakta.readthedocs.io/?utm_source=chatgpt.com "Bakta Documentation: Introduction"), [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8743544/?utm_source=chatgpt.com "Bakta: rapid and standardized annotation of bacterial ..."))
+-   Si quieres **anotaciones más ricas, normalizadas y con dbxrefs/JSON** para downstream automático (p. ej. bases de datos locales, comparaciones taxonómicas o reporte estandarizado), usa **Bakta** (pero planifica la DB y recursos).
 
 ## AMRfinderPlus
 
