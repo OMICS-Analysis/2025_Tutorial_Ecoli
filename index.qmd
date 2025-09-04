@@ -250,7 +250,7 @@ BUSCO (Benchmarking Universal Single-Copy Orthologs) evalúa la **completitud** 
 
     -   Clasifica los genes como **Completos** (presentes y completos), **Fragmentados** (parciales), **Ausentes** (no encontrados), o **Duplicados**.
 
-4.  **Salida**: Un informe con porcentajes de completitud (por ejemplo, 95% completos, 3% fragmentados, 2% ausentes) y archivos detallados.
+4.  **Salida**: Un informe con porcentajes de completitud y archivos detallados.
 
 ```{bash, eval=FALSE}
 source $HOME/bin/busco-env/bin/activate
