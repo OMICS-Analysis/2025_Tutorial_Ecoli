@@ -562,7 +562,6 @@ FastTree \
 -nt \
 -gtr \
 3_pangenome/data_genomes/pangenome_prokka_prank/core_gene_alignment.aln > my_tree.newick  
-
 ```
 
 ### Visualización
@@ -571,13 +570,97 @@ FastTree \
 ./bin/Roary/contrib/roary_plots/roary_plots.py 3_pangenome/data_genomes/pangenome_prokka_prank/my_tree.newick 3_pangenome/data_genomes/pangenome_prokka_prank/gene_presence_absence.csv
 ```
 
+**Matriz**
+
 ![](images/pangenome_matrix.png){fig-align="center"}
 
+**Pie chart**
+
 ![](images/pangenome_pie.png){fig-align="center"}
+
+**Frecuencia**
 
 ![](images/pangenome_frequency.png){fig-align="center"}
 
 # Filogénia
+
+Para poder calcular filogénias podemos utilizar diversas herramientas según sea tu capacidad computacional:
+
+-   [**RAxML Next Generation**](https://github.com/amkozlov/raxml-ng)
+
+-   [**MEGA**](https://www.megasoftware.net/)
+
+-   [**FastTree**](https://github.com/morgannprice/fasttree)
+
+Para este tutorial vamos a utilizar `FastTree`. En todas las herramientas el archivo de salida del pangenoma `.aln` te será util como `input`.
+
+```{bash, eval=FALSE}
+FastTree \
+-nt \
+-gtr \
+3_pangenome/data_genomes/pangenome_prokka_prank/core_gene_alignment.aln > my_tree.newick  
+```
+
+El formato de árbol `Newick` (o notación Newick , o formato de árbol de Nuevo Hampshire) es una manera de representar árboles utilizando paréntesis y comas. Este lo podemos leer directamente en interfaz gráfica como `MEGA`, en `R` o en `Python`.
+
+```{r, echo=TRUE, message=FALSE, warning=FALSE, eval=FALSE}
+#| code-fold: true
+#| code-summary: "Visualización Filogénia en R"
+
+library(ggtree)
+library(treeio)
+library(tidyverse)
+
+tree <- read.newick("ecoli_tree.newick")
+
+#Cargar información de las cepas de E. coli
+metadata <- readr::read_tsv("tables/Ecoli_bovineHost.tsv")
+
+metadata_ordered <- metadata %>%
+  filter(Assembly.Accession %in% tree$tip.label) %>%
+  arrange(match(Assembly.Accession, tree$tip.label))
+
+#Convert tree information to tibble object and add metadata
+treetib <- as_tibble(tree)
+treetib <- left_join(treetib, metadata_ordered,by = c('label' = "Assembly.Accession"))
+
+tree_cm <- as.treedata(treetib)
+
+# Crear la estructura princiál del arbol
+p <- ggtree(tree_cm, ladderize = TRUE, layout = "circular") + 
+  geom_tiplab(aes(label = Strain, angle = angle),
+              linesize = .07, size = 4, align = TRUE, offset = 0.008) +
+  geom_tippoint(aes(shape = Source), size = 5, alpha = 0.3) +
+  geom_tippoint(aes(color = Geographic.location), size = 5, shape = 20) +
+  scale_shape_manual(values = c(18, 1, 18)) +
+  labs(shape = "Source")+ geom_rootpoint(col="red") +
+  scale_color_manual(values = c("#375c5d", "#b360a3", "darkred", "darkcyan",
+                                "#a5a436", "#36a540", "#365ba5",
+                                "#0cf31e", "#e87c09", "#e80917", "#f81df1"),
+                     na.value = "white")
+
+
+matrix_heatmap <- data.frame(metadata_ordered %>% 
+                               select(Patotype))
+
+
+rownames(matrix_heatmap) <- make.unique(metadata_ordered$Assembly.Accession)
+
+# Agregar heatmap
+pphy <- gheatmap(p, matrix_heatmap, width=0.05, 
+                 colnames=FALSE, legend_title="State", color = NA, ) +
+  theme(text = element_text(size = 15),
+        legend.position = c(1.13,0.5), 
+        # plot.margin = margin(t = 50, r = 10, b = 50, l = 10)
+  ) +
+  scale_fill_manual(values = c("#d65c40", "darkcyan", "#e80917", "lightblue",
+                               "yellow", "#36a540", "darkblue"),
+                    na.value = "white") +
+  labs(fill = "Patotipo")
+
+```
+
+![](images/all_root.png){fig-align="center"}
 
 # Apéndice
 
