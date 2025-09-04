@@ -537,3 +537,7 @@ roary -f "$DIR_DESTINO/pangenome_prokka_prank" \
 ```
 
 # Filogénia
+
+# Apéndice
+
+## Gráficos de R
