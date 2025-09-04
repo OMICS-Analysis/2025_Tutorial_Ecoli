@@ -240,7 +240,7 @@ El `output` se ve de la siguiente manera por cada genoma:
 
 ```{bash, eval=FALSE}
 # BUSCO version is: 5.8.0 
-# The lineage dataset is: bacteria_odb10 (Creation date: 2024-01-08, number of genomes: 4085, number of BUSCOs: 124)
+# The lineage dataset is: bacteria_odb10 (Creation date: 2025-09-02, number of genomes: 4085, number of BUSCOs: 124)
 # Summarized benchmarking in BUSCO notation for file GCF_029319035.1.fna
 # BUSCO was run in mode: prok_genome_prod
 # Gene predictor used: prodigal
