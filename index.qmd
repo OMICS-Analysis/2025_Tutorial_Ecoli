@@ -404,6 +404,101 @@ makeblastdb \
 -out data/VFDB/vfdb
 ```
 
+Una vez que genramos la base de datos vamos a hacer un BLASTP de nuestros genomas `.faa`
+
+```{bash, eval=FALSE}
+BASE_DIR="$HOME/2025_Demo_ecoli"
+samples=$(find "$BASE_DIR/2_annotation/prokka" -maxdepth 1 -type d -not -path "$BASE_DIR/2_annotation/prokka" -exec basename {} \;)
+
+simult=2
+counter=0
+  for s in $samples; do
+    if [[ "$counter" -lt "$simult" ]]; then
+      protein_faa=$(find "$BASE_DIR/2_annotation/prokka/$s" -maxdepth 1 -type f -name "*.faa")
+      if [ -n "$protein_faa" ]; then
+        blastp -db "$BASE_DIR/data/VFDB/vfdb" \
+          -query "$protein_faa" \
+          -outfmt "6 qseqid sseqid pident qlen slen length evalue bitscore" \
+          -max_target_seqs 1 -num_threads 4 > "$BASE_DIR/2_annotation/$s.out" &
+        counter=$((counter+1))
+        if [[ "$counter" -eq "$simult" ]]; then wait; counter=0; fi
+
+    fi
+  done
+  wait
+```
+
+Esto genera una salida `.out` el cual se ve así:
+
+```{bash, eval=FALSE}
+PICPPNBC_00001	VFG039381(gb|NP_819814)	34.545	820	464	55	0.94	32.7
+PICPPNBC_00002	VFG002555(gb|WP_004194045)	30.952	310	346	84	0.031	35.8
+PICPPNBC_00003	VFG014236(gb|WP_011333018)	30.400	428	231	125	0.061	35.0
+PICPPNBC_00004	VFG016425(gb|WP_000780148)	35.849	98	459	53	2.0	26.9
+PICPPNBC_00005	VFG013340(gb|WP_010945509)	29.213	258	224	89	7.2	27.7
+PICPPNBC_00007	VFG049100(gb|WP_004184789)	31.481	317	371	54	3.6	29.3
+PICPPNBC_00008	VFG038347(gb|WP_005320757)	45.714	195	292	35	1.4	29.3
+PICPPNBC_00009	VFG023006(gb|WP_013827070)	25.362	188	383	138	0.95	30.0
+PICPPNBC_00010	VFG005490(gb|WP_000472995)	30.556	237	1906	72	0.41	32.0
+PICPPNBC_00011	VFG026864(gb|WP_005058381)	34.328	134	738	67	0.47	30.0
+PICPPNBC_00012	VFG043573(gb|NP_219906)	61.333	638	660	600	0.0	719
+PICPPNBC_00013	VFG015290(gb|WP_005763320)	44.444	376	488	63	8.46e-09	57.0
+PICPPNBC_00014	VFG015888(gb|WP_003381691)	26.144	370	260	153	0.37	32.3
+PICPPNBC_00015	VFG029464(gb|WP_014380395)	33.333	46	971	30	5.0	23.9
+PICPPNBC_00018	VFG044083(gb|NP_250948)	26.946	299	312	167	1.23e-05	45.8
+PICPPNBC_00019	VFG010667(gb|WP_015961409)	34.783	125	425	46	0.63	29.3
+PICPPNBC_00020	VFG011263(gb|WP_003811903)	27.848	91	790	79	2.5	26.6
+PICPPNBC_00021	VFG013269(gb|WP_010945211)	33.333	87	196	48	2.0	26.6
+PICPPNBC_00022	VFG050230(gb|NP_219645)	31.746	313	285	63	2.6	29.6
+PICPPNBC_00023	VFG007107(gb|WP_047863677)	21.673	938	677	263	0.017	38.9
+PICPPNBC_00024	VFG006812(gb|WP_003729506)	32.450	164	154	151	1.53e-18	77.4
+```
+
+Una vez tenemos este archivo vamos a aplicarle ciertos filtros:
+
+```{bash, eval=FALSE}
+blast_vf_i=0
+blast_vf_c=0.9
+blast_vf_e="1e-50"
+
+BASE_DIR="$HOME/2025_Demo_ecoli"
+samples=$(find "$BASE_DIR/2_annotation/prokka" -maxdepth 1 -type d -not -path "$BASE_DIR/2_annotation/prokka" -exec basename {} \;)
+
+for s in $samples; do
+    if [ -f "$BASE_DIR/2_annotation/$s.out" ]; then
+      awk -F '\t' '$3>='$blast_vf_i' && ($6/$5>='$blast_vf_c') && $(NF-1)<='$blast_vf_e' {print}' \
+        "$BASE_DIR/2_annotation/$s.out" > "$BASE_DIR/2_annotation/$s.filtered"
+    fi
+done
+```
+
+Esto nos genera un versión del archivo filtrada `.filter`:
+
+```{bash, eval=FALSE}
+MFNFHKLG_00013	VFG043573(gb|NP_219906)	61.333	638	660	600	0.0	719
+MFNFHKLG_00022	VFG034856(gb|WP_000181251)	100.000	473	473	473	0.0	970
+MFNFHKLG_00031	VFG047720(gb|WP_012280231)	48.953	382	388	382	3.83e-130	378
+MFNFHKLG_00032	VFG047710(gb|WP_014547360)	58.116	1073	1094	1072	0.0	1218
+MFNFHKLG_00037	VFG030400(gb|WP_081465621)	32.186	517	507	494	1.31e-71	236
+MFNFHKLG_00071	VFG009376(gb|WP_003893754)	46.701	201	197	197	1.04e-57	180
+MFNFHKLG_00094	VFG013414(gb|WP_012054478)	77.303	305	305	304	2.18e-180	499
+MFNFHKLG_00096	VFG023546(gb|YP_001703132)	37.101	901	772	814	6.49e-139	432
+MFNFHKLG_00102	VFG046022(gb|WP_000157234)	100.000	400	400	400	0.0	809
+MFNFHKLG_00103	VFG045984(gb|WP_001025155)	100.000	461	461	461	0.0	937
+MFNFHKLG_00104	VFG045947(gb|WP_000360894)	100.000	146	146	146	9.84e-109	305
+MFNFHKLG_00123	VFG023850(gb|WP_043955033)	35.922	308	315	309	2.30e-56	184
+MFNFHKLG_00131	VFG004221(gb|WP_000924983)	32.783	424	391	424	2.97e-52	179
+MFNFHKLG_00135	VFG021422(gb|WP_071586201)	62.529	866	881	854	0.0	1108
+```
+
+Podemos hacer un posterior parseo de datos con el lenguaje de programación qué mas prefieras para llegar a algo asi para cada genoma:
+
+```{r, echo=FALSE, message=FALSE}
+df <- readr::read_tsv("tables/GCF_000010745.1.vf.tsv") |> head(10)
+
+gt::gt(df)
+```
+
 # Pangenoma
 
 Vamos a utilizar Roary, lo puedes descargar [aquí](https://github.com/sanger-pathogens/Roary).

@@ -1,0 +1,520 @@
+Query	Target	Identity	Query_len	Target_len	Align_len	e_value	bitscore	Gene	VF_Name	VF_ID	VF_Category	VF_Category_ID	Description	Species
+MFNFHKLG_00013	VFG043573(gb|NP_219906)	61.333	638	660	600	0.0	719	VFC0001)]	 chaperone protein DnaK porin - Adherence trachomatis D/UW-3/CX]	Chlamydia				
+MFNFHKLG_00022	VFG034856(gb|WP_000181251)	100.000	473	473	473	0.0	970	VFC0086)]	 Type III secretion system effector EspX1 secreted effectors - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_00031	VFG047720(gb|WP_012280231)	48.953	382	388	382	3.83e-130	378	VFC0272)]	 carbamoyl phosphate synthase small subunit biosynthesis - Nutritional/Metabolic factor philomiragia subsp. philomiragia ATCC 25017]	Francisella				
+MFNFHKLG_00032	VFG047710(gb|WP_014547360)	58.116	1073	1094	1072	0.0	1218	VFC0272)]	 carbamoyl phosphate synthase large subunit biosynthesis - Nutritional/Metabolic factor cf. tularensis subsp. novicida 3523]	Francisella				
+MFNFHKLG_00037	VFG030400(gb|WP_081465621)	32.186	517	507	494	1.31e-71	236	VFC0258)]	 long-chain fatty acid--CoA ligase operon - Immune modulation sp. JDM601]	Mycobacterium				
+MFNFHKLG_00071	VFG009376(gb|WP_003893754)	46.701	201	197	197	1.04e-57	180	VFC0272)]	 3-isopropylmalate dehydratase small subunit synthesis - Nutritional/Metabolic factor smegmatis str. MC2 155]	Mycobacterium				
+MFNFHKLG_00094	VFG013414(gb|WP_012054478)	77.303	305	305	304	2.18e-180	499	VFC0258)]	 UDP-3-O-(R-3-hydroxymyristoyl)-N-acetylglucosamine deacetylase - Immune modulation influenzae PittEE]	Haemophilus				
+MFNFHKLG_00096	VFG023546(gb|YP_001703132)	37.101	901	772	814	6.49e-139	432	VFC0346)]	 accessory Sec system translocase SecA2 secretion factor - Others abscessus ATCC 19977]	Mycobacterium				
+MFNFHKLG_00102	VFG046022(gb|WP_000157234)	100.000	400	400	400	0.0	809	VFC0001)]	 protein transport protein HofC E.coli pilus - Adherence coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_00103	VFG045984(gb|WP_001025155)	100.000	461	461	461	0.0	937	VFC0001)]	 type II secretion system protein GspE E.coli pilus - Adherence coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_00104	VFG045947(gb|WP_000360894)	100.000	146	146	146	9.84e-109	305	VFC0001)]	 prepilin peptidase-dependent pilin E.coli pilus - Adherence coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_00123	VFG023850(gb|WP_043955033)	35.922	308	315	309	2.30e-56	184	VFC0258)]	 daunorubicin resistance protein DrrA family ABC transporter ATP-binding protein - Immune modulation indicus pranii MTCC 9506]	Mycobacterium				
+MFNFHKLG_00131	VFG004221(gb|WP_000924983)	32.783	424	391	424	2.97e-52	179	VFC0001)]	 fimbrial-like adhesin - Adherence enterica subsp. enterica serovar Typhi str. CT18]	Salmonella				
+MFNFHKLG_00135	VFG021422(gb|WP_071586201)	62.529	866	881	854	0.0	1108	VFC0001)]	 outer membrane usher protein - Adherence enterica subsp. enterica serovar Schwarzengrund str. CVM19633]	Salmonella				
+MFNFHKLG_00136	VFG018336(gb|WP_000019793)	60.569	246	245	246	5.17e-106	306	VFC0001)]	 fimbrial chaperone - Adherence enterica subsp. enterica serovar Paratyphi B str. SPB7]	Salmonella				
+MFNFHKLG_00146	VFG044365(gb|WP_013318789)	38.573	747	735	757	2.89e-171	509	VFC0272)]	 TonB-dependent siderophore receptor - Nutritional/Metabolic factor dadantii 3937]	Dickeya				
+MFNFHKLG_00147	VFG044173(gb|WP_005477430)	43.373	265	254	249	2.88e-73	224	VFC0272)]	 Fe(3+) dicitrate ABC transporter ATP-binding protein FecE - Nutritional/Metabolic factor parahaemolyticus RIMD 2210633]	Vibrio				
+MFNFHKLG_00149	VFG044210(gb|WP_001061683)	31.596	660	678	633	2.21e-84	279	VFC0272)]	 Fe(3+)-hydroxamate ABC transporter permease FhuB - Nutritional/Metabolic factor anthracis str. Ames Ancestor]	Bacillus				
+MFNFHKLG_00150	VFG013618(gb|WP_011609384)	69.718	426	432	426	0.0	644	VFC0272)]	 glutamate-1-semialdehyde 2,1-aminomutase biosynthesis - Nutritional/Metabolic factor somnus 129PT]	Haemophilus				
+MFNFHKLG_00157	VFG014960(gb|WP_011332905)	38.833	474	482	497	3.56e-92	288	VFC0271)]	 serine protease MucD precursor - Biofilm fluorescens Pf0-1]	Pseudomonas				
+MFNFHKLG_00168	VFG045688(gb|WP_002294134)	46.091	252	270	243	3.24e-74	226	VFC0258)]	 undecaprenyl diphosphate synthase - Immune modulation faecium Aus0004]	Enterococcus				
+MFNFHKLG_00171	VFG015003(gb|WP_011103593)	47.111	450	450	450	2.61e-137	401	VFC0271)]	 metalloprotease protease - Biofilm syringae pv. tomato str. DC3000]	Pseudomonas				
+MFNFHKLG_00172	VFG018687(gb|WP_012231505)	27.406	810	798	821	9.61e-81	276	VFC0001)]	 outer membrane protein assembly factor BamA - Adherence tribocorum CIP 105476]	Bartonella				
+MFNFHKLG_00174	VFG013165(gb|WP_012340599)	66.569	341	341	341	4.59e-169	474	VFC0258)]	 UDP-3-O-(3-hydroxymyristoyl) glucosamine N-acyltransferase - Immune modulation somnus 2336]	Haemophilus				
+MFNFHKLG_00176	VFG013167(gb|WP_012341126)	72.901	262	262	262	8.25e-142	398	VFC0258)]	 UDP-N-acetylglucosamine acyltransferase - Immune modulation somnus 2336]	Haemophilus				
+MFNFHKLG_00177	VFG013386(gb|WP_012054516)	63.021	382	390	384	2.63e-175	493	VFC0258)]	 lipid-A-disaccharide synthase - Immune modulation influenzae PittEE]	Haemophilus				
+MFNFHKLG_00193	VFG045346(gb|WP_011149697)	67.528	271	269	271	8.47e-127	361	VFC0001)]	 immunogenic lipoprotein A - Adherence vulnificus YJ016]	Vibrio				
+MFNFHKLG_00216	VFG049898(gb|WP_001284199)	100.000	160	160	160	9.04e-120	334	VFC0086)]	 type VI secretion system protein, Hcp family - Effector delivery system sonnei Ss046]	Shigella				
+MFNFHKLG_00217	VFG035469(gb|WP_000377957)	100.000	450	450	450	0.0	920	VFC0086)]	 type VI secretion system ImpA and VasL domain-containing protein T6SS - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_00218	VFG035493(gb|WP_122988827)	99.913	1174	1144	1144	0.0	2341	VFC0086)]	 type VI secretion system membrane subunit TssM T6SS - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_00219	VFG035517(gb|WP_001240530)	100.000	470	470	470	0.0	958	VFC0086)]	 type VI secretion system protein TssA T6SS - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_00220	VFG035542(gb|WP_000088859)	100.000	247	247	247	0.0	504	VFC0086)]	 type VI secretion system-associated protein TagO T6SS - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_00221	VFG035568(gb|WP_000614417)	100.000	921	921	921	0.0	1871	VFC0086)]	 type VI secretion system ATPase TssH T6SS - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_00222	VFG035594(gb|WP_000343304)	100.000	253	253	253	0.0	525	VFC0086)]	 type IVB secretion system protein IcmH/DotU T6SS - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_00223	VFG035620(gb|WP_000246413)	100.000	443	443	443	0.0	916	VFC0086)]	 type VI secretion system baseplate subunit TssK T6SS - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_00224	VFG035645(gb|WP_001080149)	100.000	174	174	174	4.16e-129	358	VFC0086)]	 type VI secretion system lipoprotein TssJ T6SS - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_00225	VFG035671(gb|WP_001113725)	100.000	426	426	426	0.0	877	VFC0086)]	 type VI secretion system-associated FHA domain protein TagH T6SS - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_00226	VFG035696(gb|WP_000348793)	100.000	360	360	360	0.0	745	VFC0086)]	 type VI secretion system baseplate subunit TssG T6SS - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_00227	VFG035710(gb|WP_000393844)	100.000	616	616	616	0.0	1278	VFC0086)]	 type VI secretion system baseplate subunit TssF - Effector delivery system coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_00228	VFG035740(gb|WP_000611742)	100.000	137	137	137	1.40e-100	283	VFC0086)]	 type VI secretion system baseplate subunit TssE T6SS - Effector delivery system coli O55:H7 str. CB9615]	Escherichia				
+MFNFHKLG_00229	VFG035768(gb|WP_000056973)	100.000	491	491	491	0.0	1021	VFC0086)]	 type VI secretion system contractile sheath large subunit T6SS - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_00231	VFG049914(gb|WP_000037389)	100.000	166	166	166	1.40e-119	334	VFC0086)]	 Type VI secretion system protein TssB - Effector delivery system sonnei Ss046]	Shigella				
+MFNFHKLG_00232	VFG035808(gb|WP_001142958)	100.000	172	172	172	4.29e-131	363	VFC0086)]	 Hcp family type VI secretion system effector - Effector delivery system coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_00233	VFG041051(gb|WP_000103125)	98.738	713	713	713	0.0	1468	VFC0086)]	 type VI secretion system tip protein VgrG - Effector delivery system coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_00234	VFG049917(gb|WP_000508696)	82.925	1415	1402	1265	0.0	2107	VFC0086)]	 Type VI secretion system protein, PAAR family - Effector delivery system sonnei Ss046]	Shigella				
+MFNFHKLG_00241	VFG013422(gb|WP_010945115)	75.000	192	194	192	1.22e-107	306	VFC0258)]	 phosphoheptose isomerase - Immune modulation ducreyi 35000HP]	Haemophilus				
+MFNFHKLG_00259	VFG043568(gb|NP_460531)	61.749	351	362	366	2.09e-152	432	VFC0001)]	 phosphoporin PhoE - Adherence enterica subsp. enterica serovar Typhimurium str. LT2]	Salmonella				
+MFNFHKLG_00269	VFG034519(gb|WP_001299009)	100.000	236	236	236	6.67e-179	489	VFC0001)]	 E. coli common pilus chaperone EcpE - Adherence coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_00270	VFG018221(gb|WP_001265646)	100.000	547	547	547	0.0	1130	VFC0001)]	 polymerized tip adhesin of ECP fibers - Adherence coli CFT073]	Escherichia				
+MFNFHKLG_00271	VFG034463(gb|WP_001131123)	100.000	841	841	841	0.0	1717	VFC0001)]	 E. coli common pilus usher EcpC - Adherence coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_00272	VFG034435(gb|WP_000716383)	100.000	222	222	222	3.25e-166	456	VFC0001)]	 E. coli common pilus chaperone EcpB - Adherence coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_00273	VFG002414(gb|WP_000730972)	100.000	195	195	195	6.43e-138	383	VFC0001)]	 E. coli common pilus structural subunit EcpA - Adherence coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_00274	VFG034380(gb|WP_001381763)	100.000	180	180	180	1.77e-132	368	VFC0001)]	 regulator protein EcpR - Adherence coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_00278	VFG034554(gb|WP_000092559)	100.000	1417	1417	1417	0.0	2883	VFC0001)]	 intimin-like adhesin FdeC - Adherence coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_00292	VFG035981(gb|WP_001443549)	100.000	1327	1327	1327	0.0	2679	VFC0001)]	 autotransporter adhesin EhaA AIDA-I type - Adherence coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_00294	VFG049114(gb|WP_012737527)	36.207	310	307	290	5.73e-64	204	VFC0272)]	 DNA-binding transcriptional activator AllS utilization - Nutritional/Metabolic factor pneumoniae subsp. pneumoniae NTUH-K2044]	Klebsiella				
+MFNFHKLG_00339	VFG030323(gb|WP_015345151)	35.829	369	368	374	1.01e-62	204	VFC0258)]	 NDMA-dependent alcohol dehydrogenase operon - Immune modulation tuberculosis 7199-99]	Mycobacterium				
+MFNFHKLG_00348	VFG013197(gb|WP_011608705)	42.500	324	340	320	2.26e-80	247	VFC0272)]	 porphobilinogen synthase biosynthesis - Nutritional/Metabolic factor somnus 2336]	Haemophilus				
+MFNFHKLG_00349	VFG035996(gb|WP_000556528)	100.000	992	992	992	0.0	1954	VFC0001)]	 autotransporter outer membrane beta-barrel domain-containing protein AIDA-I type - Adherence coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_00412	VFG005556(gb|WP_011680653)	32.414	432	427	435	1.06e-54	187	VFC0282)]	 trigger factor factor - Stress survival thermophilus LMD-9]	Streptococcus				
+MFNFHKLG_00413	VFG000077(gb|NP_465991)	66.495	207	198	194	6.24e-97	280	VFC0282)]	 ATP-dependent Clp protease proteolytic subunit - Stress survival monocytogenes EGD-e]	Listeria				
+MFNFHKLG_00415	VFG052894(gb|WP_267510310.1)	40.452	784	796	796	0.0	593	VFC0251)]	 endopeptidase La - Exoenzyme garinii JAASAAF1041]	Borrelia				
+MFNFHKLG_00425	VFG013249(gb|WP_011271803)	29.966	593	587	584	5.47e-80	263	VFC0258)]	 lipid transporter ATP-binding/permease - Immune modulation influenzae 86-028NP]	Haemophilus				
+MFNFHKLG_00437	VFG049144(gb|WP_002892069)	91.516	1049	1048	1049	0.0	1941	VFC0325)]	 acriflavine resistance protein B - Antimicrobial activity/Competitive advantage pneumoniae subsp. pneumoniae NTUH-K2044]	Klebsiella				
+MFNFHKLG_00438	VFG049125(gb|WP_004136054)	85.894	397	397	397	0.0	679	VFC0325)]	 acriflavine resistance protein A - Antimicrobial activity/Competitive advantage oxytoca E718]	Klebsiella				
+MFNFHKLG_00450	VFG013614(gb|WP_005693475)	51.899	320	323	316	8.03e-118	342	VFC0272)]	 ferrochelatase biosynthesis - Nutritional/Metabolic factor influenzae Rd KW20]	Haemophilus				
+MFNFHKLG_00476	VFG049114(gb|WP_012737527)	73.443	308	307	305	7.89e-172	478	VFC0272)]	 DNA-binding transcriptional activator AllS utilization - Nutritional/Metabolic factor pneumoniae subsp. pneumoniae NTUH-K2044]	Klebsiella				
+MFNFHKLG_00477	VFG049116(gb|WP_012737528)	74.375	160	160	160	7.01e-91	261	VFC0272)]	 ureidoglycolate hydrolase utilization - Nutritional/Metabolic factor pneumoniae subsp. pneumoniae NTUH-K2044]	Klebsiella				
+MFNFHKLG_00478	VFG049118(gb|WP_012737529)	86.194	271	272	268	8.63e-176	485	VFC0272)]	 DNA-binding transcriptional repressor AllR utilization - Nutritional/Metabolic factor pneumoniae subsp. pneumoniae NTUH-K2044]	Klebsiella				
+MFNFHKLG_00483	VFG049120(gb|WP_012737535)	91.170	453	453	453	0.0	868	VFC0272)]	 allantoinase utilization - Nutritional/Metabolic factor pneumoniae subsp. pneumoniae NTUH-K2044]	Klebsiella				
+MFNFHKLG_00487	VFG049122(gb|WP_012737539)	80.685	411	411	409	0.0	696	VFC0272)]	 allantoate amidohydrolase utilization - Nutritional/Metabolic factor pneumoniae subsp. pneumoniae NTUH-K2044]	Klebsiella				
+MFNFHKLG_00488	VFG049124(gb|WP_012737540)	83.381	349	349	349	0.0	619	VFC0272)]	 ureidoglycolate dehydrogenase utilization - Nutritional/Metabolic factor pneumoniae subsp. pneumoniae NTUH-K2044]	Klebsiella				
+MFNFHKLG_00495	VFG013326(gb|WP_011608655)	50.213	240	234	235	7.95e-83	246	VFC0258)]	 UDP-2,3-diacylglucosamine pyrophosphohydrolase - Immune modulation somnus 129PT]	Haemophilus				
+MFNFHKLG_00501	VFG042679(gb|CAD56970)	66.304	180	184	184	5.51e-82	240	VFC0001)]	 gene) major fimbrial subunit 1 fimbriae - Adherence freundii str. 3009]	Citrobacter				
+MFNFHKLG_00502	VFG042681(gb|CAD56972)	65.502	230	230	229	6.89e-110	315	VFC0001)]	 gene) fimbrial chaperone protein 1 fimbriae - Adherence freundii str. 3009]	Citrobacter				
+MFNFHKLG_00503	VFG042682(gb|CAD56973)	72.487	820	873	796	0.0	1246	VFC0001)]	 gene) outer membrane usher protein 1 fimbriae - Adherence freundii str. 3009]	Citrobacter				
+MFNFHKLG_00504	VFG021170(gb|WP_000708650)	70.659	335	335	334	6.70e-177	493	VFC0001)]	 type I fimbriae minor fimbrial subunit FimH, adhesin 1 fimbriae - Adherence enterica subsp. enterica serovar Heidelberg str. SL476]	Salmonella				
+MFNFHKLG_00505	VFG042684(gb|CAD56975)	62.500	171	164	160	8.76e-67	201	VFC0001)]	 gene) major fimbrial subunit 1 fimbriae - Adherence freundii str. 3009]	Citrobacter				
+MFNFHKLG_00506	VFG000449(gb|NP_459544)	71.905	210	210	210	2.72e-111	317	VFC0001)]	 DNA-binding response regulator 1 fimbriae - Adherence enterica subsp. enterica serovar Typhimurium str. LT2]	Salmonella				
+MFNFHKLG_00527	VFG043568(gb|NP_460531)	78.919	365	362	370	0.0	570	VFC0001)]	 phosphoporin PhoE - Adherence enterica subsp. enterica serovar Typhimurium str. LT2]	Salmonella				
+MFNFHKLG_00564	VFG012928(gb|WP_005005342)	57.729	317	315	317	1.67e-135	387	VFC0251)]	 outer membrane protease of the OmpP family, involved in cleavage of surface exposed IcsA - Exoenzyme boydii Sb227]	Shigella				
+MFNFHKLG_00574	VFG027208(gb|WP_041181419)	44.541	227	228	229	6.90e-59	185	VFC0301)]	 two-component system response regulator MprA - Regulation canettii CIPT 140070010]	Mycobacterium				
+MFNFHKLG_00575	VFG034663(gb|WP_000074237)	100.000	460	460	460	0.0	932	VFC0083)]	 Cu(+)/Ag(+) efflux RND transporter outer membrane channel CusC - Invasion coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_00578	VFG049136(gb|WP_014228207)	22.138	1047	1048	1057	1.39e-53	203	VFC0325)]	 acriflavine resistance protein B - Antimicrobial activity/Competitive advantage oxytoca E718]	Klebsiella				
+MFNFHKLG_00587	VFG013004(gb|NP_706438)	99.043	209	209	209	9.21e-158	434	VFC0272)]	 enterobactin synthase multienzyme complex phosphopantetheinyltransferase synthesis and transport - Nutritional/Metabolic factor flexneri 2a str. 301]	Shigella				
+MFNFHKLG_00588	VFG020175(gb|WP_001034865)	99.464	746	746	746	0.0	1526	VFC0272)]	 siderophore enterobactin receptor FepA synthesis and transport - Nutritional/Metabolic factor boydii CDC 3083-94]	Shigella				
+MFNFHKLG_00589	VFG044159(gb|WP_000125846)	96.500	400	400	400	0.0	796	VFC0272)]	 enterobactin/ferric enterobactin esterase - Nutritional/Metabolic factor coli CFT073]	Escherichia				
+MFNFHKLG_00591	VFG013002(gb|WP_000077683)	98.376	1293	1293	1293	0.0	2592	VFC0272)]	 enterobactin non-ribosomal peptide synthetase EntF synthesis and transport - Nutritional/Metabolic factor sonnei Ss046]	Shigella				
+MFNFHKLG_00592	VFG000927(gb|WP_000096764)	95.225	377	377	377	0.0	736	VFC0272)]	 LPS O-antigen length regulator - Nutritional/Metabolic factor coli CFT073]	Escherichia				
+MFNFHKLG_00593	VFG013021(gb|WP_000140647)	100.000	271	271	271	0.0	554	VFC0272)]	 iron-enterobactin ABC transporter ATP-binding protein synthesis and transport - Nutritional/Metabolic factor dysenteriae Sd197]	Shigella				
+MFNFHKLG_00594	VFG013037(gb|WP_000640969)	99.394	330	330	330	0.0	633	VFC0272)]	 iron-enterobactin ABC transporter permease synthesis and transport - Nutritional/Metabolic factor boydii Sb227]	Shigella				
+MFNFHKLG_00595	VFG013029(gb|WP_001298899)	100.000	334	334	334	0.0	632	VFC0272)]	 Fe(3+)-siderophore ABC transporter permease synthesis and transport - Nutritional/Metabolic factor flexneri 2a str. 2457T]	Shigella				
+MFNFHKLG_00596	VFG044165(gb|WP_001041793)	99.519	416	416	416	0.0	794	VFC0272)]	 enterobactin exporter, iron-regulated - Nutritional/Metabolic factor coli CFT073]	Escherichia				
+MFNFHKLG_00597	VFG020176(gb|WP_001234317)	99.686	318	318	318	0.0	639	VFC0272)]	 Fe2+-enterobactin ABC transporter substrate-binding protein synthesis and transport - Nutritional/Metabolic factor boydii CDC 3083-94]	Shigella				
+MFNFHKLG_00598	VFG012991(gb|WP_000381303)	99.744	391	391	391	0.0	800	VFC0272)]	 isochorismate synthase EntC synthesis and transport - Nutritional/Metabolic factor dysenteriae Sd197]	Shigella				
+MFNFHKLG_00599	VFG012985(gb|WP_000026832)	98.321	536	536	536	0.0	1090	VFC0272)]	 synthase EntE synthesis and transport - Nutritional/Metabolic factor dysenteriae Sd197]	Shigella				
+MFNFHKLG_00600	VFG012980(gb|NP_706450)	99.298	285	285	285	0.0	589	VFC0272)]	 2,3-dihydro-2,3-dihydroxybenzoate synthetase synthesis and transport - Nutritional/Metabolic factor flexneri 2a str. 301]	Shigella				
+MFNFHKLG_00601	VFG012978(gb|WP_000347634)	99.597	248	248	248	0.0	499	VFC0272)]	 2,3-dihydro-2,3-dihydroxybenzoate dehydrogenase EntA synthesis and transport - Nutritional/Metabolic factor sonnei Ss046]	Shigella				
+MFNFHKLG_00685	VFG000478(gb|NP_459678)	99.315	148	150	146	1.29e-106	300	VFC0301)]	 ferric iron uptake transcriptional regulator - Regulation enterica subsp. enterica serovar Typhimurium str. LT2]	Salmonella				
+MFNFHKLG_00755	VFG044185(gb|WP_011152542)	50.151	350	356	331	1.13e-109	324	VFC0272)]	 3-deoxy-7-phosphoheptulonate synthase - Nutritional/Metabolic factor vulnificus YJ016]	Vibrio				
+MFNFHKLG_00760	VFG013287(gb|WP_005688951)	57.692	338	338	338	5.05e-142	405	VFC0258)]	 UDP-glucose 4-epimerase - Immune modulation influenzae 86-028NP]	Haemophilus				
+MFNFHKLG_00811	VFG034953(gb|WP_000950792)	100.000	326	326	326	0.0	684	VFC0086)]	 type III secretion system effector arginine glycosyltransferase NleB2 secreted effectors - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_00816	VFG034989(gb|WP_001131649)	100.000	191	191	191	2.76e-140	388	VFC0086)]	 DUF1076 domain-containing protein secreted effectors - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_00817	VFG033793(gb|WP_001102750)	100.000	412	412	412	0.0	843	VFC0086)]	 Type III secretion system effector NleA secreted effectors - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_00819	VFG047531(gb|WP_014548270)	31.690	429	428	426	1.46e-68	223	VFC0272)]	 adenosylmethionine-8-amino-7-oxononanoate aminotransferase synthesis - Nutritional/Metabolic factor cf. tularensis subsp. novicida 3523]	Francisella				
+MFNFHKLG_00820	VFG047505(gb|WP_003026016)	50.654	346	313	306	3.18e-111	326	VFC0272)]	 biotin synthase synthesis - Nutritional/Metabolic factor novicida U112]	Francisella				
+MFNFHKLG_00821	VFG047493(gb|WP_012429462)	33.621	384	375	348	7.52e-64	208	VFC0272)]	 8-amino-7-oxononanoate synthase synthesis - Nutritional/Metabolic factor tularensis subsp. mediasiatica FSC147]	Francisella				
+MFNFHKLG_00862	VFG013382(gb|WP_041174828)	32.981	527	519	473	5.27e-81	261	VFC0258)]	 phosphoethanolamine transferase - Immune modulation influenzae PittGG]	Haemophilus				
+MFNFHKLG_00933	VFG013079(gb|WP_004970430)	39.016	330	316	305	2.91e-53	177	VFC0346)]	 virulence factor VirK - Others dysenteriae Sd197]	Shigella				
+MFNFHKLG_00938	VFG000079(gb|NP_463763)	38.037	758	820	815	3.09e-176	526	VFC0282)]	 endopeptidase Clp ATP-binding chain C - Stress survival monocytogenes EGD-e]	Listeria				
+MFNFHKLG_00970	VFG013253(gb|WP_011609176)	66.897	582	582	580	0.0	803	VFC0258)]	 lipid transporter ATP-binding/permease - Immune modulation somnus 129PT]	Haemophilus				
+MFNFHKLG_00971	VFG013242(gb|WP_005693863)	50.492	328	332	305	8.89e-110	322	VFC0258)]	 tetraacyldisaccharide 4'-kinase - Immune modulation influenzae Rd KW20]	Haemophilus				
+MFNFHKLG_00975	VFG038845(gb|WP_016351249)	69.478	248	253	249	5.81e-125	354	VFC0204)]	 NeuA protein flagella - Motility hydrophila ML09-119]	Aeromonas				
+MFNFHKLG_00987	VFG043568(gb|NP_460531)	61.957	362	362	368	4.34e-145	414	VFC0001)]	 phosphoporin PhoE - Adherence enterica subsp. enterica serovar Typhimurium str. LT2]	Salmonella				
+MFNFHKLG_00996	VFG045865(gb|WP_000750284)	100.000	180	180	180	2.72e-127	355	VFC0001)]	 fimbrial protein laminin-binding fimbriae - Adherence coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_00997	VFG045887(gb|WP_000845152)	100.000	233	233	233	5.16e-174	477	VFC0001)]	 molecular chaperone laminin-binding fimbriae - Adherence coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_01000	VFG045923(gb|WP_001165655)	100.000	356	356	356	0.0	731	VFC0001)]	 fimbrial protein laminin-binding fimbriae - Adherence coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_01001	VFG042402(gb|WP_077626202)	99.429	180	175	175	1.18e-126	353	VFC0001)]	 fimbrial protein laminin-binding fimbriae - Adherence coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_01002	VFG042403(gb|WP_000919494)	98.830	187	171	171	8.84e-124	346	VFC0001)]	 type 1 fimbrial protein laminin-binding fimbriae - Adherence coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_01016	VFG043544(gb|WP_000750416)	100.000	346	346	346	0.0	713	VFC0001)]	 porin OmpA - Adherence coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_01040	VFG048831(gb|WP_020947293)	61.454	726	722	729	0.0	910	VFC0258)]	 polysaccharide biosynthesis tyrosine autokinase - Immune modulation pneumoniae subsp. rhinoscleromatis SB3432]	Klebsiella				
+MFNFHKLG_01041	VFG048820(gb|WP_004144167)	63.946	148	148	147	9.69e-69	204	VFC0258)]	 protein-tyrosine-phosphatase - Immune modulation pneumoniae subsp. rhinoscleromatis SB3432]	Klebsiella				
+MFNFHKLG_01042	VFG048832(gb|WP_012967585)	74.934	379	379	379	0.0	622	VFC0258)]	 polysaccharide export protein - Immune modulation variicola At-22]	Klebsiella				
+MFNFHKLG_01043	VFG007643(gb|WP_011261015)	43.961	698	750	712	0.0	596	VFC0258)]	 YjbH domain-containing protein polysaccharide - Immune modulation fischeri ES114]	Vibrio				
+MFNFHKLG_01081	VFG037682(gb|WP_000866236)	52.885	441	415	416	4.21e-153	440	VFC0271)]	 poly-beta-1,6 N-acetyl-D-glucosamine synthase - Biofilm baumannii BJAB0715]	Acinetobacter				
+MFNFHKLG_01094	VFG042725(gb|WP_001189321)	100.000	277	277	277	0.0	570	VFC0001)]	 curli production assembly/transport protein CsgG fibers - Adherence coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_01095	VFG046069(gb|WP_001264088)	100.000	138	138	138	3.68e-99	280	VFC0001)]	 curli production assembly/transport protein CsgF fibers - Adherence coli VR50]	Escherichia				
+MFNFHKLG_01096	VFG045790(gb|WP_000833288)	100.000	129	129	129	3.74e-94	266	VFC0001)]	 curli production assembly/transport protein CsgE fibers - Adherence coli O25b:H4-ST131]	Escherichia				
+MFNFHKLG_01097	VFG045791(gb|WP_000481500)	99.537	216	216	216	4.75e-161	443	VFC0001)]	 transcriptional regulator CsgD fibers - Adherence coli O25b:H4-ST131]	Escherichia				
+MFNFHKLG_01098	VFG045792(gb|WP_000791650)	100.000	151	151	151	8.26e-106	298	VFC0001)]	 curlin minor subunit CsgB fibers - Adherence coli O25b:H4-ST131]	Escherichia				
+MFNFHKLG_01099	VFG046073(gb|WP_000771443)	99.338	151	150	151	2.38e-102	289	VFC0001)]	 curlin major subunit CsgA fibers - Adherence coli VR50]	Escherichia				
+MFNFHKLG_01100	VFG045794(gb|WP_000992818)	98.182	110	110	110	1.21e-74	216	VFC0001)]	 curli assembly protein CsgC fibers - Adherence coli O25b:H4-ST131]	Escherichia				
+MFNFHKLG_01110	VFG013437(gb|WP_005656817)	56.678	306	311	307	1.08e-122	353	VFC0258)]	 lipid A biosynthesis lauroyl acyltransferase - Immune modulation influenzae 86-028NP]	Haemophilus				
+MFNFHKLG_01126	VFG043072(gb|WP_000197360)	97.826	138	138	138	8.89e-97	274	VFC0204)]	 flagella biosynthesis chaperone FlgN flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_01128	VFG043073(gb|WP_000879706)	96.347	219	219	219	5.73e-153	423	VFC0204)]	 flagellar basal body P-ring formation protein FlgA flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_01129	VFG043074(gb|WP_000884708)	99.275	138	138	138	1.28e-98	279	VFC0204)]	 flagellar basal body rod protein FlgB flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_01130	VFG043075(gb|WP_001196460)	100.000	134	134	134	1.84e-94	268	VFC0204)]	 flagellar basal body rod protein FlgC flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_01131	VFG043076(gb|WP_000020482)	98.701	231	231	231	3.17e-161	444	VFC0204)]	 flagellar hook assembly protein FlgD flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_01132	VFG043077(gb|WP_000885860)	98.753	401	401	401	0.0	787	VFC0204)]	 flagellar hook protein FlgE flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_01133	VFG043078(gb|WP_000349287)	98.406	251	251	251	0.0	498	VFC0204)]	 flagellar basal-body rod protein FlgF flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_01134	VFG043079(gb|WP_000625837)	100.000	260	260	260	0.0	521	VFC0204)]	 flagellar basal-body rod protein FlgG flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_01135	VFG043080(gb|WP_001295442)	100.000	232	232	232	5.78e-172	472	VFC0204)]	 flagellar basal body L-ring protein FlgH flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_01136	VFG043081(gb|WP_000589319)	99.726	365	365	365	0.0	716	VFC0204)]	 flagellar basal body P-ring protein FlgI flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_01137	VFG043082(gb|WP_001301817)	99.042	313	313	313	0.0	640	VFC0204)]	 flagellar assembly peptidoglycan hydrolase FlgJ flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_01138	VFG043083(gb|WP_000096470)	98.903	547	547	547	0.0	1080	VFC0204)]	 flagellar hook-associated protein FlgK flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_01139	VFG043084(gb|WP_001212790)	98.423	317	317	317	0.0	632	VFC0204)]	 flagellar hook-associated protein FlgL flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_01148	VFG038840(gb|WP_005300916)	77.459	244	244	244	5.83e-139	389	VFC0204)]	 short chain dehydrogenase/reductase family oxidoreductase flagella - Motility hydrophila ML09-119]	Aeromonas				
+MFNFHKLG_01150	VFG009135(gb|YP_005360856)	42.640	413	416	394	1.14e-94	290	VFC0272)]	 3-oxoacyl-(acyl carrier protein) synthase II - Nutritional/Metabolic factor tuberculosis RGTB327]	Mycobacterium				
+MFNFHKLG_01157	VFG044124(gb|WP_010930941)	37.736	729	734	689	7.43e-151	456	VFC0272)]	 TonB-dependent alcaligin siderophore receptor FauA - Nutritional/Metabolic factor pertussis Tohama I]	Bordetella				
+MFNFHKLG_01241	VFG034888(gb|NP_309587)	100.000	782	782	782	0.0	1608	VFC0086)]	 Type III secretion system effector NleL, putative E3 ubiquitin ligase secreted effectors - Effector delivery system coli O157:H7 str. Sakai]	Escherichia				
+MFNFHKLG_01242	VFG034800(gb|WP_024199596)	100.000	1133	1133	1133	0.0	2318	VFC0086)]	 Type III secretion system effector EspN secreted effectors - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_01244	VFG041567(gb|WP_012905490)	96.909	453	453	453	0.0	902	VFC0086)]	 type III secretion system effector EspK - Effector delivery system rodentium ICC168]	Citrobacter				
+MFNFHKLG_01266	VFG021077(gb|WP_001031685)	85.421	486	487	487	0.0	873	VFC0301)]	 two-component system sensor histidine kinase PhoQ - Regulation enterica subsp. enterica serovar Agona str. SL483]	Salmonella				
+MFNFHKLG_01267	VFG004063(gb|WP_001537766)	93.722	223	223	223	5.28e-157	433	VFC0301)]	 two-component system response regulator PhoP - Regulation enterica subsp. enterica serovar Paratyphi A str. ATCC 9150]	Salmonella				
+MFNFHKLG_01325	VFG013196(gb|WP_012340438)	48.821	441	433	424	2.59e-139	405	VFC0272)]	 glutamyl-tRNA reductase biosynthesis - Nutritional/Metabolic factor somnus 2336]	Haemophilus				
+MFNFHKLG_01330	VFG013466(gb|WP_005654784)	81.979	284	284	283	3.27e-178	492	VFC0258)]	 2-dehydro-3-deoxyphosphooctonate aldolase - Immune modulation influenzae 86-028NP]	Haemophilus				
+MFNFHKLG_01342	VFG022816(gb|YP_001704253)	35.270	463	481	482	9.24e-77	247	VFC0272)]	 Probable integral membrane nitrite extrusion protein NarK3 transporter - Nutritional/Metabolic factor abscessus ATCC 19977]	Mycobacterium				
+MFNFHKLG_01343	VFG009599(gb|WP_011558674)	48.710	1247	1227	1240	0.0	1187	VFC0272)]	 nitrate reductase subunit alpha reductase - Nutritional/Metabolic factor sp. KMS]	Mycobacterium				
+MFNFHKLG_01344	VFG009606(gb|WP_003875456)	57.026	512	538	491	0.0	582	VFC0272)]	 nitrate reductase subunit beta reductase - Nutritional/Metabolic factor avium subsp. paratuberculosis K-10]	Mycobacterium				
+MFNFHKLG_01353	VFG013348(gb|WP_012054583)	73.611	302	295	288	1.37e-158	444	VFC0258)]	 glucosephosphate uridylyltransferase - Immune modulation influenzae PittEE]	Haemophilus				
+MFNFHKLG_01356	VFG031960(gb|WP_014092990)	48.394	891	866	872	0.0	821	VFC0001)]	 Listeria adhesion protein Lap - Adherence ivanovii subsp. ivanovii PAM 55]	Listeria				
+MFNFHKLG_01360	VFG032254(gb|WP_014093517)	31.429	558	559	525	5.84e-59	205	VFC0272)]	 peptide ABC transporter substrate-binding protein protein oppA - Nutritional/Metabolic factor ivanovii subsp. ivanovii PAM 55]	Listeria				
+MFNFHKLG_01494	VFG030692(gb|WP_013828150)	50.928	360	380	377	4.08e-120	352	VFC0272)]	 sn-glycerol-3-phosphate ABC transporter ATP-binding protein UgpC ABC transporter - Nutritional/Metabolic factor sp. JDM601]	Mycobacterium				
+MFNFHKLG_01525	VFG043568(gb|NP_460531)	64.935	377	362	385	8.13e-165	465	VFC0001)]	 phosphoporin PhoE - Adherence enterica subsp. enterica serovar Typhimurium str. LT2]	Salmonella				
+MFNFHKLG_01561	VFG005353(gb|WP_000260656)	59.581	333	336	334	2.00e-139	398	VFC0001)]	 type I glyceraldehyde-3-phosphate dehydrogenase plasmin receptor/GAPDH - Adherence agalactiae A909]	Streptococcus				
+MFNFHKLG_01565	VFG043040(gb|NP_460876)	45.083	546	553	539	3.74e-121	367	VFC0204)]	 methyl-accepting chemotaxis protein II flagella - Motility enterica subsp. enterica serovar Typhimurium str. LT2]	Salmonella				
+MFNFHKLG_01599	VFG035843(gb|WP_000103436)	100.000	702	702	702	0.0	1471	VFC0086)]	 type VI secretion system tip protein VgrG T6SS - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_01611	VFG024081(gb|WP_014941434)	57.582	514	539	488	0.0	597	VFC0272)]	 nitrate reductase subunit beta reductase - Nutritional/Metabolic factor indicus pranii MTCC 9506]	Mycobacterium				
+MFNFHKLG_01612	VFG009599(gb|WP_011558674)	48.463	1246	1227	1236	0.0	1172	VFC0272)]	 nitrate reductase subunit alpha reductase - Nutritional/Metabolic factor sp. KMS]	Mycobacterium				
+MFNFHKLG_01613	VFG022816(gb|YP_001704253)	33.966	462	481	474	2.59e-71	233	VFC0272)]	 Probable integral membrane nitrite extrusion protein NarK3 transporter - Nutritional/Metabolic factor abscessus ATCC 19977]	Mycobacterium				
+MFNFHKLG_01614	VFG034822(gb|WP_000627131)	100.000	431	443	431	0.0	860	VFC0086)]	 Type III secretion system effector espR1 secreted effectors - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_01633	VFG047666(gb|WP_012281046)	28.027	511	472	446	4.52e-57	197	VFC0272)]	 amino acid antiporter - Nutritional/Metabolic factor philomiragia subsp. philomiragia ATCC 25017]	Francisella				
+MFNFHKLG_01643	VFG042718(gb|WP_000520684)	98.355	304	304	304	0.0	607	VFC0001)]	 fimbrial protein fimbriae - Adherence coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_01646	VFG033307(gb|WP_000876776)	100.000	176	176	176	5.83e-130	361	VFC0001)]	 FimF protein precursor 1 fimbriae - Adherence coli O104:H4 str. 2009EL-2050]	Escherichia				
+MFNFHKLG_01647	VFG033280(gb|WP_000125356)	99.547	883	883	883	0.0	1813	VFC0001)]	 Outer membrane usher protein fimD precursor 1 fimbriae - Adherence coli O104:H4 str. 2009EL-2050]	Escherichia				
+MFNFHKLG_01648	VFG042714(gb|WP_001195169)	99.576	236	236	236	6.77e-177	484	VFC0001)]	 fimbria/pilus periplasmic chaperone fimbriae - Adherence coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_01700	VFG041576(gb|WP_012904699)	64.085	296	291	284	3.29e-133	379	VFC0086)]	 hypothetical protein - Effector delivery system rodentium ICC168]	Citrobacter				
+MFNFHKLG_01716	VFG033071(gb|WP_001815900)	100.000	252	252	252	0.0	512	VFC0001)]	 outer membrane adhesin Paa - Adherence coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_01760	VFG038219(gb|WP_000076440)	44.589	239	238	231	3.21e-66	204	VFC0301)]	 biofilm-controlling response regulator - Regulation baumannii ACICU]	Acinetobacter				
+MFNFHKLG_01765	VFG013187(gb|WP_012341760)	36.292	391	401	383	1.67e-67	219	VFC0258)]	 mannose-6-phosphate isomerase, class I - Immune modulation somnus 2336]	Haemophilus				
+MFNFHKLG_01787	VFG010904(gb|WP_011214951)	30.162	500	502	494	1.71e-62	212	VFC0272)]	 Di/tripeptide permease - Nutritional/Metabolic factor pneumophila str. Lens]	Legionella				
+MFNFHKLG_01799	VFG000463(gb|NP_460019)	55.556	173	177	171	1.33e-61	188	VFC0282)]	 Gifsy-2 prophage: superoxide dismutase precursor - Stress survival enterica subsp. enterica serovar Typhimurium str. LT2]	Salmonella				
+MFNFHKLG_01809	VFG001867(gb|WP_016357051)	67.539	193	192	191	5.82e-99	284	VFC0282)]	 superoxide dismutase - Stress survival pneumophila subsp. pneumophila str. Philadelphia 1]	Legionella				
+MFNFHKLG_01858	VFG050017(gb|WP_000960113)	32.580	548	538	531	1.49e-82	267	VFC0272)]	 2,3-dihydroxybenzoate adenylase DhbE - Nutritional/Metabolic factor cereus ATCC 14579]	Bacillus				
+MFNFHKLG_01868	VFG044190(gb|WP_011179201)	40.000	326	365	345	4.36e-65	209	VFC0272)]	 iron ABC transporter permease heme uptake system - Nutritional/Metabolic factor quintana str. Toulouse]	Bartonella				
+MFNFHKLG_01940	VFG037032(gb|WP_003689973)	41.935	753	504	496	1.10e-117	363	VFC0282)]	 catalase - Stress survival gonorrhoeae NCCP11945]	Neisseria				
+MFNFHKLG_01980	VFG005356(gb|WP_000260666)	51.039	331	335	337	1.69e-112	329	VFC0001)]	 type I glyceraldehyde-3-phosphate dehydrogenase plasmin receptor/GAPDH - Adherence pneumoniae D39]	Streptococcus				
+MFNFHKLG_02007	VFG030400(gb|WP_081465621)	34.496	583	507	516	3.76e-79	258	VFC0258)]	 long-chain fatty acid--CoA ligase operon - Immune modulation sp. JDM601]	Mycobacterium				
+MFNFHKLG_02035	VFG045345(gb|WP_005457104)	35.698	877	882	888	0.0	571	VFC0001)]	 multivalent adhesion molecule MAM7 - Adherence parahaemolyticus RIMD 2210633]	Vibrio				
+MFNFHKLG_02058	VFG020187(gb|WP_012421740)	70.192	323	314	312	3.45e-170	474	VFC0346)]	 lauroyl-Kdo(2)-lipid IV(A) myristoyltransferase - Others boydii CDC 3083-94]	Shigella				
+MFNFHKLG_02067	VFG039536(gb|NP_820549)	59.671	246	244	243	6.54e-105	303	VFC0086)]	 Coxiella Dot/Icm type IVB secretion system translocated effector secreted effectors - Effector delivery system burnetii RSA 493]	Coxiella				
+MFNFHKLG_02072	VFG034792(gb|WP_001132098)	100.000	196	196	196	5.37e-147	405	VFC0086)]	 Type III secretion system effector EspM2, Rho guanine exchange factor secreted effectors - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_02073	VFG035059(gb|WP_001144084)	100.000	216	216	216	2.43e-162	446	VFC0086)]	 DUF1076 domain-containing protein secreted effectors - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_02074	VFG034846(gb|WP_001434995)	100.000	352	352	352	0.0	731	VFC0086)]	 Type III secretion system effector EspW secreted effectors - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_02075	VFG035029(gb|WP_012816780)	100.000	211	211	211	6.55e-159	437	VFC0086)]	 DUF1076 domain-containing protein secreted effectors - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_02076	VFG035011(gb|WP_001118085)	95.028	190	193	181	1.23e-126	354	VFC0086)]	 T3SS effector NleG family protein secreted effectors - Effector delivery system coli O26:H11 str. 11368]	Escherichia				
+MFNFHKLG_02156	VFG043085(gb|WP_001259575)	97.692	130	130	130	1.54e-89	255	VFC0204)]	 flagellar protein FlhE flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02157	VFG043086(gb|WP_000067016)	99.422	692	692	692	0.0	1373	VFC0204)]	 flagellar biosynthesis protein FlhA flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02158	VFG043087(gb|WP_001278933)	98.953	382	382	382	0.0	765	VFC0204)]	 flagellar type III secretion system protein FlhB flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02159	VFG043088(gb|WP_000983602)	99.533	214	214	214	6.16e-156	430	VFC0204)]	 protein phosphatase CheZ flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02160	VFG043089(gb|WP_000763867)	100.000	129	129	129	5.98e-91	258	VFC0204)]	 chemotaxis response regulator CheY flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02161	VFG043090(gb|WP_000036413)	99.140	349	349	349	0.0	705	VFC0204)]	 protein-glutamate methylesterase/protein glutamine deamidase flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02162	VFG043091(gb|WP_000204340)	98.951	286	286	286	0.0	587	VFC0204)]	 protein-glutamate O-methyltransferase CheR flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02163	VFG043209(gb|WP_005168769)	48.467	533	557	522	9.83e-139	412	VFC0204)]	 methyl-accepting chemotaxis protein CheD - Motility enterocolitica subsp. enterocolitica 8081]	Yersinia				
+MFNFHKLG_02164	VFG043092(gb|WP_010904770)	98.915	553	553	553	0.0	1113	VFC0204)]	 methyl-accepting chemotaxis protein II flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02165	VFG043093(gb|WP_000147304)	99.401	167	167	167	6.58e-117	327	VFC0204)]	 chemotaxis protein CheW flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02166	VFG043094(gb|WP_001322280)	99.541	654	654	654	0.0	1315	VFC0204)]	 chemotaxis protein CheA flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02167	VFG043095(gb|WP_000795630)	100.000	308	308	308	0.0	630	VFC0204)]	 flagellar motor protein MotB flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02168	VFG043096(gb|WP_000906325)	99.322	295	295	295	0.0	591	VFC0204)]	 flagellar motor stator protein MotA flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02169	VFG043097(gb|WP_001291603)	100.000	192	192	192	5.52e-144	398	VFC0204)]	 flagellar transcriptional regulator FlhC flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02170	VFG043098(gb|WP_001302091)	99.138	116	116	116	1.57e-81	234	VFC0204)]	 flagellar transcriptional regulator FlhD flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02189	VFG015080(gb|NP_251276)	59.813	218	214	214	5.78e-95	276	VFC0301)]	 response regulator GacA two-component system - Regulation aeruginosa PAO1]	Pseudomonas				
+MFNFHKLG_02191	VFG000152(gb|NP_252167)	40.756	240	241	238	4.46e-56	179	VFC0271)]	 transcriptional regulator RhlR sensing - Biofilm aeruginosa PAO1]	Pseudomonas				
+MFNFHKLG_02195	VFG043099(gb|WP_001302033)	99.248	285	266	266	0.0	532	VFC0204)]	 cystine ABC transporter substrate-binding protein flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02196	VFG043100(gb|WP_001302103)	97.814	183	183	183	1.90e-135	375	VFC0204)]	 flagella biosynthesis regulatory protein FliZ flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02197	VFG043101(gb|WP_001087467)	100.000	239	239	239	9.56e-175	479	VFC0204)]	 RNA polymerase sigma factor FliA flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02198	VFG043071(gb|NP_461698)	61.133	497	506	512	2.79e-179	512	VFC0204)]	 flagellin flagella - Motility enterica subsp. enterica serovar Typhimurium str. LT2]	Salmonella				
+MFNFHKLG_02199	VFG043052(gb|NP_460913)	75.745	470	467	470	0.0	681	VFC0204)]	 flagellar filament-capping protein FliD flagella - Motility enterica subsp. enterica serovar Typhimurium str. LT2]	Salmonella				
+MFNFHKLG_02200	VFG043104(gb|WP_000270418)	95.588	136	136	136	1.99e-91	260	VFC0204)]	 flagellar export chaperone FliS flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02201	VFG043105(gb|WP_001015033)	98.333	121	121	120	4.98e-84	240	VFC0204)]	 flagella biosynthesis regulatory protein FliT flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02207	VFG043106(gb|WP_001274299)	99.038	104	104	104	3.35e-71	207	VFC0204)]	 flagellar hook-basal body complex protein FliE flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02208	VFG043107(gb|WP_000994443)	99.275	552	552	552	0.0	1109	VFC0204)]	 flagellar M-ring protein FliF flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02209	VFG043108(gb|WP_000067959)	99.698	331	331	331	0.0	654	VFC0204)]	 flagellar motor switch protein FliG flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02210	VFG043109(gb|WP_001282715)	98.684	228	228	228	1.62e-164	452	VFC0204)]	 flagellar assembly protein FliH flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02211	VFG043110(gb|WP_000213294)	100.000	457	457	457	0.0	918	VFC0204)]	 flagellum-specific ATP synthase FliI flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02212	VFG043111(gb|WP_000807584)	100.000	147	147	147	6.24e-106	298	VFC0204)]	 flagella biosynthesis chaperone FliJ flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02213	VFG043112(gb|WP_000620074)	97.600	375	375	375	0.0	711	VFC0204)]	 flagellar hook length control protein FliK flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02214	VFG043113(gb|WP_000133106)	99.351	154	154	154	1.71e-111	312	VFC0204)]	 flagellar basal body-associated protein FliL flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02215	VFG043114(gb|WP_010904778)	99.701	334	334	334	0.0	675	VFC0204)]	 flagellar motor switch protein FliM flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02216	VFG043115(gb|WP_001282098)	100.000	137	137	137	6.77e-97	274	VFC0204)]	 flagellar motor switch protein FliN flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02217	VFG043116(gb|WP_001302429)	98.347	121	121	121	1.85e-81	234	VFC0204)]	 flagellar type III secretion system protein FliO flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02218	VFG043117(gb|WP_001253441)	100.000	245	245	245	2.00e-173	476	VFC0204)]	 flagellar type III secretion system pore protein FliP flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02219	VFG043118(gb|WP_000187358)	100.000	89	89	89	1.62e-57	171	VFC0204)]	 flagellar biosynthesis protein FliQ flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02220	VFG043119(gb|WP_000942326)	98.851	261	261	261	0.0	498	VFC0204)]	 flagellar type III secretion system protein FliR flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02221	VFG049008(gb|WP_004141142)	67.633	207	207	207	1.76e-101	291	VFC0301)]	 transcriptional activator for ctr capsule biosynthesis - Regulation pneumoniae subsp. rhinoscleromatis SB3432]	Klebsiella				
+MFNFHKLG_02233	VFG043568(gb|NP_460531)	57.027	357	362	370	9.41e-134	385	VFC0001)]	 phosphoporin PhoE - Adherence enterica subsp. enterica serovar Typhimurium str. LT2]	Salmonella				
+MFNFHKLG_02236	VFG009864(gb|WP_041787729)	40.090	260	229	222	1.75e-52	170	VFC0301)]	 response regulator transcription factor - Regulation gilvum PYR-GCK]	Mycobacterium				
+MFNFHKLG_02242	VFG034973(gb|WP_000938105)	100.000	189	189	189	4.31e-142	393	VFC0086)]	 Type III secretion system effector NleF, caspase inhibitor secreted effectors - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_02245	VFG034942(gb|WP_000950813)	100.000	326	326	326	0.0	684	VFC0086)]	 Type III secretion system effector NleB2 secreted effectors - Effector delivery system coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02250	VFG000463(gb|NP_460019)	58.757	175	177	177	3.84e-67	202	VFC0282)]	 Gifsy-2 prophage: superoxide dismutase precursor - Stress survival enterica subsp. enterica serovar Typhimurium str. LT2]	Salmonella				
+MFNFHKLG_02308	VFG034751(gb|WP_000938124)	100.000	453	453	453	0.0	931	VFC0086)]	 Type III secretion system effector EspK secreted effectors - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_02385	VFG034743(gb|WP_012816795)	100.000	250	250	250	0.0	496	VFC0086)]	 Tir-cytoskeleton coupling protein TccP2 secreted effectors - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_02390	VFG000463(gb|NP_460019)	58.757	175	177	177	3.84e-67	202	VFC0282)]	 Gifsy-2 prophage: superoxide dismutase precursor - Stress survival enterica subsp. enterica serovar Typhimurium str. LT2]	Salmonella				
+MFNFHKLG_02523	VFG045297(gb|WP_011213307)	36.364	258	253	253	7.59e-53	172	VFC0258)]	 glycosyl amidation-associated protein WbuZ - Immune modulation pneumophila subsp. pneumophila str. Philadelphia 1]	Legionella				
+MFNFHKLG_02526	VFG048789(gb|WP_014838943)	83.505	388	388	388	0.0	677	VFC0258)]	 UDP-glucose 6-dehydrogenase - Immune modulation oxytoca E718]	Klebsiella				
+MFNFHKLG_02527	VFG048959(gb|WP_020956638)	95.726	468	468	468	0.0	926	VFC0258)]	 NADP-dependent phosphogluconate dehydrogenase - Immune modulation pneumoniae JM45]	Klebsiella				
+MFNFHKLG_02528	VFG013287(gb|WP_005688951)	63.798	342	338	337	7.55e-157	442	VFC0258)]	 UDP-glucose 4-epimerase - Immune modulation influenzae 86-028NP]	Haemophilus				
+MFNFHKLG_02529	VFG037956(gb|WP_029746836)	37.602	373	380	367	9.61e-76	239	VFC0258)]	 glycosyltransferase family 4 protein - Immune modulation baumannii AB307-0294]	Acinetobacter				
+MFNFHKLG_02530	VFG023796(gb|WP_172397678)	42.655	363	356	354	1.47e-95	288	VFC0258)]	 glycosyltransferase - Immune modulation enterocolitica subsp. palearctica 105.5R(r)]	Yersinia				
+MFNFHKLG_02534	VFG038013(gb|WP_001050695)	31.683	421	418	404	1.48e-65	215	VFC0258)]	 O-antigen translocase - Immune modulation baumannii TYTH-1]	Acinetobacter				
+MFNFHKLG_02535	VFG037998(gb|WP_000612008)	62.703	368	371	370	3.89e-172	484	VFC0258)]	 DegT/DnrJ/EryC1/StrS family aminotransferase - Immune modulation baumannii TYTH-1]	Acinetobacter				
+MFNFHKLG_02538	VFG048826(gb|YP_005227857)	75.175	290	289	286	7.28e-164	456	VFC0258)]	 glucose-1-phosphate thymidylyltransferase - Immune modulation pneumoniae subsp. pneumoniae HS11286]	Klebsiella				
+MFNFHKLG_02539	VFG007659(gb|WP_011261022)	77.222	358	364	360	0.0	575	VFC0258)]	 dTDP-glucose 4,6-dehydratase polysaccharide - Immune modulation fischeri ES114]	Vibrio				
+MFNFHKLG_02540	VFG048990(gb|WP_001741945)	89.189	297	296	296	0.0	558	VFC0258)]	 GalU regulator GalF - Immune modulation pneumoniae subsp. pneumoniae NTUH-K2044]	Klebsiella				
+MFNFHKLG_02544	VFG048850(gb|WP_004899428)	45.625	492	485	480	1.15e-144	423	VFC0258)]	 MOP flippase family protein - Immune modulation pneumoniae KCTC 2242]	Klebsiella				
+MFNFHKLG_02545	VFG048942(gb|WP_012967595)	66.452	464	465	465	0.0	653	VFC0258)]	 undecaprenyl-phosphate glucose phosphotransferase - Immune modulation variicola At-22]	Klebsiella				
+MFNFHKLG_02546	VFG019017(gb|WP_012304486)	74.229	456	457	454	0.0	728	VFC0258)]	 phosphomannomutase CpsG - Immune modulation pseudotuberculosis YPIII]	Yersinia				
+MFNFHKLG_02547	VFG023783(gb|WP_020283358)	62.924	478	472	472	0.0	635	VFC0258)]	 mannose-1-phosphate guanylyltransferase/mannose-6-phosphate isomerase - Immune modulation enterocolitica subsp. palearctica 105.5R(r)]	Yersinia				
+MFNFHKLG_02548	VFG048852(gb|WP_015875022)	61.671	407	404	407	0.0	527	VFC0258)]	 glycosyltransferase WbuB - Immune modulation pneumoniae subsp. pneumoniae NTUH-K2044]	Klebsiella				
+MFNFHKLG_02549	VFG048863(gb|WP_014907229)	46.980	160	152	149	1.46e-57	176	VFC0258)]	 GDP-mannose mannosyl hydrolase - Immune modulation pneumoniae subsp. pneumoniae NTUH-K2044]	Klebsiella				
+MFNFHKLG_02550	VFG048868(gb|WP_014907228)	78.302	321	322	318	0.0	541	VFC0258)]	 GDP-L-fucose synthase - Immune modulation pneumoniae subsp. pneumoniae 1084]	Klebsiella				
+MFNFHKLG_02551	VFG048885(gb|WP_014907227)	88.919	373	374	370	0.0	704	VFC0258)]	 GDP-mannose 4,6-dehydratase - Immune modulation pneumoniae subsp. pneumoniae NTUH-K2044]	Klebsiella				
+MFNFHKLG_02558	VFG048971(gb|WP_015958711)	54.208	720	720	701	0.0	768	VFC0258)]	 polysaccharide biosynthesis tyrosine autokinase - Immune modulation pneumoniae subsp. pneumoniae MGH 78578]	Klebsiella				
+MFNFHKLG_02559	VFG048933(gb|WP_038423093)	59.722	147	144	144	1.17e-60	183	VFC0258)]	 protein-tyrosine-phosphatase - Immune modulation oxytoca KCTC 1686]	Klebsiella				
+MFNFHKLG_02560	VFG048832(gb|WP_012967585)	66.227	379	379	379	0.0	543	VFC0258)]	 polysaccharide export protein - Immune modulation variicola At-22]	Klebsiella				
+MFNFHKLG_02573	VFG037718(gb|WP_001027069)	30.601	1040	1059	1049	1.42e-124	406	VFC0271)]	 cation/multidrug efflux pump efflux pump - Biofilm baumannii AB0057]	Acinetobacter				
+MFNFHKLG_02574	VFG049146(gb|WP_012968813)	28.655	1025	1048	1026	3.27e-113	375	VFC0325)]	 acriflavine resistance protein B - Antimicrobial activity/Competitive advantage variicola At-22]	Klebsiella				
+MFNFHKLG_02605	VFG004261(gb|WP_000765280)	50.585	344	335	342	1.81e-116	340	VFC0001)]	 putative fimbrial-like adhesin protein - Adherence enterica subsp. enterica serovar Typhi str. CT18]	Salmonella				
+MFNFHKLG_02606	VFG004269(gb|WP_001540414)	75.271	826	829	829	0.0	1347	VFC0001)]	 fimbrial biogenesis outer membrane usher protein - Adherence enterica subsp. enterica serovar Choleraesuis str. SC-B67]	Salmonella				
+MFNFHKLG_02607	VFG004271(gb|WP_000698775)	64.732	224	227	224	1.28e-108	311	VFC0001)]	 fimbrial biogenesis chaperone StcB - Adherence enterica subsp. enterica serovar Typhi str. CT18]	Salmonella				
+MFNFHKLG_02633	VFG038250(gb|YP_001083314)	43.307	310	255	254	4.45e-61	194	VFC0258)]	 D-alanyl-D-alanine endopeptidase - Immune modulation baumannii ATCC 17978]	Acinetobacter				
+MFNFHKLG_02653	VFG012633(gb|WP_000792545)	36.017	663	682	708	1.71e-116	363	VFC0272)]	 TonB-dependent siderophore receptor IreA element - Nutritional/Metabolic factor coli CFT073]	Escherichia				
+MFNFHKLG_02694	VFG045720(gb|WP_012979217)	53.115	647	649	642	0.0	649	VFC0272)]	 cytochrome c heme lyase subunit CcmF - Nutritional/Metabolic factor longbeachae NSW150]	Legionella				
+MFNFHKLG_02697	VFG045717(gb|WP_003636817)	48.536	245	246	239	8.57e-77	232	VFC0272)]	 cytochrome c-type biogenesis protein CcmC, putative heme lyase for CcmE - Nutritional/Metabolic factor longbeachae NSW150]	Legionella				
+MFNFHKLG_02710	VFG016024(gb|WP_011267350)	34.196	547	558	541	6.64e-97	305	VFC0272)]	 pyoverdine biosynthesis protein PvdE - Nutritional/Metabolic factor syringae pv. syringae B728a]	Pseudomonas				
+MFNFHKLG_02714	VFG043568(gb|NP_460531)	63.130	367	362	377	1.23e-157	446	VFC0001)]	 phosphoporin PhoE - Adherence enterica subsp. enterica serovar Typhimurium str. LT2]	Salmonella				
+MFNFHKLG_02716	VFG049010(gb|WP_004103995)	98.148	216	216	216	6.18e-154	425	VFC0301)]	 transcriptional regulator RcsB - Regulation oxytoca E718]	Klebsiella				
+MFNFHKLG_02742	VFG011158(gb|WP_012415798)	42.199	385	392	391	4.77e-104	312	VFC0258)]	 lipopolysaccharide biosynthesis protein - Immune modulation avium 197N]	Bordetella				
+MFNFHKLG_02795	VFG002901(gb|WP_002209736)	77.632	228	228	228	3.05e-126	356	VFC0258)]	 histidine ABC transporter permease HisQ - Immune modulation pestis Antiqua]	Yersinia				
+MFNFHKLG_02808	VFG043120(gb|WP_000615801)	99.396	331	331	331	0.0	655	VFC0204)]	 flagella biosynthesis regulator Flk flagella - Motility coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02810	VFG009246(gb|WP_011560750)	34.474	406	420	409	2.19e-55	188	VFC0272)]	 beta-ketoacyl-ACP synthase - Nutritional/Metabolic factor sp. JLS]	Mycobacterium				
+MFNFHKLG_02822	VFG004333(gb|WP_000737997)	53.165	156	158	158	8.34e-60	182	VFC0001)]	 fimbrial minor subunit StfF - Adherence enterica subsp. enterica serovar Choleraesuis str. SC-B67]	Salmonella				
+MFNFHKLG_02824	VFG018314(gb|WP_000982729)	63.596	250	250	228	4.35e-109	314	VFC0001)]	 fimbrial chaperone StfD - Adherence enterica subsp. enterica serovar Paratyphi B str. SPB7]	Salmonella				
+MFNFHKLG_02825	VFG021563(gb|WP_000951668)	56.932	880	885	880	0.0	1084	VFC0001)]	 fimbrial biogenesis outer membrane usher protein - Adherence enterica subsp. enterica serovar Agona str. SL483]	Salmonella				
+MFNFHKLG_02867	VFG000838(gb|WP_000738068)	100.000	89	89	89	3.49e-63	185	VFC0235)]	 shiga-like toxin II B subunit encoded by bacteriophage BP-933W - Exotoxin coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02868	VFG000837(gb|WP_000649753)	100.000	319	319	319	0.0	658	VFC0235)]	 shiga-like toxin II A subunit encoded by bacteriophage BP-933W - Exotoxin coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_02918	VFG036972(gb|WP_042508130)	52.087	512	508	503	0.0	541	VFC0325)]	 fatty acid efflux system protein FarB - Antimicrobial activity/Competitive advantage lactamica 020-06]	Neisseria				
+MFNFHKLG_02919	VFG036939(gb|WP_012503946)	41.926	387	384	353	6.46e-87	268	VFC0325)]	 fatty acid efflux system protein FarA - Antimicrobial activity/Competitive advantage gonorrhoeae FA 1090]	Neisseria				
+MFNFHKLG_02921	VFG011123(gb|WP_010926708)	28.691	1197	1238	1192	1.30e-142	463	VFC0301)]	 virulence factors two-component system sensor histidine kinase BvgS - Regulation bronchiseptica RB50]	Bordetella				
+MFNFHKLG_02929	VFG013437(gb|WP_005656817)	48.525	306	311	305	1.18e-102	302	VFC0258)]	 lipid A biosynthesis lauroyl acyltransferase - Immune modulation influenzae 86-028NP]	Haemophilus				
+MFNFHKLG_02961	VFG043491(gb|WP_001124831)	34.074	671	681	675	3.74e-120	373	VFC0001)]	 NAD-dependent DNA ligase LigA - Adherence interrogans serovar Lai str. 56601]	Leptospira				
+MFNFHKLG_03010	VFG049144(gb|WP_002892069)	64.833	1037	1048	1018	0.0	1373	VFC0325)]	 acriflavine resistance protein B - Antimicrobial activity/Competitive advantage pneumoniae subsp. pneumoniae NTUH-K2044]	Klebsiella				
+MFNFHKLG_03047	VFG047558(gb|WP_012279909)	44.860	345	347	321	1.50e-90	275	VFC0272)]	 phosphoribosylaminoimidazole synthetase biosynthesis - Nutritional/Metabolic factor philomiragia subsp. philomiragia ATCC 25017]	Francisella				
+MFNFHKLG_03049	VFG042931(gb|WP_012031410)	34.909	688	722	656	3.82e-112	354	VFC0001)]	 polyphosphate kinase 1 IV pili - Adherence nodosus VCS1703A]	Dichelobacter				
+MFNFHKLG_03056	VFG052864(gb|WP_062706012.1)	50.383	525	512	522	0.0	558	VFC0272)]	 glutamine-hydrolyzing GMP synthase - Nutritional/Metabolic factor hermsii ML2]	Borrelia				
+MFNFHKLG_03057	VFG052858(gb|WP_062706016.1)	51.844	488	485	488	8.22e-172	492	VFC0272)]	 inosine-5'-monophosphate dehydrogenase - Nutritional/Metabolic factor hermsii ML2]	Borrelia				
+MFNFHKLG_03106	VFG043345(gb|WP_011946713)	43.084	444	437	441	2.50e-114	342	VFC0204)]	 sigma 54-dependent response regulator - Motility pneumophila subsp. pneumophila str. Philadelphia 1]	Legionella				
+MFNFHKLG_03181	VFG000121(gb|NP_249453)	65.969	191	193	191	3.93e-90	261	VFC0271)]	 alginate biosynthesis protein AlgZ/FimS - Biofilm aeruginosa PAO1]	Pseudomonas				
+MFNFHKLG_03201	VFG049196(gb|WP_004890358)	94.982	857	857	857	0.0	1662	VFC0086)]	 ATP-dependent chaperone ClpB - Effector delivery system pneumoniae subsp. pneumoniae NTUH-K2044]	Klebsiella				
+MFNFHKLG_03208	VFG044185(gb|WP_011152542)	43.840	356	356	349	3.63e-103	307	VFC0272)]	 3-deoxy-7-phosphoheptulonate synthase - Nutritional/Metabolic factor vulnificus YJ016]	Vibrio				
+MFNFHKLG_03223	VFG037134(gb|WP_013449263)	39.241	553	555	553	3.07e-123	373	VFC0282)]	 DNA repair protein RecN - Stress survival lactamica 020-06]	Neisseria				
+MFNFHKLG_03238	VFG044347(gb|WP_042318253)	35.867	426	459	421	5.30e-69	225	VFC0272)]	 diaminobutyrate--2-oxoglutarate transaminase - Nutritional/Metabolic factor dadantii 3937]	Dickeya				
+MFNFHKLG_03261	VFG036972(gb|WP_042508130)	57.540	512	508	504	0.0	602	VFC0325)]	 fatty acid efflux system protein FarB - Antimicrobial activity/Competitive advantage lactamica 020-06]	Neisseria				
+MFNFHKLG_03262	VFG018243(gb|WP_005462534)	76.608	171	172	171	4.49e-100	285	VFC0271)]	 S-ribosylhomocysteinase - Biofilm parahaemolyticus RIMD 2210633]	Vibrio				
+MFNFHKLG_03284	VFG013481(gb|WP_041604195)	40.717	321	311	307	5.25e-78	240	VFC0258)]	 KpsF/GutQ family sugar isomerase - Immune modulation somnus 129PT]	Haemophilus				
+MFNFHKLG_03317	VFG015354(gb|WP_005765391)	45.070	420	429	426	5.58e-120	355	VFC0086)]	 four-carbon acid sugar kinase family protein syringae TTSS effectors - Effector delivery system syringae pv. tomato str. DC3000]	Pseudomonas				
+MFNFHKLG_03325	VFG000477(gb|NP_461845)	99.394	330	330	330	0.0	655	VFC0301)]	 RNA polymerase sigma factor RpoS - Regulation enterica subsp. enterica serovar Typhimurium str. LT2]	Salmonella				
+MFNFHKLG_03334	VFG015885(gb|WP_003381688)	53.763	201	201	186	9.42e-68	206	VFC0235)]	 adenylyl-sulfate kinase phaseolotoxin - Exotoxin syringae pv. phaseolicola 1448A]	Pseudomonas				
+MFNFHKLG_03364	VFG005579(gb|WP_000022815)	58.933	432	434	431	6.45e-177	501	VFC0251)]	 phosphopyruvate hydratase enolase - Exoenzyme pneumoniae D39]	Streptococcus				
+MFNFHKLG_03369	VFG010924(gb|WP_011215608)	44.846	744	734	747	0.0	659	VFC0301)]	 GTP diphosphokinase - Regulation pneumophila str. Lens]	Legionella				
+MFNFHKLG_03371	VFG015071(gb|WP_011268595)	37.340	918	917	940	4.70e-177	536	VFC0301)]	 response regulator two-component system - Regulation syringae pv. syringae B728a]	Pseudomonas				
+MFNFHKLG_03386	VFG000313(gb|WP_001174195)	36.038	438	407	419	2.99e-63	209	VFC0258)]	 glucose/galactose transporter - Immune modulation pylori 26695]	Helicobacter				
+MFNFHKLG_03402	VFG035087(gb|WP_001342815)	100.000	169	169	169	6.97e-120	335	VFC0086)]	 type VI secretion system contractile sheath small subunit T6SS - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03403	VFG035106(gb|WP_001299107)	100.000	512	512	512	0.0	1065	VFC0086)]	 type VI secretion system contractile sheath large subunit T6SS - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03404	VFG035125(gb|WP_000690895)	100.000	445	445	445	0.0	907	VFC0086)]	 type VI secretion system baseplate subunit TssK T6SS - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03405	VFG035141(gb|WP_000712312)	100.000	221	221	221	8.00e-165	453	VFC0086)]	 type VI secretion system protein TssL, short form T6SS - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03406	VFG035157(gb|WP_001246532)	100.000	550	550	550	0.0	1113	VFC0086)]	 OmpA family protein T6SS - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03407	VFG035173(gb|WP_000997067)	100.000	163	163	163	1.49e-121	338	VFC0086)]	 Hcp family type VI secretion system effector T6SS - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03408	VFG035189(gb|WP_000147348)	100.000	884	884	884	0.0	1786	VFC0086)]	 type VI secretion system ATPase TssH T6SS - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03409	VFG035208(gb|WP_000512749)	100.000	835	835	835	0.0	1729	VFC0086)]	 type VI secretion system tip protein VgrG T6SS - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03413	VFG035241(gb|WP_001299110)	100.000	1127	1108	1108	0.0	2261	VFC0086)]	 type VI secretion protein VasK T6SS - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03414	VFG035256(gb|WP_001299981)	100.000	545	536	536	0.0	1079	VFC0086)]	 type VI secretion system protein TssA T6SS - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03417	VFG035272(gb|WP_000342493)	100.000	586	586	586	0.0	1201	VFC0086)]	 type VI secretion system baseplate subunit TssF T6SS - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03418	VFG035285(gb|WP_000373302)	100.000	359	359	359	0.0	730	VFC0086)]	 type VI secretion system baseplate subunit TssG T6SS - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03419	VFG035296(gb|WP_000484008)	100.000	178	178	178	2.53e-131	365	VFC0086)]	 type VI secretion system lipoprotein TssJ T6SS - Effector delivery system coli CFT073]	Escherichia				
+MFNFHKLG_03420	VFG035316(gb|WP_000106970)	100.000	142	142	142	8.33e-103	290	VFC0086)]	 type VI secretion system baseplate subunit TssE T6SS - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03421	VFG035344(gb|WP_000157830)	100.000	458	458	458	0.0	926	VFC0086)]	 type VI secretion system ImpA family N-terminal domain-containing protein T6SS - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03447	VFG011805(gb|WP_011732196)	45.217	230	229	230	7.46e-82	244	VFC0258)]	 aspartate/glutamate racemase family protein - Immune modulation fetus subsp. fetus 82-40]	Campylobacter				
+MFNFHKLG_03460	VFG042096(gb|NP_311735)	95.706	163	163	163	1.19e-114	321	VFC0086)]	 SycD-like chaperone family TPR-repeat-containing protein - Effector delivery system coli O157:H7 str. Sakai]	Escherichia				
+MFNFHKLG_03461	VFG042097(gb|NP_311736)	96.507	458	458	458	0.0	909	VFC0086)]	 transcriptional regulator - Effector delivery system coli O157:H7 str. Sakai]	Escherichia				
+MFNFHKLG_03466	VFG042093(gb|NP_311740)	90.845	143	143	142	6.89e-93	265	VFC0086)]	 hypothetical protein - Effector delivery system coli O157:H7 str. Sakai]	Escherichia				
+MFNFHKLG_03467	VFG042091(gb|NP_311742)	93.264	193	193	193	7.73e-133	370	VFC0086)]	 type III secretion apparatus protein OrgA/MxiK - Effector delivery system coli O157:H7 str. Sakai]	Escherichia				
+MFNFHKLG_03470	VFG042087(gb|NP_311746)	97.951	393	244	244	4.65e-174	484	VFC0086)]	 type III secretion protein EprH - Effector delivery system coli O157:H7 str. Sakai]	Escherichia				
+MFNFHKLG_03474	VFG042210(gb|NP_306456)	95.333	255	150	150	1.62e-100	289	VFC0086)]	 type III secretion protein EpaR - Effector delivery system coli O157:H7 str. Sakai]	Escherichia				
+MFNFHKLG_03475	VFG042085(gb|NP_311751)	98.837	86	86	86	1.13e-57	171	VFC0086)]	 type III secretion protein EpaQ - Effector delivery system coli O157:H7 str. Sakai]	Escherichia				
+MFNFHKLG_03476	VFG042084(gb|NP_311752)	99.548	221	221	221	3.81e-155	428	VFC0086)]	 T3SS structure protein EscR - Effector delivery system coli O157:H7 str. Sakai]	Escherichia				
+MFNFHKLG_03522	VFG038906(gb|WP_005318058)	66.505	219	211	206	4.67e-81	240	VFC0235)]	 hemolysin III III - Exotoxin salmonicida subsp. salmonicida A449]	Aeromonas				
+MFNFHKLG_03550	VFG043556(gb|WP_009885879)	37.690	339	337	329	1.13e-75	236	VFC0001)]	 type I glyceraldehyde-3-phosphate dehydrogenase - Adherence genitalium G37]	Mycoplasma				
+MFNFHKLG_03572	VFG045607(gb|WP_010948621)	48.347	243	244	242	1.47e-74	226	VFC0086)]	 Dot/Icm type IV secretion system effector T4SS secreted effectors - Effector delivery system pneumophila subsp. pneumophila str. Philadelphia 1]	Legionella				
+MFNFHKLG_03576	VFG042879(gb|WP_011079462)	48.936	326	345	329	2.15e-110	324	VFC0001)]	 type IV pilus twitching motility protein PilT - Adherence vulnificus CMCP6]	Vibrio				
+MFNFHKLG_03580	VFG013266(gb|WP_011271949)	59.067	197	195	193	2.18e-81	240	VFC0258)]	 deoxyribonucleotide triphosphate pyrophosphatase - Immune modulation influenzae 86-028NP]	Haemophilus				
+MFNFHKLG_03581	VFG013626(gb|WP_011272071)	66.396	378	383	369	0.0	533	VFC0272)]	 radical SAM family heme chaperone HemW biosynthesis - Nutritional/Metabolic factor influenzae 86-028NP]	Haemophilus				
+MFNFHKLG_03606	VFG034763(gb|WP_001121619)	100.000	549	549	549	0.0	1123	VFC0086)]	 Type III secretion system secreted effector EspL2, cysteine protease secreted effectors - Effector delivery system coli O127:H6 str. E2348/69]	Escherichia				
+MFNFHKLG_03607	VFG034939(gb|WP_000953024)	100.000	329	329	329	0.0	681	VFC0086)]	 Type III secretion system effector nleB1 secreted effectors - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03608	VFG034954(gb|WP_000609742)	100.000	224	224	224	3.78e-168	461	VFC0086)]	 Type III secretion system effector NleE secreted effectors - Effector delivery system coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_03610	VFG034929(gb|WP_001239101)	100.000	3223	3223	3223	0.0	6678	VFC0086)]	 lymphostatin Efa1/LifA - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03642	VFG034751(gb|WP_000938124)	69.757	454	453	453	0.0	664	VFC0086)]	 Type III secretion system effector EspK secreted effectors - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03643	VFG034981(gb|WP_001145628)	100.000	212	212	212	1.61e-159	439	VFC0086)]	 DUF1076 domain-containing protein secreted effectors - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03644	VFG041519(gb|WP_012908052)	55.670	194	194	194	1.67e-84	248	VFC0086)]	 bfpT-regulated chaperone - Effector delivery system rodentium ICC168]	Citrobacter				
+MFNFHKLG_03645	VFG033743(gb|WP_001368749)	100.000	294	294	294	0.0	553	VFC0086)]	 Type III secretion system effector EspF secreted effectors - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03646	VFG033427(gb|WP_000245867)	100.000	92	92	92	3.32e-64	188	VFC0086)]	 chaperone for EscF - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03648	VFG033445(gb|WP_000228587)	100.000	135	135	135	3.38e-99	280	VFC0086)]	 chaperone for EspD - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03649	VFG033454(gb|WP_001092013)	100.000	314	314	314	0.0	620	VFC0086)]	 Type III secretion system translocator protein EspB, pore protein - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03650	VFG033463(gb|WP_000935766)	100.000	380	380	380	0.0	760	VFC0086)]	 Type III secretion system translocator protein EspD, pore protein - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03651	VFG033472(gb|WP_000381552)	100.000	192	192	192	1.85e-137	381	VFC0086)]	 Type III secretion system translocator protein EspA - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03652	VFG033481(gb|WP_001273455)	100.000	351	351	351	0.0	700	VFC0086)]	 Type III secretion system secretion gatekeeper SepL - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03653	VFG033490(gb|WP_000953242)	100.000	406	406	406	0.0	822	VFC0086)]	 Type III secretion system outer MS ring protein EscD - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03654	VFG033063(gb|WP_000627900)	100.000	948	948	948	0.0	1951	VFC0086)]	 intimin type epsilon - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03655	VFG033499(gb|WP_000098786)	100.000	156	156	156	1.96e-114	320	VFC0086)]	 multieffector chaperone - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03656	VFG033752(gb|WP_001121324)	100.000	538	538	538	0.0	1078	VFC0086)]	 translocated intimin receptor protein secreted effectors - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03657	VFG033761(gb|WP_000492642)	100.000	203	203	203	8.31e-154	424	VFC0086)]	 Type III secretion system effector Map, Rho guanine exchange factor secreted effectors - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03658	VFG033508(gb|WP_001005228)	100.000	119	119	119	2.31e-85	244	VFC0086)]	 CesF, chaperone for EspF - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03659	VFG033734(gb|WP_001374266)	100.000	171	171	171	2.17e-127	354	VFC0086)]	 Type III secretion system effector EspH, RhoGEF Inhibitor secreted effectors - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03660	VFG033517(gb|WP_001050798)	100.000	305	305	305	0.0	632	VFC0086)]	 Type III secetion system C ring protein EscQ - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03661	VFG033524(gb|WP_001443671)	100.000	138	138	138	3.42e-101	285	VFC0086)]	 Type III secretion system needle length regulator EscP - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03662	VFG033533(gb|WP_001062958)	100.000	106	106	106	7.23e-72	208	VFC0086)]	 positive regulator EscO - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03663	VFG033542(gb|WP_000622542)	100.000	446	446	446	0.0	907	VFC0086)]	 ATPase EscN - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03664	VFG033551(gb|WP_001037816)	100.000	675	675	675	0.0	1360	VFC0086)]	 Type III secretion system major export apparatus protein - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03665	VFG033559(gb|WP_001050414)	100.000	117	117	117	2.77e-81	233	VFC0086)]	 chaperone for SepL - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03666	VFG033769(gb|WP_000338353)	100.000	98	98	98	4.36e-64	188	VFC0086)]	 Type III secretion system effector EspZ secreted effectors - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03667	VFG033567(gb|WP_001059795)	100.000	142	125	125	3.74e-87	249	VFC0086)]	 Type III secretion system inner rod component EscI - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03668	VFG033576(gb|WP_001233824)	100.000	190	190	190	1.24e-135	377	VFC0086)]	 Type III secretion system inner MS ring protein EscJ - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03669	VFG033584(gb|WP_001063688)	100.000	151	151	151	2.25e-113	317	VFC0086)]	 Type III secretion system secretion switch protein SepD - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03670	VFG033593(gb|WP_000723928)	100.000	512	512	512	0.0	1035	VFC0086)]	 Type III secretion system secretin EscC - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03671	VFG033601(gb|WP_000087469)	100.000	151	151	151	2.54e-112	314	VFC0086)]	 chaperone for EspB and EspD - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03672	VFG033609(gb|WP_000444181)	100.000	137	137	137	2.54e-98	278	VFC0086)]	 type III secretion system LEE transcriptional regulator GrlA - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03673	VFG033618(gb|WP_000605359)	100.000	118	118	118	4.22e-83	238	VFC0086)]	 nucleoside transporter - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03674	VFG033627(gb|WP_001342442)	100.000	154	152	152	2.91e-108	304	VFC0086)]	 T3SS-associated peptidoglycan lytic enzyme - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03675	VFG033636(gb|WP_001291686)	100.000	345	345	345	0.0	695	VFC0086)]	 Type III secretion system export apparatus switch protein EscU - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03676	VFG033645(gb|WP_001002808)	100.000	258	258	258	0.0	500	VFC0086)]	 Type III secretion system minor export apparatus protein EscT - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03677	VFG033654(gb|WP_000447503)	100.000	89	89	89	6.61e-59	174	VFC0086)]	 Type III secretion systemminor export apparatus protein EscS - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03678	VFG033663(gb|WP_001299990)	100.000	217	217	217	2.98e-151	418	VFC0086)]	 Type III secretion systemminor export apparatus protein EscR - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03679	VFG033672(gb|WP_000780745)	100.000	217	217	217	1.64e-153	424	VFC0086)]	 negative regulator EscL, stator protein - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03680	VFG033681(gb|WP_000153999)	100.000	199	199	199	1.59e-147	407	VFC0086)]	 type III secretion system sorting platform component - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03681	VFG033690(gb|WP_000084152)	100.000	104	104	104	1.92e-70	205	VFC0086)]	 chaperone for EspA and EspB - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03683	VFG033708(gb|WP_001365456)	100.000	123	123	123	3.38e-88	251	VFC0301)]	 transcription regulator Ler - Regulation coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03684	VFG033726(gb|WP_000606964)	100.000	381	381	381	0.0	791	VFC0086)]	 Type III secretion system effector EspG, GTPase activating protein secreted effectors - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03685	VFG033717(gb|WP_000830675)	100.000	272	272	272	0.0	554	VFC0086)]	 SdiA-regulated domain-containing protein - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03686	VFG041576(gb|WP_012904699)	65.979	291	291	291	5.77e-142	401	VFC0086)]	 hypothetical protein - Effector delivery system rodentium ICC168]	Citrobacter				
+MFNFHKLG_03697	VFG043448(gb|NP_216353)	57.735	723	741	724	0.0	860	VFC0001)]	 malate synthase - Adherence tuberculosis H37Rv]	Mycobacterium				
+MFNFHKLG_03749	VFG052340(gb|NP_463157.1)	46.296	219	222	216	1.62e-61	191	VFC0301)]	 response regulator PmrA - Regulation enterica subsp. enterica serovar Typhimurium str. LT2]	Salmonella				
+MFNFHKLG_03759	VFG044140(gb|WP_002212186)	75.219	493	465	456	0.0	641	VFC0272)]	 outer membrane channel protein TolC hemophore-mediated heme uptake system - Nutritional/Metabolic factor pestis CO92]	Yersinia				
+MFNFHKLG_03768	VFG021496(gb|WP_000705493)	41.905	837	829	840	0.0	655	VFC0001)]	 fimbrial outer membrane usher protein StdB - Adherence enterica subsp. enterica serovar Newport str. SL254]	Salmonella				
+MFNFHKLG_03769	VFG042634(gb|AAK82426)	39.357	249	249	249	1.78e-51	167	VFC0001)]	 MrfD fimbriae, mrf - Adherence luminescens str. K122]	Photorhabdus				
+MFNFHKLG_03777	VFG013431(gb|WP_005656815)	70.815	477	476	466	0.0	692	VFC0258)]	 ADP-heptose synthase - Immune modulation influenzae 86-028NP]	Haemophilus				
+MFNFHKLG_03836	VFG036812(gb|WP_002216735)	39.919	539	544	496	3.86e-136	405	VFC0315)]	 lipooligosaccharide phosphoethanolamine transferase LptA modification - Post-translational modification meningitidis Z2491]	Neisseria				
+MFNFHKLG_03842	VFG006476(gb|WP_011115250)	62.390	567	569	569	0.0	729	VFC0282)]	 urease beta subunit UreB, urea amidohydrolase - Stress survival hepaticus ATCC 51449]	Helicobacter				
+MFNFHKLG_03845	VFG019533(gb|WP_000238754)	65.306	205	199	196	8.21e-97	279	VFC0282)]	 urease accessory protein - Stress survival pylori P12]	Helicobacter				
+MFNFHKLG_03849	VFG036030(gb|WP_001034023)	100.000	1363	1363	1363	0.0	2774	VFC0086)]	 serine protease autotransporter EspI SPATE - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03884	VFG034648(gb|WP_001245988)	100.000	362	362	362	0.0	758	VFC0001)]	 minor pilin and initiator fimbriae - Adherence coli E24377A]	Escherichia				
+MFNFHKLG_03885	VFG034628(gb|WP_000358667)	100.000	894	894	894	0.0	1835	VFC0001)]	 colonisation factor antigen c, usher fimbriae - Adherence coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03886	VFG034624(gb|WP_000755097)	100.000	166	166	166	2.12e-118	331	VFC0001)]	 colonization factor antigen 1 fimbriae - Adherence coli E24377A]	Escherichia				
+MFNFHKLG_03887	VFG034604(gb|WP_000225860)	100.000	238	238	238	1.72e-177	486	VFC0001)]	 colonisation factor antigen a, chaperone fimbriae - Adherence coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_03934	VFG000455(gb|NP_462540)	39.732	231	232	224	7.41e-53	170	VFC0001)]	 long polar fimbrial chaperone protein LpfB - Adherence enterica subsp. enterica serovar Typhimurium str. LT2]	Salmonella				
+MFNFHKLG_03935	VFG021350(gb|WP_000220316)	41.546	838	842	828	0.0	624	VFC0001)]	 long polar fimbrial usher protein LpfC - Adherence enterica subsp. enterica serovar Agona str. SL483]	Salmonella				
+MFNFHKLG_03969	VFG013517(gb|WP_011608883)	72.973	445	444	444	0.0	650	VFC0258)]	 phosphoglucosamine mutase - Immune modulation somnus 129PT]	Haemophilus				
+MFNFHKLG_03990	VFG011729(gb|WP_002869182)	46.104	328	315	308	1.47e-92	278	VFC0258)]	 KpsF/GutQ family sugar-phosphate isomerase - Immune modulation jejuni subsp. jejuni 81-176]	Campylobacter				
+MFNFHKLG_03995	VFG042736(gb|NP_253152)	53.892	477	497	501	0.0	532	VFC0001)]	 RNA polymerase factor sigma-54 IV pili - Adherence aeruginosa PAO1]	Pseudomonas				
+MFNFHKLG_04021	VFG014962(gb|WP_011912408)	36.889	455	473	450	3.48e-81	258	VFC0271)]	 serine protease MucD precursor - Biofilm stutzeri A1501]	Pseudomonas				
+MFNFHKLG_04022	VFG014994(gb|WP_011332484)	44.386	355	385	383	6.12e-85	262	VFC0271)]	 AlgW protein - Biofilm fluorescens Pf0-1]	Pseudomonas				
+MFNFHKLG_04038	VFG006925(gb|WP_011261157)	32.412	646	659	651	1.12e-115	360	VFC0001)]	 MSHA biogenesis protein MshH pili - Adherence fischeri ES114]	Vibrio				
+MFNFHKLG_04051	VFG049129(gb|YP_005225489)	68.533	385	397	375	0.0	519	VFC0325)]	 acriflavine resistance protein A - Antimicrobial activity/Competitive advantage pneumoniae subsp. pneumoniae HS11286]	Klebsiella				
+MFNFHKLG_04052	VFG049144(gb|WP_002892069)	78.193	1034	1048	1018	0.0	1652	VFC0325)]	 acriflavine resistance protein B - Antimicrobial activity/Competitive advantage pneumoniae subsp. pneumoniae NTUH-K2044]	Klebsiella				
+MFNFHKLG_04112	VFG046459(gb|WP_004287053)	81.679	394	394	393	0.0	654	VFC0001)]	 elongation factor Tu - Adherence philomiragia subsp. philomiragia ATCC 25017]	Francisella				
+MFNFHKLG_04131	VFG042734(gb|NP_249343)	66.832	210	214	202	9.38e-99	285	VFC0001)]	 cAMP-regulatory protein IV pili - Adherence aeruginosa PAO1]	Pseudomonas				
+MFNFHKLG_04133	VFG015897(gb|WP_017698917)	32.817	406	430	387	1.41e-51	178	VFC0235)]	 aminotransferase class III-fold pyridoxal phosphate-dependent enzyme phaseolotoxin - Exotoxin syringae pv. phaseolicola 1448A]	Pseudomonas				
+MFNFHKLG_04159	VFG046604(gb|WP_012280804)	65.315	225	222	222	7.34e-103	296	VFC0258)]	 ribulose-phosphate 3-epimerase - Immune modulation philomiragia subsp. philomiragia ATCC 25017]	Francisella				
+MFNFHKLG_04164	VFG013121(gb|WP_012055031)	37.678	402	445	422	2.00e-89	277	VFC0001)]	 type IV pilus secretin PilQ family protein IV pili - Adherence influenzae PittGG]	Haemophilus				
+MFNFHKLG_04178	VFG038219(gb|WP_000076440)	42.105	239	238	228	5.66e-53	171	VFC0301)]	 biofilm-controlling response regulator - Regulation baumannii ACICU]	Acinetobacter				
+MFNFHKLG_04182	VFG047402(gb|WP_003028499)	47.067	773	747	750	0.0	712	VFC0272)]	 Fe(2+) transporter permease subunit FeoB - Nutritional/Metabolic factor tularensis subsp. tularensis WY96-3418]	Francisella				
+MFNFHKLG_04205	VFG050270(gb|NP_220318)	30.785	477	474	497	2.74e-59	202	VFC0086)]	 glycogen synthase secreted effectors - Effector delivery system trachomatis D/UW-3/CX]	Chlamydia				
+MFNFHKLG_04223	VFG047610(gb|WP_013922953)	51.801	580	581	583	0.0	555	VFC0272)]	 gamma-glutamyltranspeptidase - Nutritional/Metabolic factor sp. TX077308]	Francisella				
+MFNFHKLG_04226	VFG030692(gb|WP_013828150)	50.134	356	380	373	3.05e-119	349	VFC0272)]	 sn-glycerol-3-phosphate ABC transporter ATP-binding protein UgpC ABC transporter - Nutritional/Metabolic factor sp. JDM601]	Mycobacterium				
+MFNFHKLG_04229	VFG043534(gb|WP_004681934)	47.642	438	433	424	1.24e-137	401	VFC0001)]	 sn-glycerol-3-phosphate ABC transporter substrate-binding protein UgpB - Adherence melitensis bv. 1 str. 16M]	Brucella				
+MFNFHKLG_04278	VFG010904(gb|WP_011214951)	28.571	489	502	476	6.66e-57	196	VFC0272)]	 Di/tripeptide permease - Nutritional/Metabolic factor pneumophila str. Lens]	Legionella				
+MFNFHKLG_04298	VFG049129(gb|YP_005225489)	53.470	385	397	389	4.21e-137	396	VFC0325)]	 acriflavine resistance protein A - Antimicrobial activity/Competitive advantage pneumoniae subsp. pneumoniae HS11286]	Klebsiella				
+MFNFHKLG_04299	VFG049144(gb|WP_002892069)	70.923	1037	1048	1018	0.0	1517	VFC0325)]	 acriflavine resistance protein B - Antimicrobial activity/Competitive advantage pneumoniae subsp. pneumoniae NTUH-K2044]	Klebsiella				
+MFNFHKLG_04361	VFG001399(gb|NP_216736)	51.477	469	478	474	1.14e-173	496	VFC0272)]	 glutamine synthetase synthesis - Nutritional/Metabolic factor tuberculosis H37Rv]	Mycobacterium				
+MFNFHKLG_04363	VFG019760(gb|WP_012722471)	41.453	469	465	468	3.28e-113	341	VFC0001)]	 two-component response regulator PilR IV pili - Adherence fluorescens SBW25]	Pseudomonas				
+MFNFHKLG_04365	VFG013205(gb|WP_012341592)	69.231	457	455	455	0.0	680	VFC0272)]	 oxygen-independent coproporphyrinogen III oxidase biosynthesis - Nutritional/Metabolic factor somnus 2336]	Haemophilus				
+MFNFHKLG_04382	VFG013201(gb|WP_012341283)	46.784	181	170	171	9.28e-58	178	VFC0272)]	 menaquinone-dependent protoporphyrinogen IX dehydrogenase biosynthesis - Nutritional/Metabolic factor somnus 2336]	Haemophilus				
+MFNFHKLG_04428	VFG013198(gb|WP_011608203)	62.579	320	321	318	9.92e-136	387	VFC0272)]	 hydroxymethylbilane synthase biosynthesis - Nutritional/Metabolic factor somnus 2336]	Haemophilus				
+MFNFHKLG_04429	VFG013199(gb|WP_012341015)	41.463	246	246	246	8.86e-58	184	VFC0272)]	 uroporphyrinogen-III synthase biosynthesis - Nutritional/Metabolic factor somnus 2336]	Haemophilus				
+MFNFHKLG_04430	VFG013633(gb|WP_011961771)	37.666	397	403	377	2.01e-61	203	VFC0272)]	 uroporphyrinogen-III C-methyltransferase biosynthesis - Nutritional/Metabolic factor influenzae PittEE]	Haemophilus				
+MFNFHKLG_04431	VFG013642(gb|WP_011608206)	37.531	398	425	397	1.43e-91	281	VFC0272)]	 heme biosynthesis protein HemY biosynthesis - Nutritional/Metabolic factor somnus 129PT]	Haemophilus				
+MFNFHKLG_04442	VFG038013(gb|WP_001050695)	29.310	416	418	406	4.02e-57	193	VFC0258)]	 O-antigen translocase - Immune modulation baumannii TYTH-1]	Acinetobacter				
+MFNFHKLG_04445	VFG048826(gb|YP_005227857)	75.175	293	289	286	2.67e-161	450	VFC0258)]	 glucose-1-phosphate thymidylyltransferase - Immune modulation pneumoniae subsp. pneumoniae HS11286]	Klebsiella				
+MFNFHKLG_04446	VFG007659(gb|WP_011261022)	79.772	355	364	351	0.0	602	VFC0258)]	 dTDP-glucose 4,6-dehydratase polysaccharide - Immune modulation fischeri ES114]	Vibrio				
+MFNFHKLG_04447	VFG007635(gb|WP_011078849)	68.235	420	423	425	0.0	578	VFC0258)]	 UDP-N-acetyl-D-mannosamine dehydrogenase polysaccharide - Immune modulation vulnificus CMCP6]	Vibrio				
+MFNFHKLG_04448	VFG007639(gb|WP_043920918)	72.011	376	374	368	0.0	568	VFC0258)]	 UDP-N-acetylglucosamine 2-epimerase polysaccharide - Immune modulation vulnificus CMCP6]	Vibrio				
+MFNFHKLG_04449	VFG023778(gb|WP_005181087)	70.238	348	358	336	0.0	508	VFC0258)]	 ECA polysaccharide chain length modulation protein - Immune modulation enterocolitica subsp. palearctica 105.5R(r)]	Yersinia				
+MFNFHKLG_04450	VFG013509(gb|WP_005688044)	59.654	367	355	347	1.93e-139	400	VFC0258)]	 undecaprenyl-phosphate alpha-N-acetylglucosaminyltransferase - Immune modulation influenzae 86-028NP]	Haemophilus				
+MFNFHKLG_04502	VFG047258(gb|WP_014547756)	51.441	456	455	451	2.29e-161	463	VFC0258)]	 UDP-N-acetylglucosamine pyrophosphorylase/glucosamine-1-phosphate N-acetyltransferase - Immune modulation cf. tularensis subsp. novicida 3523]	Francisella				
+MFNFHKLG_04518	VFG052929(gb|WP_075552529.1)	38.444	445	451	450	6.50e-100	306	VFC0272)]	 purine permease - Nutritional/Metabolic factor mayonii MN14-1420]	Borrelia				
+MFNFHKLG_04565	VFG032174(gb|WP_012985162)	46.491	463	461	456	2.24e-132	390	VFC0272)]	 hexose phosphate transport protein - Nutritional/Metabolic factor seeligeri serovar 1/2b str. SLCC3954]	Listeria				
+MFNFHKLG_04567	VFG052932(gb|WP_012539558.1)	40.338	444	451	414	5.45e-91	283	VFC0272)]	 purine permease - Nutritional/Metabolic factor recurrentis A1]	Borrelia				
+MFNFHKLG_04571	VFG045346(gb|WP_011149697)	52.574	272	269	272	7.43e-95	280	VFC0001)]	 immunogenic lipoprotein A - Adherence vulnificus YJ016]	Vibrio				
+MFNFHKLG_04583	VFG009933(gb|WP_085975473)	40.385	702	782	728	7.71e-177	524	VFC0301)]	 Probable GTP pyrophosphokinase RelA 3'-pyrophosphotransferase) synthetase I) synthetase) diphosphokinase) - Regulation sp. MCS]	Mycobacterium				
+MFNFHKLG_04623	VFG000320(gb|WP_001169234)	49.669	159	157	151	6.72e-53	165	VFC0258)]	 lipopolysaccharide core biosynthesis protein - Immune modulation pylori 26695]	Helicobacter				
+MFNFHKLG_04624	VFG013157(gb|WP_012341264)	50.472	425	426	424	1.80e-152	438	VFC0258)]	 3-deoxy-d-manno-octulosonic-acid transferase - Immune modulation somnus 2336]	Haemophilus				
+MFNFHKLG_04626	VFG000139(gb|NP_253697)	51.081	374	373	370	6.49e-141	405	VFC0258)]	 B-band O-antigen polymerase - Immune modulation aeruginosa PAO1]	Pseudomonas				
+MFNFHKLG_04627	VFG000140(gb|NP_253696)	56.757	265	268	259	1.25e-106	309	VFC0258)]	 UDP-glucose:(heptosyl) LPS alpha 1,3-glucosyltransferase WaaG - Immune modulation aeruginosa PAO1]	Pseudomonas				
+MFNFHKLG_04633	VFG013280(gb|WP_011609757)	56.329	330	321	316	2.65e-121	351	VFC0258)]	 heptosyltransferase I - Immune modulation somnus 129PT]	Haemophilus				
+MFNFHKLG_04634	VFG013400(gb|WP_005693429)	63.218	348	346	348	3.54e-157	444	VFC0258)]	 ADP-heptose-LPS heptosyltransferase II - Immune modulation influenzae Rd KW20]	Haemophilus				
+MFNFHKLG_04635	VFG000332(gb|WP_005632797)	78.247	310	308	308	0.0	507	VFC0258)]	 ADP-L-glycero-D-mannoheptose-6-epimerase - Immune modulation influenzae Rd KW20]	Haemophilus				
+MFNFHKLG_04652	VFG035950(gb|WP_001033224)	100.000	1616	1616	1616	0.0	3132	VFC0001)]	 trimeric autotransporter adhesin EhaG adhesin, trimeric AT - Adherence coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_04694	VFG001867(gb|WP_016357051)	43.415	206	192	205	5.12e-53	168	VFC0282)]	 superoxide dismutase - Stress survival pneumophila subsp. pneumophila str. Philadelphia 1]	Legionella				
+MFNFHKLG_04765	VFG033234(gb|WP_000756356)	100.000	174	174	174	3.20e-123	344	VFC0001)]	 Fimbrin-like protein fimI precursor 1 fimbriae - Adherence coli O104:H4 str. 2009EL-2050]	Escherichia				
+MFNFHKLG_04766	VFG000455(gb|NP_462540)	69.027	228	232	226	1.33e-109	314	VFC0001)]	 long polar fimbrial chaperone protein LpfB - Adherence enterica subsp. enterica serovar Typhimurium str. LT2]	Salmonella				
+MFNFHKLG_04767	VFG021350(gb|WP_000220316)	73.246	843	842	841	0.0	1303	VFC0001)]	 long polar fimbrial usher protein LpfC - Adherence enterica subsp. enterica serovar Agona str. SL483]	Salmonella				
+MFNFHKLG_04768	VFG021343(gb|WP_000914404)	44.972	351	354	358	1.64e-93	283	VFC0001)]	 long polar fimbrial protein LpfD - Adherence enterica subsp. enterica serovar Agona str. SL483]	Salmonella				
+MFNFHKLG_04769	VFG021339(gb|WP_000792958)	52.326	174	175	172	4.55e-62	189	VFC0001)]	 long polar fimbrial minor subunit LpfE, adhesin - Adherence enterica subsp. enterica serovar Gallinarum str. 287/91]	Salmonella				
+MFNFHKLG_04777	VFG009667(gb|WP_011780414)	61.399	726	747	715	0.0	856	VFC0282)]	 catalase/peroxidase HPI - Stress survival vanbaalenii PYR-1]	Mycobacterium				
+MFNFHKLG_04789	VFG034703(gb|WP_000556293)	100.000	577	577	577	0.0	1195	VFC0083)]	 phosphoethanolamine transferase CptA - Invasion coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_04815	VFG046459(gb|WP_004287053)	81.679	394	394	393	0.0	655	VFC0001)]	 elongation factor Tu - Adherence philomiragia subsp. philomiragia ATCC 25017]	Francisella				
+MFNFHKLG_04832	VFG013612(gb|WP_011609686)	79.379	354	354	354	0.0	587	VFC0272)]	 uroporphyrinogen decarboxylase biosynthesis - Nutritional/Metabolic factor somnus 129PT]	Haemophilus				
+MFNFHKLG_04840	VFG019760(gb|WP_012722471)	45.098	441	465	459	1.15e-123	367	VFC0001)]	 two-component response regulator PilR IV pili - Adherence fluorescens SBW25]	Pseudomonas				
+MFNFHKLG_04850	VFG001381(gb|YP_177728)	62.295	434	428	427	0.0	532	VFC0346)]	 Isocitrate lyase Icl lyase - Others tuberculosis H37Rv]	Mycobacterium				
+MFNFHKLG_04854	VFG049118(gb|WP_012737529)	40.152	274	272	264	2.39e-66	207	VFC0272)]	 DNA-binding transcriptional repressor AllR utilization - Nutritional/Metabolic factor pneumoniae subsp. pneumoniae NTUH-K2044]	Klebsiella				
+MFNFHKLG_04864	VFG013531(gb|WP_011272485)	77.596	549	549	549	0.0	909	VFC0258)]	 glucose-6-phosphate isomerase - Immune modulation influenzae 86-028NP]	Haemophilus				
+MFNFHKLG_04868	VFG007643(gb|WP_011261015)	46.619	698	750	695	0.0	635	VFC0258)]	 YjbH domain-containing protein polysaccharide - Immune modulation fischeri ES114]	Vibrio				
+MFNFHKLG_04918	VFG010882(gb|WP_010946597)	37.819	540	650	587	2.32e-121	371	VFC0272)]	 cytochrome c heme lyase subunit CcmF - Nutritional/Metabolic factor pneumophila subsp. pneumophila str. Philadelphia 1]	Legionella				
+MFNFHKLG_04959	VFG052339(gb|NP_463156.1)	85.915	366	356	355	0.0	630	VFC0301)]	 sensory kinase PmrB - Regulation enterica subsp. enterica serovar Typhimurium str. LT2]	Salmonella				
+MFNFHKLG_04960	VFG052340(gb|NP_463157.1)	90.991	222	222	222	7.90e-150	415	VFC0301)]	 response regulator PmrA - Regulation enterica subsp. enterica serovar Typhimurium str. LT2]	Salmonella				
+MFNFHKLG_04961	VFG036816(gb|WP_003689187)	44.074	547	544	540	1.99e-156	457	VFC0315)]	 lipooligosaccharide phosphoethanolamine transferase LptA modification - Post-translational modification gonorrhoeae NCCP11945]	Neisseria				
+MFNFHKLG_04992	VFG036017(gb|WP_000820552)	100.000	948	948	948	0.0	1878	VFC0271)]	 Ag43/Cah family autotransporter adhesin AIDA-I type - Biofilm coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_05011	VFG034929(gb|WP_001239101)	100.000	3223	3223	3223	0.0	6678	VFC0086)]	 lymphostatin Efa1/LifA - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_05013	VFG034954(gb|WP_000609742)	100.000	224	224	224	3.78e-168	461	VFC0086)]	 Type III secretion system effector NleE secreted effectors - Effector delivery system coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_05014	VFG034939(gb|WP_000953024)	100.000	329	329	329	0.0	681	VFC0086)]	 Type III secretion system effector nleB1 secreted effectors - Effector delivery system coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_05015	VFG034763(gb|WP_001121619)	100.000	549	549	549	0.0	1123	VFC0086)]	 Type III secretion system secreted effector EspL2, cysteine protease secreted effectors - Effector delivery system coli O127:H6 str. E2348/69]	Escherichia				
+MFNFHKLG_05034	VFG010484(gb|WP_197535716)	75.758	548	549	528	0.0	780	VFC0001)]	 Hsp60, 60K heat shock protein HtpB - Adherence pneumophila str. Paris]	Legionella				
+MFNFHKLG_05116	VFG038902(gb|WP_011898555)	60.508	447	439	433	0.0	554	VFC0235)]	 Hemolysin A HlyA - Exotoxin salmonicida subsp. salmonicida A449]	Aeromonas				
+MFNFHKLG_05138	VFG021059(gb|WP_000131296)	52.457	898	908	875	0.0	915	VFC0272)]	 Mg2+ transport protein - Nutritional/Metabolic factor enterica subsp. enterica serovar Schwarzengrund str. CVM19633]	Salmonella				
+MFNFHKLG_05142	VFG047692(gb|WP_014547359)	44.850	311	307	301	4.76e-77	237	VFC0272)]	 aspartate carbamoyltransferase biosynthesis - Nutritional/Metabolic factor cf. tularensis subsp. novicida 3523]	Francisella				
+MFNFHKLG_05149	VFG015903(gb|WP_011169509)	44.277	334	327	332	9.55e-92	276	VFC0235)]	 ornithine carbamoyltransferase phaseolotoxin - Exotoxin syringae pv. phaseolicola 1448A]	Pseudomonas				
+MFNFHKLG_05194	VFG012263(gb|NP_418732)	100.000	200	200	200	3.87e-151	416	VFC0001)]	 Type 1 fimbriae Regulatory protein fimB 1 fimbriae - Adherence coli str. K-12 substr. MG1655]	Escherichia				
+MFNFHKLG_05195	VFG000872(gb|WP_000044711)	100.000	198	198	198	5.54e-148	408	VFC0001)]	 Type 1 fimbriae Regulatory protein fimE 1 fimbriae - Adherence coli CFT073]	Escherichia				
+MFNFHKLG_05196	VFG033210(gb|WP_000695546)	100.000	182	182	182	2.80e-127	355	VFC0001)]	 Type-1 fimbrial protein, A chain precursor 1 fimbriae - Adherence coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_05197	VFG033231(gb|WP_015740441)	100.000	156	170	156	1.61e-115	323	VFC0001)]	 Fimbrin-like protein fimI precursor 1 fimbriae - Adherence coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_05198	VFG033256(gb|WP_000066560)	100.000	241	241	241	2.07e-180	494	VFC0001)]	 Chaperone protein fimC precursor 1 fimbriae - Adherence coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_05199	VFG033277(gb|WP_000120957)	100.000	878	878	878	0.0	1814	VFC0001)]	 Outer membrane usher protein fimD precursor 1 fimbriae - Adherence coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_05200	VFG012306(gb|WP_001244826)	100.000	176	176	176	1.83e-129	360	VFC0001)]	 FimF protein precursor 1 fimbriae - Adherence coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_05201	VFG012313(gb|WP_000872005)	100.000	167	167	167	8.31e-121	337	VFC0001)]	 FimG protein precursor 1 fimbriae - Adherence coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_05202	VFG033355(gb|WP_000832227)	100.000	300	300	300	0.0	597	VFC0001)]	 FimH protein precursor 1 fimbriae - Adherence coli O55:H7 str. CB9615]	Escherichia				
+MFNFHKLG_05229	VFG044081(gb|NP_250946)	44.581	520	500	489	8.49e-145	425	VFC0272)]	 paerucumarin biosynthesis protein PvcC - Nutritional/Metabolic factor aeruginosa PAO1]	Pseudomonas				
+MFNFHKLG_05304	VFG001828(gb|WP_000691354)	100.000	315	315	315	0.0	636	VFC0235)]	 Shiga toxin subunit A; RNA-N-glycosidase; catalytic subunit toxin - Exotoxin dysenteriae Sd197]	Shigella				
+MFNFHKLG_05305	VFG001829(gb|WP_000752026)	100.000	89	89	89	9.79e-63	184	VFC0235)]	 Shiga toxin subunit B precursor toxin - Exotoxin dysenteriae Sd197]	Shigella				
+MFNFHKLG_05337	VFG035047(gb|WP_001121225)	100.000	216	216	216	3.51e-164	451	VFC0086)]	 Type III secretion system effector NleG7, E3 Ubiquitin Ligase secreted effectors - Effector delivery system coli O157:H7 str. EC4115]	Escherichia				
+MFNFHKLG_05351	VFG006777(gb|WP_011701742)	33.974	338	331	312	2.32e-53	178	VFC0272)]	 lipoate protein ligase - Nutritional/Metabolic factor welshimeri serovar 6b str. SLCC5334]	Listeria				
+MFNFHKLG_05368	VFG000846(gb|WP_001358886)	86.887	878	898	877	0.0	1598	VFC0251)]	 metalloprotease - Exoenzyme coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_05369	VFG040931(gb|WP_001302175)	81.481	270	291	270	1.10e-158	442	VFC0086)]	 type II secretion system protein GspC - Effector delivery system coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_05370	VFG040932(gb|WP_001302177)	94.504	656	655	655	0.0	1243	VFC0086)]	 variant type II secretion system secretin EtpD - Effector delivery system coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_05371	VFG040933(gb|WP_000092338)	95.976	500	501	497	0.0	969	VFC0086)]	 type II secretion system ATPase GspE - Effector delivery system coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_05372	VFG040934(gb|WP_001173152)	93.120	407	407	407	0.0	762	VFC0086)]	 type II secretion system inner membrane protein GspF - Effector delivery system coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_05373	VFG040935(gb|WP_001231211)	95.139	144	144	144	2.45e-99	281	VFC0086)]	 type II secretion system major pseudopilin GspG - Effector delivery system coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_05375	VFG040937(gb|WP_000173396)	84.348	115	115	115	4.33e-66	194	VFC0086)]	 type II secretion system minor pseudopilin GspI - Effector delivery system coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_05376	VFG040938(gb|WP_000082782)	91.960	199	199	199	2.12e-126	354	VFC0086)]	 type II secretion system minor pseudopilin GspJ - Effector delivery system coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_05377	VFG040939(gb|WP_000776550)	88.615	325	325	325	0.0	557	VFC0086)]	 type II secretion system minor pseudopilin GspK - Effector delivery system coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_05378	VFG040940(gb|WP_071525076)	87.692	390	390	390	0.0	700	VFC0086)]	 type II secretion system protein GspL - Effector delivery system coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_05379	VFG040941(gb|WP_001004187)	83.234	171	170	167	1.62e-94	271	VFC0086)]	 type II secretion system protein M - Effector delivery system coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_05380	VFG040942(gb|WP_000096786)	88.087	277	277	277	3.02e-165	459	VFC0086)]	 A24 family peptidase - Effector delivery system coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_05381	VFG040943(gb|WP_000971918)	81.452	128	133	124	1.94e-72	212	VFC0086)]	 GspS family T2SS pilot lipoprotein variant EptO - Effector delivery system coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_05389	VFG034704(gb|WP_000550558)	100.000	573	573	573	0.0	1182	VFC0083)]	 phosphoethanolamine transferase CptA - Invasion coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_05390	VFG013084(gb|WP_004996485)	64.856	311	314	313	2.57e-153	431	VFC0346)]	 lauroyl-Kdo(2)-lipid IV(A) myristoyltransferase - Others dysenteriae Sd197]	Shigella				
+MFNFHKLG_05395	VFG000843(gb|WP_001213545)	100.000	479	479	479	0.0	977	VFC0235)]	 Hemolysin D - Exotoxin coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_05396	VFG033882(gb|WP_000987096)	100.000	706	706	706	0.0	1441	VFC0235)]	 Hemolysin B - Exotoxin coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_05397	VFG033890(gb|WP_000217740)	100.000	998	998	998	0.0	2010	VFC0235)]	 Hemolysin A - Exotoxin coli O103:H2 str. 12009]	Escherichia				
+MFNFHKLG_05398	VFG000842(gb|WP_000839950)	100.000	171	171	171	1.08e-128	357	VFC0235)]	 Hemolysin C - Exotoxin coli O157:H7 str. EDL933]	Escherichia				
+MFNFHKLG_05431	VFG012636(gb|NP_858256)	42.373	320	309	295	1.80e-71	223	VFC0086)]	 transcriptional activator VirB - Effector delivery system flexneri 2a str. 301]	Shigella				
