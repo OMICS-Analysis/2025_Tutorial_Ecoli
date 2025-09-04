@@ -491,6 +491,21 @@ MFNFHKLG_00131	VFG004221(gb|WP_000924983)	32.783	424	391	424	2.97e-52	179
 MFNFHKLG_00135	VFG021422(gb|WP_071586201)	62.529	866	881	854	0.0	1108
 ```
 
+Con los datos de la base de datos `FASTA` podemos crear un archivos con el nombre de cada identificador, y asi sea más sencillo anotar:
+
+```{bash, eval=FALSE}
+awk '/^>/ {if (NR>1) print ""; split($0, a, " "); id=a[1]; sub(/^>/, "", id); gene=""; desc=""; org=""; for(i=2; i<=length(a); i++) {if (a[i] ~ /^\(/) {gene=a[i]; sub(/^\(/, "", gene); sub(/\)$/, "", gene)} else if (a[i] ~ /^\[/) {org=a[i]; sub(/^\[/, "", org); sub(/\]$/, "", org)} else {desc=desc" "a[i]}} print id"\t"gene"\t"desc"\t"org} END {if (NR>0) print ""}' $HOME/2025_Demo_ecoli/data/VFDB/VFDB_setB_pro.fas > $HOME/2025_Demo_ecoli/data/VFDB/VFDB_setB_pro.tab
+
+```
+
+Este archivo `.tab` se vería algo así:
+
+```{r, echo=FALSE, message=FALSE}
+df <- readr::read_tsv("tables/VFDB_setB_pro.tab") |> head(10)
+
+gt::gt(df)
+```
+
 Podemos hacer un posterior parseo de datos con el lenguaje de programación qué mas prefieras para llegar a algo asi para cada genoma:
 
 ```{r, echo=FALSE, message=FALSE}
