@@ -676,13 +676,6 @@ Este alineamiento tambien se puede lograr con las siguientes herramientas que no
 
 -   [**MAFFT**](https://mafft.cbrc.jp/alignment/server/index.html): Alineamiento eficiente para grandes conjuntos de datos. (Este utiliza `Roary`)
 
-```{bash, eval=FALSE}
-FastTree \
--nt \
--gtr \
-3_pangenome/data_genomes/pangenome_prokka_prank/core_gene_alignment.aln > my_tree.newick  
-```
-
 Con el alineamiento, los programas infieren el árbol filogenético usando métodos como:
 
 -   **Distancia**: Basado en diferencias entre secuencias (por ejemplo, Neighbor-Joining).
@@ -692,6 +685,15 @@ Con el alineamiento, los programas infieren el árbol filogenético usando méto
 -   **Máxima verosimilitud**: Estima el árbol más probable según un modelo evolutivo (por ejemplo, RAxML, IQ-TREE).
 
 -   **Inferencia bayesiana**: Usa probabilidades para inferir el árbol (por ejemplo, MrBayes).
+
+### FastTree
+
+```{bash, eval=FALSE}
+FastTree \
+-nt \
+-gtr \
+3_pangenome/data_genomes/pangenome_prokka_prank/core_gene_alignment.aln > my_tree.newick  
+```
 
 El formato de árbol `Newick` (o notación Newick , o formato de árbol de Nuevo Hampshire) es una manera de representar árboles utilizando paréntesis y comas. Este lo podemos leer directamente en interfaz gráfica como `MEGA`, en `R` o en `Python`.
 
