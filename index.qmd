@@ -555,7 +555,7 @@ roary -f "$DIR_DESTINO/pangenome_prokka_prank" \
 
 Filogénia. Generamos un archivo `.newick`
 
-**PRECAUCIÓN** ⚠️: La memoría RAM se dispara hasta 23 GB para la construcción del árbol.
+**PRECAUCIÓN** ⚠️: La memoría RAM se dispara hasta 23 GB para la construcción del árbol. 40 minutos de proceso.
 
 ```{bash, eval=FALSE}
 FastTree \
@@ -568,8 +568,14 @@ FastTree \
 ### Visualización
 
 ```{bash, eval=FALSE}
-
+./bin/Roary/contrib/roary_plots/roary_plots.py 3_pangenome/data_genomes/pangenome_prokka_prank/my_tree.newick 3_pangenome/data_genomes/pangenome_prokka_prank/gene_presence_absence.csv
 ```
+
+![](images/pangenome_matrix.png){fig-align="center"}
+
+![](images/pangenome_pie.png){fig-align="center"}
+
+![](images/pangenome_frequency.png){fig-align="center"}
 
 # Filogénia
 
