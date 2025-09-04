@@ -541,6 +541,8 @@ for carpeta in "$DIR_ORIGEN"/*; do
     done
 ```
 
+**PRECAUCIÓN** ⚠️: con 8 núcleos de procesamiento este paso demora **65 horas**.
+
 ```{bash, eval=FALSE}
 DIR_ORIGEN="$HOME/2025_Demo_ecoli/2_annotation/prokka"
 DIR_DESTINO="$HOME/2025_Demo_ecoli/3_pangenome/data_genomes"
@@ -549,6 +551,24 @@ roary -f "$DIR_DESTINO/pangenome_prokka_prank" \
 -e \
 -p 8 \
 -v "$DIR_DESTINO"/*.gff
+```
+
+Filogénia. Generamos un archivo `.newick`
+
+**PRECAUCIÓN** ⚠️: La memoría RAM se dispara hasta 23 GB para la construcción del árbol.
+
+```{bash, eval=FALSE}
+FastTree \
+-nt \
+-gtr \
+3_pangenome/data_genomes/pangenome_prokka_prank/core_gene_alignment.aln > my_tree.newick  
+
+```
+
+### Visualización
+
+```{bash, eval=FALSE}
+
 ```
 
 # Filogénia
